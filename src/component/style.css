@@ -1,0 +1,7 @@
+.header-background{
+    background-image: url('../images/background_image.avif');
+}
+
+.scrolling-wrapper{
+    overflow-x: auto;
+}
