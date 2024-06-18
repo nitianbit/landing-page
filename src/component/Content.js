@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Card } from 'reactstrap';
 import './style.css'
 import HorizontalScroller from './HorizontalScroller';
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const Content = ({ forms }) => {
 
@@ -65,6 +67,50 @@ const Content = ({ forms }) => {
                             </div>
                         </form> */}
                 </div>
+            </div>
+
+            <div>
+                <Card className='px-3 py-2'>
+                    <div className='row'>
+                        <div className='col'>
+                            Start Your Property Purchase Journey Now
+                        </div>
+                        <div className='row col-9 d-flex'>
+                            {forms?.second?.fields?.map((field, index) => (
+                                <div key={index} className="col-3">
+                                    <div className="form-floating mb-3">
+                                        {field?.type === 'select' ? (
+                                            <select
+                                                className="form-select"
+                                                value={data[field?.label] || ''}
+                                                onChange={(e) => handleInputChange(field?.label, e.target.value)}
+                                                name={field?.label}
+                                                required={field?.required}
+                                            >
+                                                <option value="" disabled>Select {field?.label}</option>
+                                                {field?.options.map((option, optIndex) => (
+                                                    <option key={optIndex} value={option}>{option}</option>
+                                                ))}
+                                            </select>
+                                        ) : (
+                                            <input
+                                                value={data[field?.label] || ''}
+                                                onChange={(e) => handleInputChange(field?.label, e.target.value)}
+                                                type={field?.type || 'text'}
+                                                className="form-control"
+                                                name={field?.label}
+                                                placeholder={field?.label}
+                                                required={field?.required}
+                                            />
+                                        )}
+                                        <label htmlFor={field?.label} className="form-label">{field?.label}</label>
+                                    </div>
+                                </div>
+                            ))}
+                            <FaArrowAltCircleRight />
+                        </div>
+                    </div>
+                </Card>
             </div>
             <div className="container bg-grey">
                 <div className="row">
