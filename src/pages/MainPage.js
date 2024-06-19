@@ -3,6 +3,7 @@ import { doGET, doPOST } from '../utils/HttpUtils'
 import { AppContext } from '../services/context/AppContext'
 import Header from '../component/Header'
 import Content from '../component/Content'
+import Bottom from '../component/Bottom'
 const MainPage = () => {
     const [loading, setLoading] = useState(false);
     const [formNumberFields, setFormNumberFields] = useState({
@@ -28,15 +29,15 @@ const MainPage = () => {
         }
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e, form, formData) => {
         e.preventDefault();
         try {
             setLoading(true);
 
-            const formId = formNumberFields?.[formData?.number]._id;
-            const values = Object.keys(formData?.values).map(label => ({
-                fieldId: formData?.values?.[formNumberFields]?.fields.find(field => field.label === label)._id,
-                value: formData?.values[label]
+            const formId = form?._id;
+            const values = Object?.keys(formData)?.map(label => ({
+                fieldId: form?.fields?.find(field => field?.label === label)?._id,
+                value: formData[label]
             }));
 
             // Send form data to backend
@@ -45,12 +46,13 @@ const MainPage = () => {
             // Handle response
             if (response.success) {
                 console.log("Form submitted successfully:", response);
-                setFormNumberFields({}); // Clear form data after successful submission
             } else {
                 console.error("Error submitting form:", response.error);
             }
+            return true
         } catch (error) {
             console.error("Error submitting form:", error);
+            return false
         } finally {
             setLoading(false);
         }
@@ -65,8 +67,9 @@ const MainPage = () => {
 
     return (
         <div className='p-2'>
-            <Header forms={formNumberFields} />
-            <Content forms={formNumberFields} />
+            <Header forms={formNumberFields} handleSubmit={handleSubmit} />
+            <Content forms={formNumberFields} handleSubmit={handleSubmit} />
+            <Bottom forms={formNumberFields} handleSubmit={handleSubmit} />
         </div>
     )
 }

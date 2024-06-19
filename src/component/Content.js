@@ -4,7 +4,7 @@ import './style.css'
 import HorizontalScroller from './HorizontalScroller';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-const Content = ({ forms }) => {
+const Content = ({ forms, handleSubmit }) => {
 
     const [data, setData] = useState({});
 
@@ -16,69 +16,20 @@ const Content = ({ forms }) => {
         }));
     };
 
-    useEffect(() => {
-        console.log(forms?.third)
-    }, [])
-
 
     return (
         <>
             <HorizontalScroller />
-            <div className="col-sm-12 col-md-4">
-                <div className="card border border-light-subtle rounded-3 shadow-sm">
-                    {/* <form onSubmit={handleSubmit}>
-                            {forms?.firstForm?.fields?.map((field, index) => (
-                                <div key={index} className="col-12">
-                                    <div className="form-floating mb-3">
-                                        {field.type === 'select' ? (
-                                            <select
-                                                className="form-select"
-                                                value={data[field?.label] || ''}
-                                                onChange={(e) => handleInputChange(field?.label, e.target.value)}
-                                                name={field?.label}
-                                                required={field?.required}
-                                            >
-                                                <option value="" disabled>Select {field?.label}</option>
-                                                {field?.options.map((option, optIndex) => (
-                                                    <option key={optIndex} value={option}>{option}</option>
-                                                ))}
-                                            </select>
-                                        ) : (
-                                            <input
-                                                value={data[field?.label] || ''}
-                                                onChange={(e) => handleInputChange(field?.label, e.target.value)}
-                                                type={field?.type || 'text'}
-                                                className="form-control"
-                                                name={field?.label}
-                                                placeholder={field?.label}
-                                                required={field?.required}
-                                            />
-                                        )}
-                                        <label htmlFor={field?.label} className="form-label">{field?.label}</label>
-                                    </div>
-                                </div>
-                            ))}
-                            <div className="col-12">
-                                <div className="d-grid my-3">
-                                    <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
-                                        {loading ? 'Submitting...' : 'Sign up'}
-                                    </button>
-                                </div>
-                            </div>
-                        </form> */}
-                </div>
-            </div>
-
             <div>
-                <Card className='px-3 py-2'>
-                    <div className='row'>
-                        <div className='col'>
+                <Card className='px-3 py-3'>
+                    <div className='row align-items-center'>
+                        <div className='col-3'>
                             Start Your Property Purchase Journey Now
                         </div>
-                        <div className='row col-9 d-flex'>
+                        <div className='row col-9 d-flex align-items-center'>
                             {forms?.second?.fields?.map((field, index) => (
                                 <div key={index} className="col-3">
-                                    <div className="form-floating mb-3">
+                                    <div className="form-floating">
                                         {field?.type === 'select' ? (
                                             <select
                                                 className="form-select"
@@ -107,7 +58,13 @@ const Content = ({ forms }) => {
                                     </div>
                                 </div>
                             ))}
-                            <FaArrowAltCircleRight />
+                            <div className='col-3 d-flex justify-content-end'>
+                                <FaArrowAltCircleRight size={30} onClick={(e) => {
+                                    handleSubmit(e, forms?.second, data).then(res => {
+                                        res && setData({})
+                                    })
+                                }} />
+                            </div>
                         </div>
                     </div>
                 </Card>
@@ -133,70 +90,6 @@ const Content = ({ forms }) => {
 
                 <hr />
             </div>
-
-
-            <div className="row pt-4 my-md-5 pt-md-5 border-top">
-                <div className='col-3'>
-                    {forms?.third?.fields?.map((field, index) => (
-                        <div key={index} className="col-12">
-                            <div className="form-floating mb-3">
-                                {field?.type === 'select' ? (
-                                    <select
-                                        className="form-select"
-                                        value={data[field?.label] || ''}
-                                        onChange={(e) => handleInputChange(field?.label, e.target.value)}
-                                        name={field?.label}
-                                        required={field?.required}
-                                    >
-                                        <option value="" disabled>Select {field?.label}</option>
-                                        {field?.options.map((option, optIndex) => (
-                                            <option key={optIndex} value={option}>{option}</option>
-                                        ))}
-                                    </select>
-                                ) : (
-                                    <input
-                                        value={data[field?.label] || ''}
-                                        onChange={(e) => handleInputChange(field?.label, e.target.value)}
-                                        type={field?.type || 'text'}
-                                        className="form-control"
-                                        name={field?.label}
-                                        placeholder={field?.label}
-                                        required={field?.required}
-                                    />
-                                )}
-                                <label htmlFor={field?.label} className="form-label">{field?.label}</label>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="col-9 d-flex align-items-end">
-                    <div className="col-12 col-md">
-                        <img className="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24" />
-                        <small className="d-block mb-3 text-muted">&copy; 2017-2018</small>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>Features</h5>
-                        <ul className="list-unstyled text-small">
-                            <li><a className="text-muted" href="#">Cool stuff</a></li>
-                            <li><a className="text-muted" href="#">Last time</a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>Resources</h5>
-                        <ul className="list-unstyled text-small">
-                            <li><a className="text-muted" href="#">Final resource</a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-md">
-                        <h5>About</h5>
-                        <ul className="list-unstyled text-small">
-                            <li><a className="text-muted" href="#">Team</a></li>
-                            <li><a className="text-muted" href="#">Locations</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
 
         </>
     );

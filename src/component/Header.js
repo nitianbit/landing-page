@@ -6,37 +6,9 @@ import img2 from '../images/image_5.jpeg';
 import img3 from '../images/image_6.jpeg';
 import { doGET, doPOST } from '../utils/HttpUtils';
 
-function Header({ forms }) {
+function Header({ forms, handleSubmit }) {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            setLoading(true);
-
-            const formId = forms?.firstForm._id;
-            const values = Object.keys(data).map(label => ({
-                fieldId: forms?.firstForm?.fields.find(field => field.label === label)._id,
-                value: data[label]
-            }));
-
-            // Send form data to backend
-            let response = await doPOST("/addFormValue", { formId, values, projectId: "666de33f3d5ee559944dd6ad" });
-
-            // Handle response
-            if (response.success) {
-                console.log("Form submitted successfully:", response);
-                setData({}); // Clear form data after successful submission
-            } else {
-                console.error("Error submitting form:", response.error);
-            }
-        } catch (error) {
-            console.error("Error submitting form:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
 
     const handleInputChange = (fieldName, value) => {
         setData(prevData => ({
@@ -84,7 +56,7 @@ function Header({ forms }) {
             <div className="col-sm-12 col-md-4">
                 <div className="card border border-light-subtle rounded-3 shadow-sm">
                     <div className="card-body p-3 p-md-4 p-xl-5">
-                        <form onSubmit={handleSubmit}>
+                        <div>
                             {forms?.first?.fields?.map((field, index) => (
                                 <div key={index} className="col-12">
                                     <div className="form-floating mb-3">
@@ -118,12 +90,16 @@ function Header({ forms }) {
                             ))}
                             <div className="col-12">
                                 <div className="d-grid my-3">
-                                    <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
+                                    <button onClick={(e) => {
+                                        handleSubmit(e, forms?.first, data).then(res => {
+                                            res && setData({})
+                                        })
+                                    }} className="btn btn-primary btn-lg" type="submit" disabled={loading}>
                                         {loading ? 'Submitting...' : 'Sign up'}
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
