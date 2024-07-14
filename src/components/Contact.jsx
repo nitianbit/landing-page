@@ -38,9 +38,8 @@ const Contact = ({ form, handleSubmit }) => {
                             href="https://flowbite.com"
                             src="https://i.ibb.co/x7x4VQG/Screenshot-2024-06-27-at-1-20-25-PM.png"
                             alt="Flowbite Logo"
-
                         />
-                        <Footer.Copyright href="#" by="Copyright@KanInfratech| thekanproperties.com.AllRightReserved." year={2024} />
+                        <Footer.Copyright by="Copyright@KanInfratech| thekanproperties.com.AllRightReserved." year={2024} />
                     </div>
                 </div>
             </Footer>
