@@ -9,11 +9,12 @@ import { useEffect, useState } from "react";
 import { getUTMParameters } from "../../utils/helper.js";
 function LandingPage() {
   const [forms, setForms] = useState(null)
+  const [project, setProject] = useState(null)
   const [loading, setLoading] = useState(false);
 
-  const getForm = async () => {
+  const getForm = async (projectId) => {
     try {
-      const response = await doGET("/project/666de33f3d5ee559944dd6ad/Forms");
+      const response = await doGET(`/project/${projectId}/Forms`);
       setForms({
         first: response?.[0] ?? [],
         second: response?.[1] ?? [],
@@ -24,7 +25,17 @@ function LandingPage() {
     }
   };
 
-  const handleSubmit = async (e, form, formData) => {
+  const getProjectDomain = async () => {
+    try {
+      const response = await doGET(`/projectDomain?domain=${window?.location?.hostname}`);
+      setProject(response)
+      getForm(response?._id)
+    } catch (error) {
+      console.error("Error fetching form:", error);
+    }
+  };
+
+  const handleSubmit = async (e, form, formData, phone = null) => {
     e.preventDefault();
     try {
       setLoading(true);
@@ -38,7 +49,7 @@ function LandingPage() {
       const utmParameters = getUTMParameters();
 
       // Send form data to backend
-      let response = await doPOST("/addFormValue", { formId, values, projectId: "666de33f3d5ee559944dd6ad", utmParameters });
+      let response = await doPOST("/addFormValue", { formId, values, projectId: project?._id, utmParameters, ...(phone && { phone }) });
 
       // Handle response
       if (response.success) {
@@ -55,8 +66,9 @@ function LandingPage() {
     }
   };
 
+
   useEffect(() => {
-    getForm()
+    getProjectDomain()
   }, [])
   return (
     <>
