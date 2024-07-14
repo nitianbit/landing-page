@@ -11,7 +11,7 @@ const AboutUs = () => {
                 </div>
                 {/* Paragraph */}
                 <div className="w-full md:w-7/10 bg-[#ffcd73]" style={{ maxHeight: "52vh" }}>
-                    <p className="text-gray-900 text-md sm:text-2xl p-20">
+                    <p className="text-gray-900 text-sm sm:text-xl p-20">
                         Welcome to <span className="font-bold">KAN Properties</span>, your trusted partner in real estate consultancy.
                         With years of experience and a deep understanding of the market, we offer personalized, transparent, and professional solutions for all your real estate needs. Whether you're buying, selling, investing, or managing property, our expert team is dedicated to ensuring you achieve your goals with confidence and ease.
                         <br />
@@ -28,7 +28,7 @@ const AboutUs = () => {
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-stretch">
                         <div className="flex justify-center">
-                            <Card href="#" className="max-w-sm h-full bg-[#ffcd73]">
+                            <Card className="max-w-sm h-full bg-[#ffcd73]">
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     Our Mission
                                 </h5>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                             </Card>
                         </div>
                         <div className="flex justify-center">
-                            <Card href="#" className="max-w-sm h-full bg-[#ffcd73]">
+                            <Card className="max-w-sm h-full bg-[#ffcd73]">
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     Our Services
                                 </h5>
