@@ -17,12 +17,17 @@ const Form1 = ({ form, handleSubmit }) => {
     };
 
     return (
-        <form>
+        <form onSubmit={(e) => {
+            handleSubmit(e, form, data, phoneNo).then(res => {
+                res && setData({})
+            })
+        }}>
             {form?.fields?.map((field, index) => {
                 return field?.type === "select" ? (
                     <div className="mb-6" key={`${field?._id}-${index}`}>
                         <select
                             value={data[field?.label] || ''}
+                            required={true}
                             onChange={(e) => handleInputChange(field?.label, e.target.value)}
                             id={field?.label.toLowerCase()}
                             className="mt-1 block w-full px-3 py-2 border border-[#dddcdb] rounded-2xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-[#f6f2ec]"
@@ -38,6 +43,7 @@ const Form1 = ({ form, handleSubmit }) => {
                         <input
                             value={data[field?.label] || ''}
                             onChange={(e) => handleInputChange(field?.label, e.target.value, field?.type)}
+                            required={true}
                             type={field?.type}
                             id={field?.label.toLowerCase()}
                             className="mt-1 block w-full px-3 py-2 border border-[#dddcdb] rounded-2xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-[#f6f2ec]"
@@ -57,11 +63,11 @@ const Form1 = ({ form, handleSubmit }) => {
                 </label>
             </div> */}
             <button
-                onClick={(e) => {
-                    handleSubmit(e, form, data, phoneNo).then(res => {
-                        res && setData({})
-                    })
-                }}
+                // onClick={(e) => {
+                //     handleSubmit(e, form, data, phoneNo).then(res => {
+                //         res && setData({})
+                //     })
+                // }}
                 type="submit"
                 className="w-full bg-[#ffcd73] text-black text-xl py-2 px-4 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >

@@ -14,12 +14,17 @@ const Form3 = ({ form, handleSubmit }) => {
         console.log(form)
     }, [])
     return (
-        <form className=''>
+        <form className='' onSubmit={(e) => {
+            handleSubmit(e, form, data).then(res => {
+                res && setData({})
+            })
+        }}>
             {form?.fields?.map((field, index) => {
                 return (
                     <div className="mb-6" key={`${field?._id}-${index}`}>
                         {field?.type === "textarea" ? (
                             <textarea
+                                required={true}
                                 value={data[field?.label] || ''}
                                 onChange={(e) => handleInputChange(field?.label, e.target.value)}
                                 id={field?.label.toLowerCase()}
@@ -29,6 +34,7 @@ const Form3 = ({ form, handleSubmit }) => {
                             ></textarea>
                         ) : (
                             <input
+                                required={true}
                                 value={data[field?.label] || ''}
                                 onChange={(e) => handleInputChange(field?.label, e.target.value)}
                                 type={field?.type}
@@ -41,11 +47,11 @@ const Form3 = ({ form, handleSubmit }) => {
                 );
             })}
             <button
-                onClick={(e) => {
-                    handleSubmit(e, form, data).then(res => {
-                        res && setData({})
-                    })
-                }}
+                // onClick={(e) => {
+                //     handleSubmit(e, form, data).then(res => {
+                //         res && setData({})
+                //     })
+                // }}
                 type="submit"
                 className="w-full bg-[#e9825c] text-white py-3 px-6 rounded-xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
