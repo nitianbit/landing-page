@@ -46,7 +46,7 @@ const Form1 = ({ form, handleSubmit }) => {
                     </div>
                 );
             })}
-            <div className="mb-6 flex items-center">
+            {/* <div className="mb-6 flex items-center">
                 <input
                     type="checkbox"
                     id="terms"
@@ -55,7 +55,7 @@ const Form1 = ({ form, handleSubmit }) => {
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
                     I agree to terms and conditions
                 </label>
-            </div>
+            </div> */}
             <button
                 onClick={(e) => {
                     handleSubmit(e, form, data, phoneNo).then(res => {
