@@ -53,7 +53,7 @@ const Form2 = ({ form, handleSubmit }) => {
                                     <div className="relative mb-4 mr-4 flex-grow" key={`${field?._id}-${index}`}>
                                         {field?.label === "Mobile Number" ? (
                                             <div className="relative">
-                                                <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-500">+91 |</span>
+                                                {/* <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-500">+91 |</span> */}
                                                 <input
                                                     required={true}
                                                     value={data[field?.label] || ''}
