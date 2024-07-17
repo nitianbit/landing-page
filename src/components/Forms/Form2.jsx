@@ -63,9 +63,9 @@ const Form2 = ({ form, handleSubmit }) => {
                                                     className="block w-full px-4 pt-6 pb-2 border border-gray-100 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-[#f6f2ec]"
                                                     placeholder=" "
                                                 />
-                                                <label htmlFor={field?.label.toLowerCase()} className="absolute top-0 left-0 pl-16 pt-2 text-gray-700 text-sm">
+                                                {/* <label htmlFor={field?.label.toLowerCase()} className="absolute top-0 left-0 pl-16 pt-2 text-gray-700 text-sm">
                                                     {field?.label}
-                                                </label>
+                                                </label> */}
                                             </div>
                                         ) : (
                                             <input
