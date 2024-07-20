@@ -11,7 +11,7 @@ const AboutUs = () => {
                 </div>
                 {/* Paragraph */}
                 <div className="w-full md:w-7/10 bg-[#ffcd73]" style={{ maxHeight: "52vh" }}>
-                    <p className="text-gray-900 text-sm sm:text-xl p-20">
+                    <p className="text-gray-900 text-sm sm:text-xl p-8 md:p-20">
                         Welcome to <span className="font-bold">KAN Properties</span>, your trusted partner in real estate consultancy.
                         With years of experience and a deep understanding of the market, we offer personalized, transparent, and professional solutions for all your real estate needs. Whether you're buying, selling, investing, or managing property, our expert team is dedicated to ensuring you achieve your goals with confidence and ease.
                         <br />
