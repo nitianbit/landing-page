@@ -15,12 +15,12 @@ const ProductPage = () => {
         try {
             const response = await doGET(`/product/${productId}`);
             setProduct(response)
-            const formsArray = Array.from({ length: 3 }, (_, index) => response?.forms?.find(form => form.formIndex === index) || []);
-
+            // const formsArray = Array.from({ length: 3 }, (_, index) => response?.forms?.find(form => form.formIndex === index) || []);
+             response?.forms?.sort((a, b) => a.formIndex - b.formIndex)
             setForms({
-                first: formsArray[0],
-                second: formsArray[1],
-                third: formsArray[2],
+                first: response.forms?.length?response.forms[0]:null,
+                second:  response.forms?.length>1?response.forms[1]:null,
+                // third: response[2],
             });
         } catch (error) {
             console.error("Error fetching form:", error);
@@ -40,7 +40,7 @@ const ProductPage = () => {
             const utmParameters = getUTMParameters();
 
             // Send form data to backend
-            let response = await doPOST("/addFormValue", { formId, values, refererId: productId, utmParameters, ...(phone && { phone }) });
+            let response = await doPOST("/addFormValue", { formId, values,projectId:product?.parent, refererId: productId, utmParameters, ...(phone && { phone }) });
 
             // Handle response
             if (response.success) {
