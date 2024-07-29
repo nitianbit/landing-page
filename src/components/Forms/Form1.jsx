@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Form1 = ({ form, handleSubmit }) => {
     const [data, setData] = useState({});
