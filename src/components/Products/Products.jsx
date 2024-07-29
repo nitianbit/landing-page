@@ -22,7 +22,7 @@ const Products = ({ project }) => {
     return (
         <>
             <Card
-                className="max-w-sm shadow-none border-none"
+                className="max-w-sm shadow-none border-none cursor-pointer"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc="https://i.ibb.co/10YBYbg/Screenshot-2024-06-27-at-10-38-03-AM.png"
                 onClick={() => navigate(`/product/${products[0]?._id}`)}
@@ -38,9 +38,10 @@ const Products = ({ project }) => {
                 </h3>
             </Card>
             <Card
-                className="max-w-sm shadow-none border-none"
+                className="max-w-sm shadow-none border-none cursor-pointer"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc="https://i.ibb.co/CKm1hMd/Screenshot-2024-06-27-at-10-38-19-AM.png"
+                onClick={() => navigate(`/product/${products[1]?._id}`)}
             >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                     MANSHA ORCHID PLOTS
@@ -54,9 +55,10 @@ const Products = ({ project }) => {
                 </h3>
             </Card>
             <Card
-                className="max-w-sm shadow-none border-none"
+                className="max-w-sm shadow-none border-none cursor-pointer"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc="https://i.ibb.co/DgKfqC9/Screenshot-2024-06-27-at-10-38-30-AM.png"
+                onClick={() => navigate(`/product/${products[2]?._id}`)}
             >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
 
