@@ -15,15 +15,20 @@ function LandingPage() {
   const getForm = async (projectId) => {
     try {
       const response = await doGET(`/project/${projectId}/Forms`);
+      response.sort((a, b) => a.formIndex - b.formIndex)
+
+      // const formsArray = Array.from({ length: 3 }, (_, index) => response.find(form => form.formIndex === index) || []);
+
       setForms({
-        first: response?.[0] ?? [],
-        second: response?.[1] ?? [],
-        third: response?.[2] ?? [],
-      })
+        first: response[0],
+        second: response[1],
+        third: response[2],
+      });
     } catch (error) {
-      console.error("Error fetching form:", error);
+      console.error("Error fetching forms:", error);
     }
   };
+
 
   const getProjectDomain = async () => {
     try {
@@ -73,7 +78,7 @@ function LandingPage() {
   return (
     <>
       <NavbarComponent />
-      <Home form={forms?.first} handleSubmit={handleSubmit} />
+      <Home form={forms?.first} project={project} handleSubmit={handleSubmit} />
       <Form2 form={forms?.second} handleSubmit={handleSubmit} />
       <AboutUs />
       <Contact form={forms?.third} handleSubmit={handleSubmit} />

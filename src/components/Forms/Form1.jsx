@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect, useState } from 'react';
 
 const Form1 = ({ form, handleSubmit }) => {
     const [data, setData] = useState({});
@@ -27,7 +28,7 @@ const Form1 = ({ form, handleSubmit }) => {
                     <div className="mb-6" key={`${field?._id}-${index}`}>
                         <select
                             value={data[field?.label] || ''}
-                            required={true}
+                            required={form?.requiredFields?.includes(field?._id) || false}
                             onChange={(e) => handleInputChange(field?.label, e.target.value)}
                             id={field?.label.toLowerCase()}
                             className="mt-1 block w-full px-3 py-2 border border-[#dddcdb] rounded-2xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-[#f6f2ec]"
@@ -43,7 +44,7 @@ const Form1 = ({ form, handleSubmit }) => {
                         <input
                             value={data[field?.label] || ''}
                             onChange={(e) => handleInputChange(field?.label, e.target.value, field?.type)}
-                            required={true}
+                            required={form?.requiredFields?.includes(field?._id) || false}
                             type={field?.type}
                             id={field?.label.toLowerCase()}
                             className="mt-1 block w-full px-3 py-2 border border-[#dddcdb] rounded-2xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-[#f6f2ec]"
