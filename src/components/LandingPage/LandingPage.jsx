@@ -15,13 +15,14 @@ function LandingPage() {
   const getForm = async (projectId) => {
     try {
       const response = await doGET(`/project/${projectId}/Forms`);
+      response.sort((a, b) => a.formIndex - b.formIndex)
 
-      const formsArray = Array.from({ length: 3 }, (_, index) => response.find(form => form.formIndex === index) || []);
+      // const formsArray = Array.from({ length: 3 }, (_, index) => response.find(form => form.formIndex === index) || []);
 
       setForms({
-        first: formsArray[0],
-        second: formsArray[1],
-        third: formsArray[2],
+        first: response[0],
+        second: response[1],
+        third: response[2],
       });
     } catch (error) {
       console.error("Error fetching forms:", error);
