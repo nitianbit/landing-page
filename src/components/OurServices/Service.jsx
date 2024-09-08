@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ServiceCard from './ServiceCard'
 import apartment from '../../assets/images/delhi.jpg'
+import "./styles.css"
 
 const Service = () => {
   const [data, setData] = useState([
@@ -37,27 +38,27 @@ const Service = () => {
     <div className='flex justify-center'>WHAT WE OFFER</div>
     <div className='text-3xl flex justify-center font-bold pb-8'>Featured Properties</div>
     
-      <div className="w-full overflow-x-auto">
+    <div className="w-full overflow-x-auto scrollbar-hide">
         <div className="flex space-x-4">
           <div className='flex flex-col'>
 
-             <div className="flex flex-row space-x-4 gap-5 mb-10">
+            <div className="flex flex-row space-x-4 gap-4 mb-5">
               {data.map((item, index) => (
-                index % 2 === 0 && (  
+                index % 2 === 0 && (
                   <ServiceCard text={item.title} key={index} />
                 )
               ))}
             </div>
-             <div className="flex flex-row space-x-4 gap-5">
+            <div className="flex flex-row space-x-4 gap-4 mb-5">
               {data.map((item, index) => (
-                index % 2 !== 0 && (  
+                index % 2 !== 0 && (
                   <ServiceCard text={item.title} key={index} />
                 )
               ))}
             </div>
           </div>
         </div>
-</div>
+      </div>
 
        
  
