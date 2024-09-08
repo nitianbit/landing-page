@@ -4,7 +4,7 @@ import Form3 from './Forms/Form3'
 
 const Contact = ({ form, handleSubmit }) => {
     return (
-        <div>
+        <div id='contact-form'>
             <div className=" flex flex-col md:flex-row bg-gray-100">
                 <div className="w-full md:w-1/2 bg-[#ffcd73] flex flex-col px-10 sm:px-0  py-12">
                     <h2 className="text-4xl font-bold mb-8 mx-auto">Have Any Question?</h2>
