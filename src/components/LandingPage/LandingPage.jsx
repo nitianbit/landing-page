@@ -2,14 +2,18 @@ import { Footer } from "flowbite-react";
 import NavbarComponent from '../Navbar.jsx'
 import Home from '../Home.jsx';
 import Form2 from '../Forms/Form2.jsx';
-import AboutUs from "../AboutUs.jsx";
 import Contact from "../Contact.jsx";
 import { doGET, doPOST } from "../../utils/HttpUtils.js";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { getUTMParameters } from "../../utils/helper.js";
+import Cities from "../Cities/Cities.jsx";
+import Form1Section from "../Forms/Form1Section.jsx";
+import AboutUs from "../AboutUs/AboutUs.jsx";
+import { useUserContext } from "../../context/UserContext.jsx";
 function LandingPage() {
+  const { project, setProject } = useUserContext()
   const [forms, setForms] = useState(null)
-  const [project, setProject] = useState(null)
+  // const [project, setProject] = useState(null)
   const [loading, setLoading] = useState(false);
 
   const getForm = async (projectId) => {
@@ -78,9 +82,11 @@ function LandingPage() {
   return (
     <>
       <NavbarComponent />
-      <Home form={forms?.first} project={project} handleSubmit={handleSubmit} />
+      <Form1Section form={forms?.first} handleSubmit={handleSubmit} />
+      <AboutUs/>
       <Form2 form={forms?.second} handleSubmit={handleSubmit} />
-      <AboutUs />
+      <Cities/>
+      <Home form={forms?.first} project={project} handleSubmit={handleSubmit} />
       <Contact form={forms?.third} handleSubmit={handleSubmit} />
     </>
   );
