@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage.jsx';
-import ProductPage from './components/Products/ProductPage.jsx';
+import ProductPage from './components/Products/ProductPage/ProductPage.jsx';
+import AllProductPage from './components/Products/AllProductPage.jsx';
+import AboutUs from './components/AboutUs/AboutUsPage.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +14,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/product/:productId" element={<ProductPage />} />
+        <Route path="/products" element={<AllProductPage />} />
       </Routes>
     </Router>
   );
