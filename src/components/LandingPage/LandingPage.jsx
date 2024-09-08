@@ -8,8 +8,8 @@ import {  useEffect, useState } from "react";
 import { getUTMParameters } from "../../utils/helper.js";
 import Cities from "../Cities/Cities.jsx";
 import Form1Section from "../Forms/Form1Section.jsx";
-import AboutUs from "../AboutUs/AboutUs.jsx";
 import { useUserContext } from "../../context/UserContext.jsx";
+import Service from "../OurServices/Service.jsx";
 function LandingPage() {
   const { project, setProject } = useUserContext()
   const [forms, setForms] = useState(null)
@@ -83,7 +83,7 @@ function LandingPage() {
     <>
       <NavbarComponent />
       <Form1Section form={forms?.first} handleSubmit={handleSubmit} />
-      <AboutUs/>
+      <Service/>
       <Form2 form={forms?.second} handleSubmit={handleSubmit} />
       <Cities/>
       <Home form={forms?.first} project={project} handleSubmit={handleSubmit} />
