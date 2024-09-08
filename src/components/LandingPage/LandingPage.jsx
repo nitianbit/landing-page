@@ -81,7 +81,6 @@ function LandingPage() {
   }, [])
   return (
     <>
-      <NavbarComponent />
       <Form1Section form={forms?.first} handleSubmit={handleSubmit} />
       <Service/>
       <Form2 form={forms?.second} handleSubmit={handleSubmit} />
