@@ -6,12 +6,14 @@ import LandingPage from './components/LandingPage/LandingPage.jsx';
 import ProductPage from './components/Products/ProductPage/ProductPage.jsx';
 import AllProductPage from './components/Products/AllProductPage.jsx';
 import AboutUs from './components/AboutUs/AboutUsPage.jsx';
+import NavbarComponent from './components/Navbar.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <Router>
+      <NavbarComponent />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" element={<AboutUs />} />
