@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '../Button/Button';
+import { FaArrowRight } from "react-icons/fa";
 
 const Form2 = ({ form, handleSubmit }) => {
     const [data, setData] = useState({});
@@ -85,7 +87,12 @@ const Form2 = ({ form, handleSubmit }) => {
                                 );
                             })}
                             <div className="flex items-center">
-                                <button
+                                <Button
+                                className="font-rasputin"
+                                text={
+                                    <FaArrowRight />
+                                }/>
+                                {/* <button
                                     // onClick={(e) => {
                                     //     handleSubmit(e, form, data).then(res => {
                                     //         res && setData({})
@@ -108,7 +115,7 @@ const Form2 = ({ form, handleSubmit }) => {
                                             d="M5 12h14M12 5l7 7-7 7"
                                         />
                                     </svg>
-                                </button>
+                                </button> */}
                             </div>
                         </form>
                     </div>
