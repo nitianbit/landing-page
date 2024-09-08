@@ -3,7 +3,7 @@ import delhi from '../../assets/images/delhi.jpg'
 
 const CitiesCard = ({cityName}) => {
   return (
-    <div className='flex-1 w-1/5 border p-4 flex flex-col justify-center'>
+    <div className='h-48 w-64 object-cover flex-1  border p-4 flex flex-col justify-center'>
         <img  style={{
             aspectRatio:1
         }} src={delhi}/>
