@@ -11,24 +11,32 @@ const NavbarComponent = () => {
 
   return (
     <Navbar fluid rounded className='ml-10 mr-10'>
-      <NavbarBrand href="">
+      <NavbarBrand>
         <img src="https://i.ibb.co/3c47Ccs/Screenshot-2024-06-25-at-9-34-14-AM.png" className="mr-3 h-16 sm:h-20" alt="Flowbite React Logo" />
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
-        <NavbarLink className='text-xl font-bold' href="#">
+        <NavbarLink className='text-xl font-bold cursor-pointer' onClick={()=>{
+          navigate("/")
+        }}>
           Home
         </NavbarLink>
-        <NavbarLink className='text-xl font-bold' onClick={()=>{
+        <NavbarLink className='text-xl font-bold cursor-pointer' onClick={()=>{
           navigate("/about-us")
         }}>
           About Us
         </NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">For Buyers</NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">For Builders/Dealers</NavbarLink>
-        <NavbarLink className='text-xl font-bold'>
-          <Button className="px-4 font-rasputin" text="Schedule a Call" onClick={scrollToElement}/>
-        </NavbarLink>
+        <NavbarLink className='text-xl font-bold cursor-pointer' onClick={()=>{
+          navigate("/products")
+        }}>For Buyers</NavbarLink>
+        <NavbarLink className='text-xl font-bold cursor-pointer' onClick={()=>{
+          navigate("/")
+        }}>For Builders/Dealers</NavbarLink>
+        {/* <NavbarLink className='text-xl font-bold cursor-pointer'> */}
+          <Button className="px-4 font-rasputin" text="Contact Us" onClick={()=>{
+          navigate("/conact-us")
+        }}/>
+        {/* </NavbarLink> */}
       </NavbarCollapse>
     </Navbar>
   )
