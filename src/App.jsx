@@ -7,6 +7,7 @@ import ProductPage from './components/Products/ProductPage/ProductPage.jsx';
 import AllProductPage from './components/Products/AllProductPage.jsx';
 import AboutUs from './components/AboutUs/AboutUsPage.jsx';
 import NavbarComponent from './components/Navbar.jsx';
+import Contact from './components/ContactUs/Contact.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/product/:productId" element={<ProductPage />} />
         <Route path="/products" element={<AllProductPage />} />
+        <Route path="/conact-us" element={<Contact />} />
       </Routes>
     </Router>
   );
