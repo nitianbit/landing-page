@@ -1,5 +1,14 @@
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import Button from "./Button/Button";
+import { useNavigate } from "react-router-dom";
 const NavbarComponent = () => {
+  const navigate = useNavigate()
+
+  const scrollToElement = () => {
+    const element = document.getElementById('contact-form');
+    window.scrollBy({ top: element.offsetTop, behavior: 'smooth' });
+  };
+
   return (
     <Navbar fluid rounded className='ml-10 mr-10'>
       <NavbarBrand href="">
@@ -10,12 +19,16 @@ const NavbarComponent = () => {
         <NavbarLink className='text-xl font-bold' href="#">
           Home
         </NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">
-          About
+        <NavbarLink className='text-xl font-bold' onClick={()=>{
+          navigate("/about-us")
+        }}>
+          About Us
         </NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">Services</NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">Pricing</NavbarLink>
-        <NavbarLink className='text-xl font-bold' href="#">Contact</NavbarLink>
+        <NavbarLink className='text-xl font-bold' href="#">For Buyers</NavbarLink>
+        <NavbarLink className='text-xl font-bold' href="#">For Builders/Dealers</NavbarLink>
+        <NavbarLink className='text-xl font-bold'>
+          <Button className="px-4 font-rasputin" text="Schedule a Call" onClick={scrollToElement}/>
+        </NavbarLink>
       </NavbarCollapse>
     </Navbar>
   )
