@@ -73,7 +73,6 @@ const ProductPage = () => {
     }
     return (
         <>
-            <NavbarComponent />
             <Form1Section isFormNeeded={true} form={forms?.first} handleSubmit={handleSubmit} />
             <ProductPhotoSection/>
             <AboutProduct productName="Universal Square by Auric Group"/>
