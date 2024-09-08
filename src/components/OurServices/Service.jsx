@@ -1,27 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ServiceCard from './ServiceCard'
+import apartment from '../../assets/images/delhi.jpg'
 
 const Service = () => {
+  const [data, setData] = useState([
+    { title: 'Residential Apartments', src: apartment },
+    { title: 'Residential Flats', src: apartment },
+    { title: 'Residential Builder Floors', src: apartment },
+    { title: 'Residential Duplex', src: apartment },
+    { title: 'Residential Vilas', src: apartment },
+    { title: 'Residential Plots', src: apartment },
+    { title: 'Residential Offices', src: apartment },
+    { title: 'Residential Shops', src: apartment },
+
+    { title: 'Residential Apartments', src: apartment },
+    { title: 'Residential Flats', src: apartment },
+    { title: 'Residential Builder Floors', src: apartment },
+    { title: 'Residential Duplex', src: apartment },
+    { title: 'Residential Vilas', src: apartment },
+    { title: 'Residential Plots', src: apartment },
+    { title: 'Residential Offices', src: apartment },
+    { title: 'Residential Shops', src: apartment },
+
+    { title: 'Residential Apartments', src: apartment },
+    { title: 'Residential Flats', src: apartment },
+    { title: 'Residential Builder Floors', src: apartment },
+    { title: 'Residential Duplex', src: apartment },
+    { title: 'Residential Vilas', src: apartment },
+    { title: 'Residential Plots', src: apartment },
+    { title: 'Residential Offices', src: apartment },
+    { title: 'Residential Shops', src: apartment },
+  ]);
+
   return (
     <div className='p-6'>
     <div className='flex justify-center'>WHAT WE OFFER</div>
     <div className='text-3xl flex justify-center font-bold pb-8'>Featured Properties</div>
+    
+      <div className="w-full overflow-x-auto">
+        <div className="flex space-x-4">
+          <div className='flex flex-col'>
 
-    <div class="grid gap-4 mx-8">
-      <div class="flex justify-center gap-3">
-        <ServiceCard text="Residential Apartments"/>
-        <ServiceCard text="Residential Flats"/>
-        <ServiceCard text="Residential Builder Floors"/>
-        <ServiceCard text="Residential Duplex"/>
-        {/* <ServiceCard text="Shop-Cum Offices"/> */}
-      </div>
-      <div class="flex justify-center gap-4">
-        <ServiceCard text="Residential Vilas"/>
-        <ServiceCard text="Residential Plots"/>
-        <ServiceCard text="Commercial Offices"/>
-        <ServiceCard text="Commercial Shops"/>
-      </div>
-    </div>
+             <div className="flex flex-row space-x-4 gap-5 mb-10">
+              {data.map((item, index) => (
+                index % 2 === 0 && (  
+                  <ServiceCard text={item.title} key={index} />
+                )
+              ))}
+            </div>
+             <div className="flex flex-row space-x-4 gap-5">
+              {data.map((item, index) => (
+                index % 2 !== 0 && (  
+                  <ServiceCard text={item.title} key={index} />
+                )
+              ))}
+            </div>
+          </div>
+        </div>
+</div>
+
+       
+ 
+     
+
   </div>
   )
 }
