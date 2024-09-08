@@ -12,7 +12,11 @@ export default {
       width: {
         '7/10': '70%',
         '3/10': '30%',
-      }
+      },
+      scrollBehavior: 'smooth',
+      fontFamily: {
+        rasputin: ['Rasputin', 'sans-serif'], 
+      },
     },
   },
   plugins: [
