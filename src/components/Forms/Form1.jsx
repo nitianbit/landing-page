@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
+import Button from '../Button/Button';
 
 const Form1 = ({ form, handleSubmit }) => {
     const [data, setData] = useState({});
@@ -63,17 +64,11 @@ const Form1 = ({ form, handleSubmit }) => {
                     I agree to terms and conditions
                 </label>
             </div> */}
-            <button
-                // onClick={(e) => {
-                //     handleSubmit(e, form, data, phoneNo).then(res => {
-                //         res && setData({})
-                //     })
-                // }}
+            <Button
+                text="Schedule a Call"
                 type="submit"
-                className="w-full bg-[#ffcd73] text-black text-xl py-2 px-4 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-                Schedule a Call
-            </button>
+                className="px-6"
+            />
         </form>
     );
 };
