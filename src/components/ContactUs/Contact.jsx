@@ -1,42 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { doGET, doPOST } from '../../utils/HttpUtils';
 import ContactForm from './ContactForm';
+import { CONTACTENDPOINTS } from './constant';
+import { useUserContext } from '../../context/UserContext';
+// import { handleSubmit } from '../Forms/FormHelper';
 
 const Contact = () => {
     const [form, setForm] = useState(null)
+    const { project } = useUserContext()
+    const [loading, setLoading] = useState(false);
+
     const getForm = async (projectId) => {
         try {
-            const response = await doGET(`/project/${projectId}/Forms`);
+            const query = `type=contact&projectId=${projectId}`
+            const response = await doGET(CONTACTENDPOINTS.getContactForm(query));
             setForm(response);
         } catch (error) {
             console.error("Error fetching forms:", error);
         }
     };
-
-    const handleSubmit = async (e, form, formData, phone = null) => {
-        e.preventDefault();
-        try {
-          setLoading(true);
-        let response = await doPOST("/addFormValue", form);
     
-          // Handle response
-          if (response.success) {
-            console.log("Form submitted successfully:", response);
-          } else {
-            console.error("Error submitting form:", response.error);
-          }
-          return true
-        } catch (error) {
-          console.error("Error submitting form:", error);
-          return false
-        } finally {
-          setLoading(false);
-        }
-      };
-
     useEffect(() => {
-        getForm()
-    }, [])
+        if(project){
+            getForm(project?._id)
+        }
+    }, [project])
 
     return (
         <div id='contact-form'>
@@ -60,7 +48,7 @@ const Contact = () => {
                 <div className="w-full md:w-1/2 bg-[#ffcd73] flex flex-col px-10 sm:px-0  py-12">
                     <h2 className="text-4xl font-bold mb-8 mx-auto">Have Any Question?</h2>
                     <div className="w-full max-w-lg mx-auto">
-                        <ContactForm form={form} handleSubmit={handleSubmit} />
+                        <ContactForm form={form}/>
                     </div>
                 </div>
             </div>
