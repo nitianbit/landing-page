@@ -26,8 +26,7 @@ const Service = () => {
 
   return (
     <div className='p-6'>
-    <div className='flex justify-center'>WHAT WE OFFER</div>
-    <div className='text-3xl flex justify-center font-bold pb-8'>Featured Properties</div>
+     <div className='text-3xl flex justify-center font-bold pb-8'>Popular Cities</div>
     
     <div className="w-full overflow-x-auto scrollbar-hide">
         <div className="flex space-x-4">
