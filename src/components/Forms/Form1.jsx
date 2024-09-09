@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
+import { handleSubmit } from './FormHelper';
 
-const Form1 = ({ form, handleSubmit }) => {
+const Form1 = ({ form }) => {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
     const [phoneNo, setPhoneNo] = useState(null)
@@ -20,7 +21,7 @@ const Form1 = ({ form, handleSubmit }) => {
 
     return (
         <form onSubmit={(e) => {
-            handleSubmit(e, form, data, phoneNo).then(res => {
+            handleSubmit(e, formData = form, data, phoneNo).then(res => {
                 res && setData({})
             })
         }}>
