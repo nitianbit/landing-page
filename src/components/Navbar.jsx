@@ -30,7 +30,7 @@ const NavbarComponent = () => {
           navigate("/products")
         }}>For Buyers</NavbarLink>
         <NavbarLink className='text-xl font-bold cursor-pointer' onClick={()=>{
-          navigate("/")
+          navigate("/clients")
         }}>For Builders/Dealers</NavbarLink>
         {/* <NavbarLink className='text-xl font-bold cursor-pointer'> */}
           <Button className="px-4 font-rasputin" text="Contact Us" onClick={()=>{
