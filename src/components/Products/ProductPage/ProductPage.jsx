@@ -1,7 +1,4 @@
-
 import React, { useEffect, useState } from 'react'
-import NavbarComponent from '../../Navbar'
-import Contact from '../../Contact'
 import { useParams } from 'react-router-dom'
 import { doGET, doPOST } from '../../../utils/HttpUtils'
 import { getUTMParameters } from '../../../utils/helper'
