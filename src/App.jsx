@@ -8,7 +8,7 @@ import AllProductPage from './components/Products/AllProductPage.jsx';
 import AboutUs from './components/AboutUs/AboutUsPage.jsx';
 import NavbarComponent from './components/Navbar.jsx';
 import Contact from './components/ContactUs/Contact.jsx';
-import Client from './components/Clients/Client.jsx';
+import Client from './components/Clients/Clients.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
