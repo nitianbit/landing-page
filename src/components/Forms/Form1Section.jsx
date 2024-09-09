@@ -15,7 +15,7 @@ const Form1Section = ({ form, handleSubmit, isFormNeeded=false }) => {
 
             {/* Form Section */}
            {isFormNeeded && <div className="w-full md:w-3/10 bg-[#f6f2ec] p-8 overflow-auto border-b border-black" style={{ maxHeight: "85vh" }}>
-                <h2 className="text-2xl mb-6 p-4">Let's Find Your Dream Properties, Request a Callback</h2>
+                <h3 className="text-xl mb-6 p-4">GENERATE HIGHT QUALITY LEADS FOR REAL ESTATE</h3>
                 <Form1 form={form} handleSubmit={handleSubmit} />
             </div>}
         </div>
