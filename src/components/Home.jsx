@@ -7,7 +7,7 @@ import { doGET } from "../utils/HttpUtils";
 import { Link, useNavigate } from "react-router-dom";
 import productService from "./Products/productService";
 import Button from "./Button/Button";
-const Home = ({ form, project, handleSubmit }) => {
+const Home = ({  project}) => {
     const navigate = useNavigate();
     const [products, setProducts] = useState(null)
     const getProducts = async (projectId) => {
