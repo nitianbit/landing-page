@@ -9,6 +9,8 @@ import AboutUs from './components/AboutUs/AboutUsPage.jsx';
 import NavbarComponent from './components/Navbar.jsx';
 import Contact from './components/ContactUs/Contact.jsx';
 import Client from './components/Clients/Clients.jsx';
+import Footer from './components/Footer/index.jsx';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +26,7 @@ function App() {
         <Route path="/conact-us" element={<Contact />} />
         <Route path="/clients" element={<Client />} />
       </Routes>
+        <Footer />
     </Router>
   );
 }
