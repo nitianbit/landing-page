@@ -1,13 +1,15 @@
-import React from 'react'
-import delhi from '../../assets/images/delhi.jpg'
 
-const CitiesCard = ({cityName}) => {
+import React from 'react'
+import apartment from '../../assets/images/delhi.jpg'
+import "./styles.css"
+
+const CitiesCard = ({text}) => {
   return (
-    <div className='h-48 w-64 object-cover flex-1  border p-4 flex flex-col justify-center'>
-        <img  style={{
+    <div className="flex-1 p-4 service-image">
+         <img  style={{
             aspectRatio:1
-        }} src={delhi}/>
-        <div className='flex justify-center font-medium mt-2'>{cityName}</div>
+        }} src={apartment}/>
+        <div className='flex justify-center font-medium mt-2'>{text}</div>
     </div>
   )
 }
