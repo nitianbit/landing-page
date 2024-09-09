@@ -7,7 +7,6 @@ import Cities from "../Cities/Cities.jsx";
 import Form1Section from "../Forms/Form1Section.jsx";
 import { useUserContext } from "../../context/UserContext.jsx";
 import Service from "../OurServices/Service.jsx";
-import { LandingPageENDPOINTS } from './constant.js';
 function LandingPage() {
   const { project, setProject } = useUserContext()
   const [forms, setForms] = useState(null)
