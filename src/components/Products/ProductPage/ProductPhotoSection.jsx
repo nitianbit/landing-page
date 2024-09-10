@@ -1,22 +1,37 @@
-import React from 'react'
+
+
+import React from 'react';
 
 const ProductPhotoSection = () => {
-    return (
-        <div className="border-t border-b p-6">
-            <div className='text-3xl flex justify-center font-bold pb-8'>More Photos</div>
-            <div class="grid gap-4 grid-flow-col overflow-x-auto horizontal-scroll">
-                <img src="image1.jpg" class="h-48 w-64 object-cover" alt="Image 1" />
-                <img src="image2.jpg" class="h-48 w-64 object-cover" alt="Image 2" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-                <img src="image3.jpg" class="h-48 w-64 object-cover" alt="Image 3" />
-            </div>
-        </div>
-    )
-}
+  const images = [
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png",
+    "https://www.w3schools.com/html/images/13_html_images.png"
+  ];
 
-export default ProductPhotoSection
+  return (
+    <div className="px-4 py-8 md:px-12 lg:px-24">
+      <h2 className="text-3xl font-semibold mb-8">Universal Square Photos</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {images.map((src, index) => (
+          <div key={index} className="rounded-lg overflow-hidden">
+            <img
+              src={src}
+              alt={`Universal Square Photo ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProductPhotoSection;

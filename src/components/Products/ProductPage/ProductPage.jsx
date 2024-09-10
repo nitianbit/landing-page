@@ -5,12 +5,17 @@ import { getUTMParameters } from '../../../utils/helper'
 import Form1Section from '../../Forms/Form1Section'
 import './style.css'
 import ProductPhotoSection from './ProductPhotoSection'
-import AboutProduct from './AboutProduct'
-import ProductOverView from './ProductOverView'
+  import ProductBasics from '../components/ProductBasics'
+import { productData } from './data'
+import Amenities from '../components/Amenities'
+import LocationAdvantages from '../components/LocalAdvantages'
+import Highlights from '../components/Highlights'
+import AboutProject from '../components/AboutProject'
+import AboutDeveloper from '../components/AboutDeveloper'
 
 const ProductPage = () => {
     const { productId } = useParams();
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState(productData)
     const [forms, setForms] = useState(null)
 
     const getProducts = async () => {
@@ -59,22 +64,27 @@ const ProductPage = () => {
         }
     };
 
-    useEffect(() => {
-        if (!product) {
-            getProducts()
-        }
-    }, [product])
+    // useEffect(() => {
+    //     if (!product) {
+    //         getProducts()
+    //     }
+    // }, [product])
 
-    if (!product || !forms) {
-        return <div>Loading ...</div>
-    }
+    // if (!product || !forms) {
+    //     return <div>Loading ...</div>
+    // }
+
     return (
         <>
             <Form1Section isFormNeeded={true} form={forms?.first} handleSubmit={handleSubmit} />
+            <ProductBasics data={product}/>
             <ProductPhotoSection/>
-            <AboutProduct productName="Universal Square by Auric Group"/>
-            <ProductOverView/>
-        </>
+            <Amenities/>
+            <LocationAdvantages/>
+            <Highlights />
+             <AboutProject {...product.about}/>
+             <AboutDeveloper {...product.aboutDeveloper}/>
+         </>
     )
 }
 
