@@ -15,6 +15,7 @@ const LocationAdvantages = ({ locationData }) => {
 
   return (
     <div className="px-4 py-8 md:px-12 lg:px-24">
+      <h3 className="text-2xl font-bold  mb-6">LOCATION ADVANTAGES</h3>
       {locationData?.type == "string" ?
         locationData?.data :
         locationData?.type == "html" ?
