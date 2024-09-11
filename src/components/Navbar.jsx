@@ -34,7 +34,7 @@ const NavbarComponent = () => {
         }}>For Builders/Dealers</NavbarLink>
         {/* <NavbarLink className='text-xl font-bold cursor-pointer'> */}
           <Button className="px-4 font-rasputin" text="Contact Us" onClick={()=>{
-          navigate("/contat-us")
+          navigate("/contact-us")
         }}/>
         {/* </NavbarLink> */}
       </NavbarCollapse>
