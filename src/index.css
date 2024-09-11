@@ -13,3 +13,7 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.default-background-color {
+  background-color:#64506b;
+}
