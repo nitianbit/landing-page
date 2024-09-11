@@ -45,8 +45,8 @@ const Contact = () => {
                         <p className="mb-2">Monday - Saturday 10:00 AM - 06:00 PM</p>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 bg-[#ffcd73] flex flex-col px-10 sm:px-0  py-12">
-                    <h2 className="text-4xl font-bold mb-8 mx-auto">Have Any Question?</h2>
+                <div className="w-full md:w-1/2 bg-[#ffcd73] flex flex-col px-10 sm:px-0  py-12 default-background-color">
+                    <h2 className="text-4xl font-bold  mb-8 mx-auto text-white">Have Any Question?</h2>
                     <div className="w-full max-w-lg mx-auto">
                         <ContactForm form={form}/>
                     </div>
