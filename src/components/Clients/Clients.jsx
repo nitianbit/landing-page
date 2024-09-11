@@ -3,10 +3,15 @@ import Form1Section from '../Forms/Form1Section'
 import { useUserContext } from '../../context/UserContext';
 import {CLIENTENDPOINTS} from './constant'
 import { doGET } from '../../utils/HttpUtils';
+import ClientAdvertisement from './ClientAdvertisement';
+import ClientBusiness from './ClientBusiness';
+import { clientData } from './data';
+import AboutUs from './AboutUs';
 
 const Client = () => {
   const { project, setProject } = useUserContext()
   const [form, setForm] = useState(null)
+  const [data, setData] = useState(clientData)
   const getForm = async (projectId) => {
     try {
       const query = `type=client&projectId=${projectId}`;
@@ -26,8 +31,11 @@ const Client = () => {
   }, [project])
 
   return (
-    <div>
+    <div x>
         <Form1Section  form={form} isFormNeeded={true}/>
+        <ClientAdvertisement/>
+        <ClientBusiness data={data}/>
+        <AboutUs/>
     </div>
   )
 }
