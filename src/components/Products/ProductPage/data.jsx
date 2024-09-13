@@ -214,3 +214,6 @@ export const productData2 = {
         `
     },
 }
+
+
+export const PRODUCTS=[productData,productData2]
