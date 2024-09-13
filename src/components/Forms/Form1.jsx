@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
+import Button from '../Button/Button';
+import { handleSubmit } from './FormHelper';
+import { useUserContext } from '../../context/UserContext';
 
-const Form1 = ({ form, handleSubmit }) => {
+const Form1 = ({ form }) => {
     const [data, setData] = useState({});
+    const {project} = useUserContext()
     const [loading, setLoading] = useState(false);
     const [phoneNo, setPhoneNo] = useState(null)
 
@@ -19,9 +23,12 @@ const Form1 = ({ form, handleSubmit }) => {
 
     return (
         <form onSubmit={(e) => {
-            handleSubmit(e, form, data, phoneNo).then(res => {
-                res && setData({})
-            })
+            // handleSubmit(e, formData = form, data, phoneNo).then(res => {
+            //     res && setData({})
+            // })
+            handleSubmit({ e, form, formData: data, phone: phoneNo, project }).then(res => {
+                    res && setData({})
+                })
         }}>
             {form?.fields?.map((field, index) => {
                 return field?.type === "select" ? (
@@ -63,17 +70,11 @@ const Form1 = ({ form, handleSubmit }) => {
                     I agree to terms and conditions
                 </label>
             </div> */}
-            <button
-                // onClick={(e) => {
-                //     handleSubmit(e, form, data, phoneNo).then(res => {
-                //         res && setData({})
-                //     })
-                // }}
+            <Button
+                text="Schedule a Call"
                 type="submit"
-                className="w-full bg-[#ffcd73] text-black text-xl py-2 px-4 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-                Schedule a Call
-            </button>
+                className="px-6"
+            />
         </form>
     );
 };

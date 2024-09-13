@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Button from '../Button/Button';
 
 const Form3 = ({ form, handleSubmit }) => {
     const [data, setData] = useState({});
@@ -46,17 +47,16 @@ const Form3 = ({ form, handleSubmit }) => {
                     </div>
                 );
             })}
-            <button
-                // onClick={(e) => {
-                //     handleSubmit(e, form, data).then(res => {
-                //         res && setData({})
-                //     })
-                // }}
+            <Button
+
+            text="Schedule a Call"
+            style={{
+                backgroundColor:'white',
+                color:"black"
+            }}
                 type="submit"
-                className="w-full bg-[#e9825c] text-white py-3 px-6 rounded-xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-                Schedule a Meeting
-            </button>
+                className="px-6"
+            />
         </form>
     )
 }
