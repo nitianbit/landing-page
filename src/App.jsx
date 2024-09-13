@@ -19,7 +19,8 @@ function App() {
   return (
     <Router>
       <NavbarComponent />
-      <Routes>
+      <div className='px-4 py-8 md:px-12 lg:px-15'>
+      <Routes >
         <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/product/:productId" element={<ProductPage />} />
@@ -28,6 +29,7 @@ function App() {
         <Route path="/clients" element={<Client />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
+      </div>
         <Footer />
     </Router>
   );
