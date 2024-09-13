@@ -88,7 +88,7 @@ console.log({productId})
 
     return (
         <>
-            <Form1Section isFormNeeded={true} form={forms?.first} />
+            <Form1Section isFormNeeded={true} form={forms?.first} src={product?.src}/>
             <ProductBasics data={product} />
             <ProductPhotoSection images={product?.photos} title={product?.title}/>
             <Amenities amenities={product?.amenities} title={product?.title} />
