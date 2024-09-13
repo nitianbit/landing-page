@@ -3,7 +3,7 @@ import React from 'react';
 
 const Item = ({ time, description }) => (
   <div className="flex items-center space-x-4 mb-4">
-    <div className="w-16 h-16 rounded-full bg-purple-800 flex items-center justify-center flex-shrink-0">
+    <div className="w-16 h-16 rounded-full bg-purple-800 flex items-center justify-center flex-shrink-0" style={{backgroundColor:"#64506b"}}>
       <span className="text-white text-xl font-bold">{time}</span>
     </div>
     <p className="text-sm leading-tight max-w-[200px]">{description}</p>
@@ -14,7 +14,7 @@ const LocationAdvantages = ({ locationData }) => {
 
 
   return (
-    <>
+    <div className='mt-8'>
       <h3 className="text-2xl font-bold  mb-6">LOCATION ADVANTAGES</h3>
       {locationData?.type == "string" ?
         locationData?.data :
@@ -27,7 +27,7 @@ const LocationAdvantages = ({ locationData }) => {
               )
               )}
             </div> : null}
-    </>
+    </div>
   );
 };
 
