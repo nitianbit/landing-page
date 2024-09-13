@@ -12,6 +12,7 @@ import LocationAdvantages from '../components/LocalAdvantages'
 import Highlights from '../components/Highlights'
 import AboutProject from '../components/AboutProject'
 import AboutDeveloper from '../components/AboutDeveloper'
+import FloorSection from './FloorSection'
 
 const ProductPage = () => {
     const { productId } = useParams();
@@ -64,8 +65,7 @@ const ProductPage = () => {
     //         // setLoading(false);
     //     }
     // };
-console.log({productId})
-    useEffect(() => {
+     useEffect(() => {
         if (productId && productId !== 'undefined') {
             setProduct(productData1)
         } else {
@@ -95,6 +95,7 @@ console.log({productId})
             <LocationAdvantages locationData={product?.locationAdvantages} />
             <Highlights highlights={product.highlights} />
             <AboutProject {...product.about} title={product?.title} />
+            {product?.floorPlans?.length && <FloorSection images={product?.floorPlans} title={product?.title}/>}
             <AboutDeveloper {...product.aboutDeveloper} developer={product?.developer}/>
         </>
     )
