@@ -49,6 +49,18 @@ import p2Image8 from '../../../assets/product/vista-corner/Vista Corner Floor Pl
 import p2Image9 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/9.png'
 import p2Image10 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/10.png'
 
+import Floor1 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/1.png'
+import Floor2 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/2.png'
+import Floor3 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/3.png'
+import Floor4 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/4.png'
+import Floor5 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/5.png'
+import Floor6 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/6.png'
+import Floor7 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/7.png'
+import Floor8 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/8.png'
+import Floor9 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/9.png'
+import Floor10 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/10.png'
+
+
 
 
 export const productData1 = {
@@ -271,6 +283,10 @@ export const productData2 = {
 
         `
     },
+    ,
+    floorPlans:[
+       Floor1,Floor2,Floor3,Floor4,Floor5,Floor6,Floor7,Floor8,Floor9,Floor10
+    ]
 }
 
 
