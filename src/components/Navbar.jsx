@@ -1,6 +1,7 @@
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import Button from "./Button/Button";
 import { useNavigate } from "react-router-dom";
+import AppIcon from "../assets/home/app-icon.jpeg"
 const NavbarComponent = () => {
   const navigate = useNavigate()
 
@@ -12,7 +13,7 @@ const NavbarComponent = () => {
   return (
     <Navbar fluid rounded className='ml-10 mr-10'>
       <NavbarBrand>
-        <img src="https://i.ibb.co/3c47Ccs/Screenshot-2024-06-25-at-9-34-14-AM.png" className="mr-3 h-16 sm:h-20" alt="Flowbite React Logo" />
+        <img src={AppIcon} className="mr-3 h-16 sm:h-20" alt="Flowbite React Logo" />
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
