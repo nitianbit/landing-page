@@ -8,7 +8,7 @@ import ekamProsperityHomes from '../../assets/home/hot-properties/EKAM by Prospe
 import manshaAffordable from '../../assets/home/hot-properties/MANSHA Affordable.png'
 import ProductCard from './ProductCard';
 
-const data = [{
+const getData =(products,navigate)=> [{
     heading1: "Universal Square By Auric",
     heading2: "Sector 79, Faridabad",
     heading3: "Commercial Offices/Shops",
@@ -60,7 +60,7 @@ const Products = ({ project }) => {
     }, [project?._id])
     return (
         <>
-         {data?.map((item, index)=>{
+         {products?.length && getData(products,navigate)?.map((item, index)=>{
             return <ProductCard heading1={item?.heading1} heading2={item?.heading2} heading3={item?.heading3} heading4={item?.heading4} src={item?.src} onClick={item?.onClick}/>
         })}
         </>
