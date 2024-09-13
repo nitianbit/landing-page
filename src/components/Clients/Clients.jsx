@@ -7,6 +7,8 @@ import ClientAdvertisement from './ClientAdvertisement';
 import ClientBusiness from './ClientBusiness';
 import { clientData } from './data';
 import AboutUs from './AboutUs';
+import Banner from "../../assets/builders-dealers/Top Banner.png"
+
 
 const Client = () => {
   const { project, setProject } = useUserContext()
@@ -32,7 +34,7 @@ const Client = () => {
 
   return (
     <div x>
-        <Form1Section  form={form} isFormNeeded={true}/>
+        <Form1Section  form={form} isFormNeeded={true} src={Banner}/>
         <ClientAdvertisement/>
         <ClientBusiness data={data}/>
         <AboutUs/>
