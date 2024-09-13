@@ -1,7 +1,9 @@
 import React from 'react'
 import Button from '../Button/Button'
+import { useNavigate } from 'react-router-dom'
 
 const AboutUs = () => {
+  const navigate = useNavigate()
   return (
     <div className='mx-6'>
       <h2 className='text-xl font-bold  mt-6 mb-3'>
@@ -25,7 +27,7 @@ const AboutUs = () => {
       <div className='font-bold'>
         Contact us now to supercharge your real estate business.</div>
          <Button className="px-4 my-6 font-rasputin" text="Schedule a Call" onClick={()=>{
-          navigate("/contat-us")
+          navigate("/contact-us")
         }}/>
     </div>
 
