@@ -1,6 +1,7 @@
 import React from 'react';
 import { PRODUCTS } from './ProductPage/data';
 import { useNavigate } from 'react-router-dom';
+import Button from '../Button/Button';
 
 
 const ProductCard = ({ product }) => {
@@ -41,8 +42,10 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="pt-4 ms-auto">
                 <p className="text-gray-700 mb-4 text-lg m-0 p-0">
-                {product?.about?.type=="string"?product?.about?.value:<div dangerouslySetInnerHTML={{ __html: product?.about?.value }} /> }
-                <a href="#" className="text-purple-500 underline font-semibold">Read More</a>
+                    {product?.about?.type == "string" ? product?.about?.value : <div dangerouslySetInnerHTML={{ __html: product?.about?.value }} />}
+                    <div onClick={() => {
+                        navigate(`${product?._id}`)
+                    }} className="text-purple-500 underline font-semibold cursor-pointer">Read More</div>
                 </p>
 
                 <div className='flex justify-between'>
@@ -50,9 +53,9 @@ const ProductCard = ({ product }) => {
                         <p className="font-bold">Developer</p>
                         <p className="">{product?.developer}</p>
                     </div>
-                    <button className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300" onClick={()=>{}}>
-                        MORE DETAILS
-                    </button>
+                    <Button className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300" text="More Details" onClick={() => {
+                        navigate(`${product?._id}`)
+                    }} />
                 </div>
 
             </div>
