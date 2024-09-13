@@ -58,7 +58,7 @@ const Products = ({ project }) => {
                 className="max-w-sm shadow-none border-none cursor-pointer"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc="https://i.ibb.co/DgKfqC9/Screenshot-2024-06-27-at-10-38-30-AM.png"
-                onClick={() => navigate(`/product/${products[2]?._id}`)}
+{/*                 onClick={() => navigate(`/product/${products[2]?._id}`)} */}
             >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
 
