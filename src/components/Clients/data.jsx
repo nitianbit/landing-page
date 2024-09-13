@@ -1,3 +1,8 @@
+import image1 from '../../assets/builders-dealers/Targeted Audience.png'
+import image2 from '../../assets/builders-dealers/Better Conversion Rates.jpg.avif'
+import image3 from '../../assets/builders-dealers/Time and Cost Efficiency.png'
+import image4 from '../../assets/builders-dealers/Custom Solutions.jpg'
+
 export const clientData = {
     _id: 1,
     title: 'Universal Square',
@@ -7,22 +12,22 @@ export const clientData = {
     startingPrice: 'Starting ₹49 Lakh*',
     overviewItems: [
         {
-            image: '',
+            image: image1,
             title: 'Targeted Audience',
             description: ' We use advanced data analysis to identify and reach out to buyers who are actively looking for properties, leads to sales maximisation.'
         },
         {
-            image: '',
+            image: image2,
             title: 'Better Conversion Rates',
             description: 'Your sales team can connect with buyers and focus on closing deals, boosting your conversion rates, and shortening your sales cycles.'
         },
         {
-            image: '',
+            image: image3,
             title: ' Time and Cost Efficiency',
             description: ' We filter out low-quality inquiries, allowing you to save valuable time and resources while focusing on highpotential prospects.'
         },
         {
-            image: '',
+            image: image4,
             title: ' Custom Solutions',
             description: " Whether you're selling residential, commercial, or luxury properties, our solutions are tailored to your unique needs."
         },
