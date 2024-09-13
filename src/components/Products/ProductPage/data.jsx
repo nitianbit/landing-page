@@ -1,5 +1,5 @@
 
-export const productData = {
+export const productData1 = {
     _id: 1,
     title: 'Universal Square',
     developer: 'Auric Group',
@@ -216,4 +216,4 @@ export const productData2 = {
 }
 
 
-export const PRODUCTS=[productData,productData2]
+export const PRODUCTS=[productData1,productData2]
