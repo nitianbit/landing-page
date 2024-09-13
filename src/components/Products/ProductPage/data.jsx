@@ -1,7 +1,38 @@
+import universalSquare from '../../../assets/home/hot-properties/Universal Square.png'
+import vistaCorner from '../../../assets/home/hot-properties/Vista Corner.png'
+
+import pImage1 from '../../../assets/product/photos/1.png'
+import pImage2 from '../../../assets/product/photos/2.png'
+import pImage3 from '../../../assets/product/photos/3.png'
+import pImage4 from '../../../assets/product/photos/4.png'
+import pImage5 from '../../../assets/product/photos/5.png'
+import pImage6 from '../../../assets/product/photos/6.png'
+import pImage7 from '../../../assets/product/photos/7.png'
+import pImage8 from '../../../assets/product/photos/8.png'
+import pImage9 from '../../../assets/product/photos/9.png'
+
+import restaurants from '../../../assets/product/amenities/Restaurants.png'
+import foodCourt from '../../../assets/product/amenities/Food Court.png'
+import multiplex from '../../../assets/product/amenities/Multiplex.png'
+import shoppingArea from '../../../assets/product/amenities/Shopping Area.png'
+import hypermarket from '../../../assets/product/amenities/Hypermarket.png'
+import anchorStore from '../../../assets/product/amenities/Anchor Store.png'
+import banquet from '../../../assets/product/amenities/Banquet.png'
+import pubgDiscos from '../../../assets/product/amenities/Pubs & Discos.png'
+import gamingZone from '../../../assets/product/amenities/Gaming Zone.png'
+import officeSpaces from '../../../assets/product/amenities/Office Spaces.png'
+import retail from '../../../assets/product/amenities/Retail.png'
+import openAirFoodCourt from '../../../assets/product/amenities/Open Air Food Court.png'
+import parking from '../../../assets/product/amenities/Parking.png'
+import eventEntertainment from '../../../assets/product/amenities/Event & Entertainment.png'
+import terraceCafesRestaurants from '../../../assets/product/amenities/Terrace Cafes & Restaurants.png'
+import fleaMarketPlazas from '../../../assets/product/amenities/Flea Market Plazas.png'
+
 
 export const productData1 = {
     _id: 1,
     title: 'Universal Square',
+    src:universalSquare,
     developer: 'Auric Group',
     location: 'Sector 79, Faridaad',
     description: 'Independent SCO Floors and Commercial SCO Plots',
@@ -29,31 +60,35 @@ export const productData1 = {
         },
     ],
     photos: [
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png"
+        pImage1,
+        pImage2,
+        pImage3,
+        pImage4,
+        pImage5,
+        pImage6,
+        pImage7,
+        pImage8,
+        pImage9,
     ],
     amenities: {
         type: 'list',
         data: [
-            { name: "Restaurants", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Food Court", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Multiplex", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Shopping Area", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Hypermarket", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Anchor Store", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Banquet", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Pubs & Discos", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Gaming Zone", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Office Spaces", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Retail", image: "https://www.w3schools.com/html/images/13_html_images.png" },
-            { name: "Open Air Food Court", image: "https://www.w3schools.com/html/images/13_html_images.png" },
+            { name: "Restaurants", image: restaurants },
+            { name: "Food Court", image: foodCourt },
+            { name: "Multiplex", image: multiplex },
+            { name: "Shopping Area", image: shoppingArea },
+            { name: "Hypermarket", image: hypermarket },
+            { name: "Anchor Store", image: anchorStore },
+            { name: "Banquet", image: banquet },
+            { name: "Pubs & Discos", image: pubgDiscos },
+            { name: "Gaming Zone", image:  gamingZone },
+            { name: "Office Spaces", image: officeSpaces },
+            { name: "Retail", image: retail },
+            { name: "Open Air Food Court", image: openAirFoodCourt },
+            { name: "parking", image: parking },
+            { name: "Event & Entertainment", image: eventEntertainment },
+            { name: "Terrace Cafes & Restaurants", image: terraceCafesRestaurants },
+            { name: "Flea Market Plazas", image: fleaMarketPlazas },
         ]
     },
     locationAdvantages: {
@@ -110,6 +145,7 @@ export const productData1 = {
 }
 export const productData2 = {
     _id: 1,
+    src:vistaCorner,
     title: 'Copious Vista Corner',
     developer: 'Copious Realtors Pvt. Ltd',
     location: 'Sector 89, Gurgaon',
