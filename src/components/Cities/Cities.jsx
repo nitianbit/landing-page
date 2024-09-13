@@ -1,27 +1,29 @@
 import React, { useState } from 'react'
 import CitiesCard from './CitiesCard'
-import apartment from '../../assets/images/delhi.jpg'
+import delhi from '../..//assets/home/citites/Delhi.png'
+import mumbai from '../..//assets/home/citites/Mumbai.png'
+import gurgaon from '../..//assets/home/citites/Gurgaon.png'
+import pune from '../..//assets/home/citites/Pune.png'
+import faridabad from '../..//assets/home/citites/Faridabad.png'
+import bengaluru from '../..//assets/home/citites/Bengaluru.png'
+import noida from '../..//assets/home/citites/Noida.png'
+import hyderabad from '../..//assets/home/citites/Hyderabad.png'
+import chennai from '../..//assets/home/citites/Chennai.png'
+import kolkata from '../..//assets/home/citites/Kolkata.png'
 import "./styles.css"
 
 const Service = () => {
   const [data, setData] = useState([
-    { title: 'Residential Apartments', src: apartment },
-    { title: 'Residential Flats', src: apartment },
-    { title: 'Residential Builder Floors', src: apartment },
-    { title: 'Residential Duplex', src: apartment },
-    { title: 'Residential Vilas', src: apartment },
-    { title: 'Residential Plots', src: apartment },
-    { title: 'Residential Offices', src: apartment },
-    { title: 'Residential Shops', src: apartment },
-
-    { title: 'Residential Apartments', src: apartment },
-    { title: 'Residential Flats', src: apartment },
-    { title: 'Residential Builder Floors', src: apartment },
-    { title: 'Residential Duplex', src: apartment },
-    { title: 'Residential Vilas', src: apartment },
-    { title: 'Residential Plots', src: apartment },
-    { title: 'Residential Offices', src: apartment },
-    { title: 'Residential Shops', src: apartment }, 
+    { title: 'Delhi', src: delhi },
+    { title: 'Mumbai', src: mumbai },
+    { title: 'Gurgaon', src: gurgaon },
+    { title: 'Pune', src: pune },
+    { title: 'Faridabad', src: faridabad },
+    { title: 'Bengaluru', src: bengaluru },
+    { title: 'Noida', src: noida },
+    { title: 'Chennai', src: chennai },
+    { title: 'Hyderabad', src: hyderabad },
+    { title: 'Kolkata', src: kolkata },
   ]);
 
   return (
@@ -35,14 +37,14 @@ const Service = () => {
             <div className="flex flex-row space-x-4 gap-4 mb-5">
               {data.map((item, index) => (
                 index % 2 === 0 && (
-                  <CitiesCard text={item.title} key={index} />
+                  <CitiesCard text={item.title} key={index} src={item?.src}/>
                 )
               ))}
             </div>
             <div className="flex flex-row space-x-4 gap-4 mb-5">
               {data.map((item, index) => (
                 index % 2 !== 0 && (
-                  <CitiesCard text={item.title} key={index} />
+                  <CitiesCard text={item.title} key={index} src={item?.src}/>
                 )
               ))}
             </div>
