@@ -9,7 +9,7 @@ const ClientBusiness = ({data}) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 {
-                    data?.overviewItems?.map(item => <OverviewItem key={item?.title} icon="https://img.icons8.com/ios-filled/50/000000/apartment.png"  {...item} />)
+                    data?.overviewItems?.map(item => <OverviewItem key={item?.title} icon={item?.image}  {...item} />)
                 }
             </div>
            
