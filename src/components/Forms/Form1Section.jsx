@@ -3,12 +3,12 @@ import Form1 from './Form1'
 
 const Form1Section = ({ form, isFormNeeded=false, src }) => {
     return (
-        <div className='flex flex-wrap ' >
+        <div className='flex flex-col md:flex-row mb-5' >
             <div className={`w-full md:w-${isFormNeeded ? "7" : "10"}/10 border-b border-black`} style={{ maxHeight: "85vh" }}>
                 <img
                     src={src}
                     alt="Large description"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-fill"
                     style={{ maxHeight: 'calc(100vh - 4rem)' }} // Adjust for navbar height if needed
                 />
             </div>
