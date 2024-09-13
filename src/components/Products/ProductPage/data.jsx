@@ -283,7 +283,6 @@ export const productData2 = {
 
         `
     },
-    ,
     floorPlans:[
        Floor1,Floor2,Floor3,Floor4,Floor5,Floor6,Floor7,Floor8,Floor9,Floor10
     ]
