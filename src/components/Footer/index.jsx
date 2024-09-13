@@ -91,6 +91,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -103,7 +105,7 @@ const Footer = () => {
                         <h1 className="text-3xl font-bold">APKI PROPERTY</h1>
                     </div>
 
-                     <div className="flex flex-col space-y-2">
+                    <div className="flex flex-col space-y-2">
                         <Link to="/about-us" className="hover:underline">ABOUT US</Link>
                         <Link to="/products" className="hover:underline">FOR BUYERS</Link>
                         <Link to="/clients" className="hover:underline">FOR BUILDERS/DEALERS</Link>
@@ -111,21 +113,21 @@ const Footer = () => {
                         <Link to="/contact-us" className="hover:underline">CONTACT US</Link>
                     </div>
 
-                     <div className="flex justify-center md:justify-start space-x-4">
-                        <a href="#" className="hover:underline">
-                            <img src="path_to_facebook_icon" alt="Facebook" />
+                    <div className="flex justify-center md:justify-start space-x-4">
+                        <a className="hover:underline">
+                            <FaFacebookSquare size={20} />
                         </a>
-                        <a href="#" className="hover:underline">
-                            <img src="path_to_instagram_icon" alt="Instagram" />
+                        <a className="hover:underline">
+                            <FaInstagramSquare size={20} />
                         </a>
                     </div>
                 </div>
 
 
-                 <hr className="border-gray-600 my-8" />
+                <hr className="border-gray-600 my-8" />
 
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                     <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
                         <h2 className="text-xl font-bold mb-4 text-center md:text-left">TOP CITIES</h2>
                         <ul className="grid grid-cols-2 gap-2 text-center md:text-left">
                             <li>DELHI</li>
@@ -141,7 +143,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                     <div>
+                    <div>
                         <h2 className="text-xl font-bold mb-4 text-center md:text-left">WHAT WE OFFER</h2>
                         <ul className="grid grid-cols-2 gap-2 text-center md:text-left">
                             <li>RESIDENTIAL APARTMENTS</li>
@@ -156,9 +158,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                 <hr className="border-gray-600 my-8" />
+                <hr className="border-gray-600 my-8" />
 
-                 <div className="text-center">
+                <div className="text-center">
                     <p className="text-sm">&copy; Copyright @apkiproperty.com. All Rights Reserved.</p>
                 </div>
             </div>
