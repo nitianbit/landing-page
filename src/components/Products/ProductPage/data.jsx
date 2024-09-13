@@ -1,6 +1,8 @@
 import universalSquare from '../../../assets/home/hot-properties/Universal Square.png'
 import vistaCorner from '../../../assets/home/hot-properties/Vista Corner.png'
 
+import vistaCornerCover from '../../../assets/product/vista-corner/Vista Corner Top Banner.png'
+
 import pImage1 from '../../../assets/product/photos/1.png'
 import pImage2 from '../../../assets/product/photos/2.png'
 import pImage3 from '../../../assets/product/photos/3.png'
@@ -59,8 +61,6 @@ import Floor7 from '../../../assets//product/vista-corner/Vista Corner Floor Pla
 import Floor8 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/8.png'
 import Floor9 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/9.png'
 import Floor10 from '../../../assets//product/vista-corner/Vista Corner Floor Plans/10.png'
-
-
 
 
 export const productData1 = {
@@ -180,6 +180,7 @@ export const productData1 = {
 export const productData2 = {
     _id: 1,
     src:vistaCorner,
+    coverSrc:vistaCornerCover,
     title: 'Copious Vista Corner',
     developer: 'Copious Realtors Pvt. Ltd',
     location: 'Sector 89, Gurgaon',
