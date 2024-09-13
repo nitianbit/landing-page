@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import { handleSubmit } from './FormHelper';
+import { useUserContext } from '../../context/UserContext';
 
 const Form1 = ({ form }) => {
     const [data, setData] = useState({});
+    const {project} = useUserContext()
     const [loading, setLoading] = useState(false);
     const [phoneNo, setPhoneNo] = useState(null)
 
@@ -21,9 +23,12 @@ const Form1 = ({ form }) => {
 
     return (
         <form onSubmit={(e) => {
-            handleSubmit(e, formData = form, data, phoneNo).then(res => {
-                res && setData({})
-            })
+            // handleSubmit(e, formData = form, data, phoneNo).then(res => {
+            //     res && setData({})
+            // })
+            handleSubmit({ e, form, formData: data, phone: phoneNo, project }).then(res => {
+                    res && setData({})
+                })
         }}>
             {form?.fields?.map((field, index) => {
                 return field?.type === "select" ? (
