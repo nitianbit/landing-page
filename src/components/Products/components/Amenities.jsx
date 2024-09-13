@@ -4,7 +4,7 @@ const Amenities = ({ amenities, title = "" }) => {
 
 
   return (
-    <>
+    <div className='pt-6'>
       <h2 className="text-3xl font-semibold   mb-8">Why Buy in {title}?</h2>
       <h3 className="text-2xl font-medium  mb-6">AMENITIES</h3>
 
@@ -27,7 +27,7 @@ const Amenities = ({ amenities, title = "" }) => {
                 </div>
               ))}
             </div> : null}
-    </>
+    </div>
   );
 };
 
