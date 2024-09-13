@@ -29,6 +29,28 @@ import terraceCafesRestaurants from '../../../assets/product/amenities/Terrace C
 import fleaMarketPlazas from '../../../assets/product/amenities/Flea Market Plazas.png'
 
 
+import p2Image11 from '../../../assets/product/vista-corner/Vista Corner Photos/1.png'
+import p2Image12 from '../../../assets/product/vista-corner/Vista Corner Photos/2.png'
+import p2Image13 from '../../../assets/product/vista-corner/Vista Corner Photos/3.png'
+import p2Image14 from '../../../assets/product/vista-corner/Vista Corner Photos/4.png'
+import p2Image15 from '../../../assets/product/vista-corner/Vista Corner Photos/5.png'
+import p2Image16 from '../../../assets/product/vista-corner/Vista Corner Photos/6.png'
+
+
+
+import p2Image1 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/1.png'
+import p2Image2 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/2.png'
+import p2Image3 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/3.png'
+import p2Image4 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/4.png'
+import p2Image5 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/5.png'
+import p2Image6 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/6.png'
+import p2Image7 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/7.png'
+import p2Image8 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/8.png'
+import p2Image9 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/9.png'
+import p2Image10 from '../../../assets/product/vista-corner/Vista Corner Floor Plans/10.png'
+
+
+
 export const productData1 = {
     _id: 1,
     title: 'Universal Square',
@@ -174,15 +196,15 @@ export const productData2 = {
         },
     ],
     photos: [
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png",
-        "https://www.w3schools.com/html/images/13_html_images.png"
+        p2Image11,
+        p2Image12,
+        p2Image13,
+        p2Image14,
+        p2Image15,
+        p2Image16,
+        // p2Image7,
+        // p2Image8,
+        // p2Image9
     ],
     amenities: {
         type: 'html',
