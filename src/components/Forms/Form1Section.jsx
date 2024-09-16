@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 import Icons from '../../assets/home/icons.jpeg'
 import { useNavigate } from 'react-router-dom'
 
-const Form1Section = ({ form, isFormNeeded = false, src, heading, subheading, buttonText }) => {
+const Form1Section = ({ form, isFormNeeded = false, src, heading, subheading, buttonText, productId=null }) => {
     const navigate = useNavigate()
     return (
         <div className="relative flex flex-col md:flex-row mb-5">
@@ -53,7 +53,7 @@ const Form1Section = ({ form, isFormNeeded = false, src, heading, subheading, bu
             {isFormNeeded && (
                 <div className="w-full md:w-3/10 bg-[#f6f2ec] p-8 overflow-auto border-b border-black" style={{ maxHeight: "85vh" }}>
                     <h3 className="text-xl mb-6 p-4">GENERATE HIGH QUALITY LEADS FOR REAL ESTATE</h3>
-                    <Form1 form={form} />
+                    <Form1 form={form} productId={productId}/>
                 </div>
             )}
         </div>
