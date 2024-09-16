@@ -7,7 +7,7 @@ import Cities from "../Cities/Cities.jsx";
 import Form1Section from "../Forms/Form1Section.jsx";
 import { useUserContext } from "../../context/UserContext.jsx";
 import Service from "../OurServices/Service.jsx";
-import Banner from "../../assets/home/Top Banner.png"
+import  Banner from "../../assets/home/Top Banner.png"
 
 function LandingPage() {
   const { project, setProject } = useUserContext()
@@ -68,7 +68,14 @@ function LandingPage() {
   // }, [project])
   return (
     <>
-      <Form1Section src={Banner} />
+ <Form1Section 
+    src={Banner}
+    heading={["THINKING OF BUYING YOUR", "HOME OR OFFICE?"]}
+    subheading="GET THE CARE AND GUIDANCE YOU DESERVE" 
+    buttonText="Contact Us" 
+/>
+
+
       <Service/>
       {/* <Form2 form={forms} handleSubmit={handleSubmit} /> */}
       <Cities/>

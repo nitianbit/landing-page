@@ -8,7 +8,7 @@ import residentialBuilderFloors from '../../assets/home/featured/Residential-Bui
 import commercialOffices from '../../assets/home/featured/Commercial-Offices.png'
 import residentialDuplex from '../../assets/home/featured/Residential-Duplex.png'
 import commercialShops from '../../assets/home/featured/Commercial-Shops.png'
-import "./styles.css"
+import "./styles.css" 
 
 const Service = () => {
   const [data, setData] = useState([
