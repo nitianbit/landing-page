@@ -25,23 +25,24 @@ const Home = ({  project}) => {
     }, [project?._id])
     return (
         <div>
-            <div className="container mx-auto px-4 mb-20 mt-16 ">
+            <div className="container mx-auto px-4 mb-20 mt-16">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl font-semibold mb-4" style={{ color: "#faa283" }}>HOT PROPERTIES</h2>
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">NEWLY LAUNCHED IN FARIDABAD</h1>
                 </div>
-                <div className="flex flex-wrap justify-center gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
                     <Products project={project} products={products} />
-
+    
                     {products?.length > 3 &&
-                    <Button text="View All" className="cursor-pointer px-4 py-0 font-rasputin" onClick={()=>{
-                        navigate("/products")
-                    }}/>
-                         } 
+                        <Button text="View All" className="cursor-pointer px-4 py-0 font-rasputin" onClick={() => {
+                            navigate("/products")
+                        }} />
+                    }
                 </div>
             </div>
         </div>
     )
+    
 }
 
 export default Home
