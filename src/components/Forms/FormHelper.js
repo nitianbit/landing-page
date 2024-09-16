@@ -2,7 +2,7 @@ import { getUTMParameters } from "../../utils/helper";
 import { doPOST } from "../../utils/HttpUtils";
 import {FORMENDPOINSTS} from './constant.js'
 
-export const handleSubmit = async ({e, form, formData, phone = null, project}) => {
+export const handleSubmit = async ({e, form, formData, phone = null, project, productId=null}) => {
     e.preventDefault();
     try {
 
@@ -15,7 +15,7 @@ export const handleSubmit = async ({e, form, formData, phone = null, project}) =
       const utmParameters = getUTMParameters();
 
       // Send form data to backend
-      let response = await doPOST(FORMENDPOINSTS.addFormValue, { formId, values, projectId: project?._id, utmParameters, ...(phone && { phone }) });
+      let response = await doPOST(FORMENDPOINSTS.addFormValue, { formId, values, projectId: project?._id,...(productId && {refererId: productId }), utmParameters, ...(phone && { phone }) });
 
       // Handle response
       if (response.success) {
