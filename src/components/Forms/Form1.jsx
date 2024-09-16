@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import { handleSubmit } from './FormHelper';
 import { useUserContext } from '../../context/UserContext';
 
-const Form1 = ({ form }) => {
+const Form1 = ({ form, productId=null }) => {
     const [data, setData] = useState({});
     const {project} = useUserContext()
     const [loading, setLoading] = useState(false);
@@ -26,7 +26,7 @@ const Form1 = ({ form }) => {
             // handleSubmit(e, formData = form, data, phoneNo).then(res => {
             //     res && setData({})
             // })
-            handleSubmit({ e, form, formData: data, phone: phoneNo, project }).then(res => {
+            handleSubmit({ e, form, formData: data, phone: phoneNo, project, productId }).then(res => {
                     res && setData({})
                 })
         }}>
