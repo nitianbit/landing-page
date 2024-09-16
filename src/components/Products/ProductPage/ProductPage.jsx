@@ -88,7 +88,7 @@ const ProductPage = () => {
 
     return (
         <>
-            <Form1Section isFormNeeded={true} form={forms?.first} src={product?.coverSrc}/>
+            <Form1Section isFormNeeded={true} form={forms?.first} src={product?.src} type="product" productId={productId}/>
             <ProductBasics data={product} />
             <ProductPhotoSection images={product?.photos} title={product?.title}/>
             <Amenities amenities={product?.amenities} title={product?.title} />
