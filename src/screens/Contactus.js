@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/demo.css';
 import './style.css';
 import Header from './header';
 import Footer from './footer';
+import { CONTACTENDPOINTS } from '../components/contactUs/constant'
+import { doGET } from '../utils/HttpUtils'
+import { useUserContext } from '../context/UserContext'
+import { handleSubmit } from '../components/handleSubmit';
 
 
 const Contactus = () => {
+    const [form, setForm] = useState(null)
+    const [data, setData] = useState({});
+    const { project } = useUserContext()
+    const [loading, setLoading] = useState(false);
+    const handleInputChange = (fieldName, value) => {
+        setData(prevData => ({
+            ...prevData,
+            [fieldName]: value
+        }));
+    };
+
+    const getForm = async (projectId) => {
+        try {
+            const query = `type=contact&projectId=${projectId}`
+            const response = await doGET(CONTACTENDPOINTS.getContactForm(query));
+            setForm(response);
+        } catch (error) {
+            console.error("Error fetching forms:", error);
+        }
+    };
+    useEffect(() => {
+        if (project) {
+            getForm(project?._id)
+        }
+    }, [project])
     return (
         <>
             <Header />
@@ -34,12 +63,40 @@ const Contactus = () => {
                         <p>10:00 AM - 06:00 PM</p>
                     </div>
                     <div className='right'>
-                        <form action="" method="post">
+                        <form onSubmit={(e) => {
+                            handleSubmit({ e, form, formData: data, project }).then(res => {
+                                res && setData({})
+                            })
+                        }}>
                             <h4>Have Any Question?</h4>
-                            <input type="text" name="" id="" placeholder="Full Name"></input>
-                            <input type="email" name="" id="" placeholder="Email ID"></input>
-                            <input type="tel" name="" id="" placeholder="Mobile Number"></input>
-                            <textarea name="" id="" cols="30" rows="10" placeholder='Got something more to say'></textarea>
+                            {form?.fields?.map((field, index) => {
+                                return (
+                                    <div key={`${field?._id}-${index}`}>
+                                        {field?.type === "textarea" ? (
+                                            <textarea
+                                                // required={true}
+                                                required={form?.requiredFields?.includes(field?._id) || false}
+                                                value={data[field?.name] || ''}
+                                                onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                                id={field?.label.toLowerCase()}
+                                                cols="30"
+                                                rows="10"
+                                                placeholder={field?.label}
+                                            ></textarea>
+                                        ) : (
+                                            <input
+                                                // required={true}
+                                                required={form?.requiredFields?.includes(field?._id) || false}
+                                                value={data[field?.name] || ''}
+                                                onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                                type={field?.type}
+                                                id={field?.label.toLowerCase()}
+                                                placeholder={field?.label}
+                                            />
+                                        )}
+                                    </div>
+                                );
+                            })}
                             <input type="submit" name="" value="Schedule a Call" className='button'></input>
                         </form>
                     </div>
