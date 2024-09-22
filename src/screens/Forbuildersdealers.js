@@ -1,13 +1,49 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/demo.css';
 import './style.css';
 import Header from './header';
 import Footer from './footer';
-                                                              
+import { CLIENTENDPOINTS } from '../components/clients/constant';
+import { doGET } from '../utils/HttpUtils';
+import { useUserContext } from '../context/UserContext';
+import { handleSubmit } from '../components/handleSubmit';
+
 
 
 const Forbuildersdealers = () => {
     const [popup, setPopup] = useState(false);
+    const { project, setProject } = useUserContext()
+    const [form, setForm] = useState(null)
+    const [data, setData] = useState({})
+    const [phoneNo, setPhoneNo] = useState(null)
+    const getForm = async (projectId) => {
+        try {
+            const query = `type=client&projectId=${projectId}`;
+            const response = await doGET(CLIENTENDPOINTS.getForm(query));
+            // const formsArray = Array.from({ length: 3 }, (_, index) => response.find(form => form.formIndex === index) || []);
+
+            setForm(response);
+        } catch (error) {
+            console.error("Error fetching forms:", error);
+        }
+    };
+
+    const handleInputChange = (fieldName, value, type) => {
+        setData(prevData => ({
+            ...prevData,
+            [fieldName]: value
+        }));
+        if ((type == "number" && (fieldName == "Phone" || fieldName == "phone")) ? value : null) {
+            setPhoneNo((type == "number" && (fieldName == "Phone" || fieldName == "phone")) ? value : null)
+        }
+    };
+
+
+    useEffect(() => {
+        if (project) {
+            getForm(project?._id)
+        }
+    }, [project])
     return (
         <>
             <Header />
@@ -23,28 +59,60 @@ const Forbuildersdealers = () => {
                             lead generation service.</p>
                     </div>
                     <div className='right'>
-                    <form action="#" method="post" id="Schedule">
-                        <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
-                        <h4>TRY US NOW:</h4>
-                        <input type="text" name="" id="" placeholder="Full Name"></input>
-                        <input type="email" name="" id="" placeholder="Email ID"></input>
-                        <input type="tel" name="" id="" placeholder="Mobile Number"></input>
-                        <input type="text" name="" id="" placeholder="City you are living in"></input>
-                        <select name="" id="">
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                        </select>
-                        <div className='d-flex align-center mb-3'>
-                            <input type="checkbox" name="" id="agree"></input>
-                            <label for="agree">I agree to receive information regarding my submitted enquiry* </label>
-                        </div>
-                        <input type="button" name="" value="Schedule a Call" className='button' onClick={() => { setPopup(!popup) }}></input>
-                    </form>
+                        <form onSubmit={(e) => {
+                            e.preventDefault()
+                            console.log("hey")
+                                handleSubmit({ e, form, formData: data, phone: phoneNo, project }).then(res => {
+                                    res && setData({})
+                                })
+                                setPopup(!popup)
+                            }} id="Schedule">
+                            <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
+                            <h4>TRY US NOW:</h4>
+                            {form && form?.fields?.map((field, fieldIndex) => (
+                                field?.type === "select" ? (
+                                    <select
+                                        key={fieldIndex}
+                                        value={data[field?.name] || ''}
+                                        name={field?.name}
+                                        required={form?.requiredFields?.includes(field?._id) || false}
+                                        onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                        label={field?.label}
+                                        id="">
+                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                        {field?.options?.length ? (
+                                            field.options.map((option, optionIndex) => (
+                                                <option key={optionIndex} value={option}>{option}</option>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <option value="">Your Investment Budget</option>
+                                                <option value="">Your Investment Budget</option>
+                                                <option value="">Your Investment Budget</option>
+                                            </>
+                                        )}
+                                    </select>
+                                ) : (
+                                    <input
+                                        key={fieldIndex}
+                                        type={field?.type}
+                                        name={field?.name}
+                                        placeholder={field.label}
+                                        value={data[field?.name] || ''}
+                                        onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                        required={form?.requiredFields?.includes(field?._id) || false}
+                                    />
+                                )
+                            ))}
+                            <div className='d-flex align-center mb-3'>
+                                <input required type="checkbox" name="" id="agree"></input>
+                                <label for="agree">I agree to receive information regarding my submitted enquiry* </label>
+                            </div>
+                            <input type="submit" name="" value="Schedule a Call" className='button'></input>
+                        </form>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
             {/* banner section end */}
             {/* content */}
