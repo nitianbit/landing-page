@@ -13,12 +13,12 @@ const Forbuyers = () => {
             <div className='sorting'>
                 <div className='container flex-between-center'>
                     <button className='btn'>All Properties</button>
-                    // <select name="" id="">
-                    //     <option value="">Sort By</option>
-                    //     <option value="">Sort By</option>
-                    //     <option value="">Sort By</option>
-                    //     <option value="">Sort By</option>
-                    // </select>
+                   {/* <select name="" id="">
+                        <option value="">Sort By</option>
+                        <option value="">Sort By</option>
+                        <option value="">Sort By</option>
+                        <option value="">Sort By</option>
+                    </select> */}
                 </div>
             </div>
             <div className='container flex-between-center'>
