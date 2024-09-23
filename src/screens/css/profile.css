@@ -1,0 +1,208 @@
+.profileData{
+    margin: 50px 0px 50px 0px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px #ddd;
+    border-radius: 5px;
+}
+.profileData .profileLeft{
+    width: 20%;
+    border-right: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.profileData .profileLeft .profilePic{
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.profileData .profileLeft .profilePic img{
+    border: 6px solid #29303B;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+.profileData .profileLeft .profilePic h3{
+    margin-top: 15px;
+    color: #29303B;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profileData .profileLeft .ProfileMenu{}
+.profileData .profileLeft .ProfileMenu ul{}
+.profileData .profileLeft .ProfileMenu ul li{
+    padding: 10px 0px;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 20px;
+}
+.profileData .profileLeft .ProfileMenu ul li.active{
+    background: linear-gradient(290deg,#200550, #005c4b);
+    
+}
+.profileData .profileLeft .ProfileMenu ul li a{
+    color: #29303B;
+}
+.profileData .profileLeft .ProfileMenu ul li.active a{
+    color: #fff;
+}
+.profileData .profileRight{
+    width: 80%;
+}
+.profileData .profileRight h2{
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+    color: #29303B;
+}
+.profileData .profileRight h4{
+    border-bottom: 1px solid #ddd;
+    margin: 20px;
+    padding-bottom: 15px;
+    color: #29303B;
+}
+.profileData .profileRight .basicData{
+    padding: 20px;
+}
+.profileData .profileRight .basicData  a.addmthd{
+    padding: 10px 25px 12px 25px;
+    background: linear-gradient(290deg,#200550, #005c4b);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 5px;
+    display: inline-block;
+    margin-top: 30px;
+}
+.profileData .profileRight .basicData h5 {
+    padding: 10px 0px;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.profileData .profileRight .basicData h5 span{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.profileData .profileRight .photoData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profileData .profileRight .photoData .wrapper{
+    width: 400px;
+    height: 200px;
+    border: 1px dashed #29303B;
+    /* border-bottom: none; */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.profileData .profileRight .photoData .wrapper .photo{}
+.profileData .profileRight .photoData .wrapper .photo img{
+    width: 100%;
+}
+.profileData .profileRight .photoData .wrapper .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+}
+.profileData .profileRight .photoData .wrapper .content .icon span{
+    font-size: 100px;
+    color: #07294d;
+}
+.profileData .profileRight .photoData .wrapper .content .text{
+}
+.profileData .profileRight .photoData .wrapper #cancelBtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.profileData .profileRight .photoData .wrapper .fileName{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0px 12px 0px;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    background: #29303B;
+    color: #fff;
+    display: inline-block;
+    border-radius:0px 0px 10px 10px;
+}
+.profileData .profileRight .photoData  #defaultBtn{
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 8px 0px 10px 10px;
+    margin-bottom: 12px;
+    border: none;
+    /* box-shadow: 0px 0px 10px #ddd; */
+    border: 1px solid #ddd;
+}
+.profileData .profileRight .photoData #savebtn{
+    width: 100%;
+    padding: 10px 0px 12px 0px;
+    background: linear-gradient(290deg,#200550, #005c4b);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+ul{
+    padding-left: 0!important;
+}
+
+.mt-8{
+    margin-top: 120px;
+}
+
+.photoData{
+    height: 20%;
+}
+
+
+.leftRight{
+    min-height: 84vh;
+}
+h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 25px;
+}
+input[type="password"]{
+    width: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 8px 0px 10px 15px;
+    margin-bottom: 12px;
+
+    /* box-shadow: 0px 0px 10px #ddd; */
+    border: 1px solid #ddd;
+}
+input.submit{
+    width: 82%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 8px 0px 10px 15px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: linear-gradient(290deg,#200550, #C638D8);
+    color: #fff
+}
