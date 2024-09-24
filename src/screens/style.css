@@ -1,0 +1,1678 @@
+:root {
+    --primary: #64506b;
+    --system-ui: "Open Sans", sans-serif;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #64506b;
+    outline: 1px solid #64506b;
+    border-radius: 5px;
+}
+
+.icon-close2 {
+    display: none;
+}
+
+.icon-menu {
+    display: none;
+}
+
+
+.sch {
+    display: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+
+.slick-slider {
+    display: none !important;
+}
+
+/* .banner start */
+.banner {
+    background: url("../../public/images/banner.jpg") no-repeat center center / cover;
+    height: 80vh;
+    display: flex;
+}
+
+.banner h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.banner h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.banner h4 span {
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+/* .banner end */
+/* featuredProperties start */
+.featuredProperties {
+    padding: 80px 0 40px 0;
+}
+
+h4.subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: 'Rasputin';
+    color: #000;
+}
+
+h1.title {
+    color: #202020;
+    margin-bottom: 60px;
+    font-size: 35px;
+}
+
+.featuredProperties .properties {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+
+.featuredProperties .properties .singleProperties {
+    width: 22%;
+    margin-bottom: 40px;
+    font-family: 'Rasputin';
+    font-size: 13px;
+    color: #202020;
+}
+
+/* .singleProperties{
+    padding: 0 30px;
+} */
+.featuredProperties .properties .singleProperties .imgBox {
+    margin-bottom: 15px;
+}
+
+.featuredProperties .properties .singleProperties .imgBox img {}
+
+.featuredProperties .properties .singleProperties h5 {
+    text-align: center;
+    font-size: 15px;
+    font-size: 13px;
+}
+
+/* featuredProperties end */
+
+
+/* newlyLaunched start */
+.newlyLaunched {
+    padding: 80px 0 40px 0;
+}
+
+.newlyLaunched .properties {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+
+.newlyLaunched .properties .singleProperties {
+    width: 22%;
+    margin-bottom: 40px;
+}
+
+.newlyLaunched .properties .singleProperties .imgBox {
+    margin-bottom: 15px;
+}
+
+.newlyLaunched .properties .singleProperties .imgBox img {}
+
+.newlyLaunched .properties .singleProperties h5 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+}
+
+.newlyLaunched .properties .singleProperties h5 {
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+}
+
+.newlyLaunched .properties .singleProperties h6 {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.newlyLaunched .properties .singleProperties p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #737373;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 8px;
+
+}
+
+/* newlyLaunched end */
+/* popularCities start */
+.popularCities {
+    padding: 80px 0 40px 0;
+    background: #fcfcfc;
+}
+
+.popularCities .cities {
+    display: flex;
+    gap: 2.5%;
+    flex-wrap: wrap;
+}
+
+.popularCities .cities .singleCities {
+    width: 18%;
+    margin-bottom: 20px;
+}
+
+.popularCities .cities .singleCities .imgBox {
+    margin-bottom: 15px;
+}
+
+.popularCities .cities .singleCities .imgBox img {}
+
+.popularCities .cities .singleCities h5 {
+    text-align: center;
+    font-size: 13px;
+    color: #202020;
+}
+
+/* popularCities end */
+
+
+/************footer *************/
+.footer {
+    background: #000;
+}
+
+.footer .footerTop {
+    padding: 35px 0;
+}
+
+.footer .container {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.footer .footerTop .footerLogo {
+    width: 23%;
+}
+
+.footer .footerTop .footerLogo a img {
+    filter: invert(1);
+}
+
+.footer .footerTop .footerLogo p {
+    color: #c5c5c5;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+.footer .footerTop .footerMenu ul li {
+    margin-bottom: 7px;
+    font-size: 11.3px;
+    text-transform: uppercase;
+    font-family: 'Rasputin';
+}
+
+.footer .footerTop .footerMenu ul li a {
+    color: #fff;
+}
+
+.footer .footerMenu ul li a span {}
+
+.footer .footerMenu ul li {
+    margin-right: 15px;
+    font-size: 13.3px;
+}
+
+.footer .footerSocial h5 {
+    font-family: 'Rasputin';
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer .footerSocial ul li a {
+    color: #000;
+    background: #fff;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 8px;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+.footer .Topcity,
+.footer .Offer {
+    width: 49%;
+}
+
+.footer .Topcity .gp5,
+.footer .Offer .gp5 {
+    gap: 5%;
+}
+
+.footer .Topcity h4,
+.footer .Offer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Rasputin';
+    font-size: 16px;
+}
+
+.footer .Topcity ul {}
+
+.footer .Topcity ul li,
+.footer .Offer ul li {
+    display: block;
+    margin: 12px 0px;
+    font-family: 'Rasputin';
+    font-size: 11.3px;
+}
+
+.footer .Topcity ul li,
+.footer .Offer ul li {
+    color: #fff;
+}
+
+.footer .termsConditions {
+    width: 20%;
+}
+
+.footer .termsConditions h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.footerbottom {
+    padding: 20px;
+    /* background: rgb(37 38 43); */
+}
+
+.footerbottom p {
+    font-size: 13px;
+    font-family: 'Rasputin';
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* ABOUT US */
+.aboutUs {
+    padding-top: 50px;
+}
+
+.aboutUs h1.abt {
+    font-style: 31px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Rasputin';
+    color: #202020;
+
+}
+
+.aboutUs h1.Why {
+    font-style: 15.3px;
+    color: #202020;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.aboutUs h1 {
+    font-style: 35px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+
+.aboutUs p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.aboutUs ul li p {
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #202020;
+}
+
+.aboutUs ul {
+    margin-bottom: 15px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.aboutUs ul li ul {
+    margin-bottom: 15px;
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.aboutUs ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.aboutUs ul li b {}
+
+/* ABOUT US */
+/* Forbuyers */
+.sorting {
+    padding: 30px 0;
+}
+
+.sorting .btn {
+    padding: 9px 30px;
+    background: #64506b;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #64506b;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sorting select {
+    padding: 9px 30px;
+    height: 38px;
+    background: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #000;
+}
+
+.allProperties .sinPro {
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.gp3 {
+    gap: 3%;
+}
+
+.allProperties .sinPro .img {
+    width: 450px;
+    height: 320px;
+}
+
+.allProperties .sinPro .img img {
+    width: 450px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.allProperties .sinPro .info {
+    width: 60%;
+}
+
+.allProperties .sinPro .info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: 'Rasputin';
+}
+
+.allProperties .sinPro .info h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.allProperties .sinPro .info p {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 8px;
+    color: #737373;
+
+
+}
+
+.allProperties .sinPro .info h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.allProperties .sinPro .info .Facility {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.allProperties .sinPro .info .Facility .sinBox {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    margin-bottom: 12px;
+}
+
+.allProperties .sinPro .info .Facility .sinBox img {
+    width: 50px;
+    height: 50px;
+}
+
+.allProperties .sinPro .info .Facility h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.allProperties .sinPro .info .Facility p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #737373;
+}
+
+.allProperties p.red {
+    margin: 15px 0 20px 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+
+}
+
+.allProperties p.red a {
+    color: #64506b;
+    font-weight: 700;
+}
+
+.allProperties .Developer {
+    padding: 15px 0;
+}
+
+.allProperties .Developer h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 900;
+    color: #202020;
+}
+
+.allProperties .Developer p {
+    font-family: var(--system-ui);
+    font-size: 13px;
+}
+
+/* Forbuyers */
+
+
+
+/* builderDealerBanner */
+.builderDealerBanner {
+    background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+    position: relative;
+    height: 500px;
+}
+
+.builderDealerBanner.vista {
+    background: url("../../public/images/vista.jpg") no-repeat center center / cover;
+    position: relative;
+    height: 607px;
+}
+
+.builderDealerBanner.uni {
+    background: url("../../public/images/uni.jpg") no-repeat center center / cover;
+    position: relative;
+    height: 590px;
+}
+
+.builderDealerBanner .left {
+    padding-top: 50px;
+}
+
+.builderDealerBanner .left h2 {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-family: 'Rasputin';
+}
+
+.builderDealerBanner .left p {
+    color: #000;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.builderDealerBanner .right {
+    width: 340px;
+    background: #fff;
+    padding: 25px;
+    position: absolute;
+    height: 500px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.builderDealerBanner.vista .right,
+.builderDealerBanner.uni .right {
+    width: 340px;
+    background: #fff;
+    padding: 25px;
+    position: absolute;
+    height: 557px;
+    top: 0;
+    right: 0;
+}
+
+.builderDealerBanner .right {
+    width: 340px;
+    background: #fff;
+    padding: 25px;
+    position: absolute;
+    height: 454px;
+    top: 0;
+    right: 0;
+}
+
+.builderDealerBanner .right form,
+.Form .inqure {
+    font-family: 'Rasputin';
+}
+
+.builderDealerBanner .right form h4,
+.Form .inqure h4,
+.downloadbro .inqure h4,
+.contactUs .right form h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.builderDealerBanner .right form input,
+.Form .inqure input,
+.downloadbro .inqure input,
+.contactUs .right form input,
+.contactUs .right form textarea,
+.Form .inqure textarea,
+.builderDealerBanner .right form select,
+.Form .inqure select {
+    width: calc(100% - 30px);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+
+}
+
+.builderDealerBanner .right form select,
+.Form .inqure select,
+.contactUs .right form input[type="submit"],
+.downloadbro .inqure input[type="submit"],
+.builderDealerBanner .right form input[type="submit"],
+.builderDealerBanner .right form input[type="button"],
+.Form .inqure input[type="button"] {
+    width: 100%;
+    height: 38px;
+}
+input[type="submit"],
+input[type="button"]{
+    color: #fff;
+}
+select {
+    background: #fff;
+    color: #000;
+}
+
+.builderDealerBanner .right form input[type="checkbox"],
+.downloadbro .inqure input[type="checkbox"],
+.Form .inqure input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+.builderDealerBanner .right form label,
+.downloadbro .inqure form label,
+.Form .inqure label {
+    font-size: 9px;
+}
+
+/* builderDealerBanner */
+
+.aboutUs h1 {
+    margin-bottom: 15px;
+    font-family: 'Rasputin';
+}
+
+.aboutUs p.Reach {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.aboutUs h3 {
+    margin-bottom: 15px;
+}
+
+.aboutUs .percent {
+    width: 50px;
+    height: 50px;
+    background: #64506b;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 12px;
+}
+
+
+.wdd {
+    display: flex;
+    gap: 2.5%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.wdd .sinService {
+    padding: 20px 2%;
+    width: calc(22% - 4%);
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    transform: rotateY(0deg);
+    margin-top: 30px;
+}
+
+
+.wdd .sinService .serIcon {
+    width: calc(90px - 40px);
+    height: calc(90px - 40px);
+    /* border: 2px solid #043651; */
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.8s all ease;
+}
+
+.wdd .sinService:hover .serIcon {
+    transform: rotateY(360deg);
+    margin-bottom: 20px;
+    transition: 0.8s all ease;
+}
+
+.wdd .sinService .serInfo h4 {
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1.title.pp {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.wdd .sinService .serInfo p {
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.wdd .sinService .serInfo p span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #043651;
+    cursor: pointer;
+}
+
+.wdd p a {
+    background: #043651;
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 8px 22px;
+    border-radius: 25px;
+    border: 1px solid #043651;
+    display: inline-block;
+    box-shadow: 0px 0px 10px #ddd;
+}
+
+.wdd p a:hover {
+    transition: 0.5s all ease-in-out;
+    background: #fff;
+    color: #043651;
+    border: 1px solid #043651;
+}
+
+
+
+
+/* contactUs */
+.contactUs {
+    font-family: 'Rasputin';
+
+}
+
+.contactUs .bgs {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.contactUs .lll {
+    width: 50%;
+    height: 475px;
+}
+
+.contactUs .rrr {
+    width: 50%;
+    height: 554px;
+    background: #64506b;
+}
+
+.contactUs .left {
+    width: 50%;
+}
+
+.contactUs .left h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contactUs .left p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 25px;
+    color: #202020;
+}
+
+.contactUs .left h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.contactUs .right {
+    background: #64506b;
+    padding: 30px;
+    width: calc(50% - 60px);
+}
+
+.contactUs .right form {}
+
+.contactUs .right form h4 {
+    color: #fff;
+}
+
+.contactUs .right form input[type="submit"] {
+    background: #fff;
+    color: #64506b;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* contactUs */
+/* vistaContent */
+.vistaContent {
+    padding: 50px 0;
+}
+
+.vistaContent h1 {
+    margin-bottom: 15px;
+    font-family: 'Rasputin';
+}
+
+.vistaContent h1.not {
+    margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+    color: #202020;
+}
+
+.aboutUs h1.not {
+    margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+    color: #202020;
+}
+
+.vistaContent h2 {
+    font-size: 32px;
+    font-weight: 700;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.vistaContent h3 {
+    margin-bottom: 10px;
+}
+
+.vistaContent p {
+    margin-bottom: 10px;
+}
+
+.vistaContent .Facility {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.vistaContent .Facility .sinBox {
+    width: 22%;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    margin-bottom: 12px;
+}
+
+.vistaContent .Facility .sinBox img {
+    width: 50px;
+    height: 50px;
+}
+
+.vistaContent .Facility h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.vistaContent .Facility p {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* vistaContent */
+/* gallery */
+.gallery {}
+
+.gallery h1 {}
+
+.gallery .properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.gallery .properties .imgBox {
+    width: 30%;
+    margin-bottom: 30px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.gallery .properties .imgBox img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* gallery */
+/* plans */
+.plans {}
+
+.plans h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.plans .planImg {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.plans .planImg img {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+/* plans */
+
+.aboutUs .cities {
+    display: flex;
+    gap: 2.5%;
+    flex-wrap: wrap;
+}
+
+.aboutUs .cities .singleCities {
+    width: 22.5%;
+    margin-bottom: 20px;
+}
+
+.aboutUs .cities .singleCities .imgBox {
+    margin-bottom: 15px;
+}
+
+.aboutUs .cities .singleCities .imgBox img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.aboutUs .cities .singleCities h5 {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.locAd {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.locAd .sinad {
+    width: 21%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.locAd .percent {
+    width: 50px;
+    height: 50px;
+}
+
+.locAd p {
+    width: calc(100% - 50px);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.popup {
+    background: #0000008c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999999999999;
+    display: grid;
+    place-content: center;
+    transform: scale(0);
+    transition: 0.5s all ease;
+}
+
+.popup.active {
+    transition: 0.5s all ease;
+    transform: scale(1);
+}
+
+.popup .inqure {
+    background: #ffffff;
+    width: 358px;
+    /* height: 560px; */
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #64506b;
+}
+
+.popup .inqure .left {
+    width: calc(100% - 100px);
+    padding: 15px 50px;
+}
+
+.popup .inqure .left h4 {
+    text-align: center;
+    font-size: 18px;
+    color: #00cf2d;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.popup .inqure .left p.download {
+    display: none;
+}
+
+.popup .icon-close2 {
+    color: #64506b;
+    font-size: 20px;
+    background: #64506b30;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+.contactUs .container {
+    z-index: 999999;
+}
+
+
+
+.Form,
+.imgshow {
+    display: none;
+}
+
+
+
+
+.downloadbro {
+    background: #0000008c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: grid;
+    place-content: center;
+    transform: scale(0);
+    transition: 0.5s all ease;
+}
+
+.downloadbro.active {
+    transition: 0.5s all ease;
+    transform: scale(1);
+}
+
+.downloadbro .inqure {
+    background: #ffffff;
+    width: 330px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #64506b;
+    padding: 25px 15px;
+}
+
+.downloadbro .icon-close2 {
+    color: #64506b;
+    font-size: 16px;
+    background: #64506b30;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+/* Smartphones (portrait and landscape)  */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        padding-top: 58px !important;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .full {
+        width: 100% !important;
+    }
+
+    .container {
+        max-width: 360px;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .smd {
+        display: none !important;
+    }
+
+    .smb15 {
+        margin-bottom: 15px;
+    }
+
+    .header .logo {
+        width: 28% !important;
+    }
+
+    .menu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: #fff;
+        width: calc(100% - 60px) !important;
+        height: calc(100% - 60px) !important;
+        z-index: 99999;
+        transform: rotateY(90deg);
+        transform-origin: right;
+        transition: 0.5s all ease;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .menu.active {
+        transform: rotateY(0);
+    }
+
+    .con {
+        text-align: center;
+        width: 100%;
+    }
+
+    .icon-menu {
+        font-size: 28px;
+        display: block;
+        margin-left: 15px;
+    }
+
+    .icon-close2 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 22px;
+        z-index: 99999;
+        display: block;
+    }
+
+
+    .slick-slider {
+        display: block !important;
+    }
+
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul li {
+        padding: 0 !important;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+    }
+
+    .banner h4 {
+        font-size: 11px;
+    }
+
+    .featuredProperties,
+    .popularCities,
+    .newlyLaunched {
+        padding: 30px 0 30px 0;
+    }
+
+    .featuredProperties .properties,
+    .popularCities .cities,
+    .newlyLaunched .properties {
+        /* overflow-x: scroll;
+        flex-wrap: nowrap; */
+    }
+
+    .featuredProperties .properties .singleProperties,
+    .popularCities .cities .singleCities,
+    .newlyLaunched .properties .singleProperties {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+    h1.title {
+        color: #202020;
+        margin-bottom: 35px;
+    }
+
+    .footer .footerLogo {
+        width: 40%;
+        margin-bottom: 15px;
+    }
+
+    .Topcity {
+        margin-bottom: 20px;
+    }
+
+    .footer .Topcity ul li,
+    .footer .Offer ul li {
+        font-size: 11px;
+    }
+
+    .allProperties .sinPro .img {
+        width: 140px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    .allProperties .sinPro .img img {
+        width: 140px;
+        height: 180px;
+    }
+
+    .allProperties .sinPro {
+        padding: 10px;
+    }
+
+    .allProperties .sinPro .info {
+        padding: 0px;
+    }
+
+    .allProperties .sinPro .info h2 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .allProperties .sinPro .info h4 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .allProperties .sinPro .info h3 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .allProperties .sinPro .info .Facility .sinBox {
+        align-items: flex-start;
+        gap: 5%;
+        margin-bottom: 8px;
+    }
+
+
+    .allProperties .sinPro .info .Facility .sinBox img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .allProperties .sinPro .info .Facility h5 {
+        font-size: 10px;
+    }
+
+    .allProperties .sinPro .info p {
+        font-size: 9px !important;
+        margin-bottom: 5px;
+    }
+
+    .allProperties .sinPro .info .Facility {
+        padding-top: 5px;
+        gap: 2%;
+    }
+
+    .allProperties .sinPro .info .Facility h5 {
+        margin-bottom: 4px;
+    }
+
+    .allProperties p.red {
+        margin: 0px 0px;
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+    .allProperties .Developer h5 {
+        font-size: 13px;
+    }
+
+    .allProperties .Developer p {
+        font-family: var(--system-ui);
+        font-size: 10px;
+    }
+
+    .allProperties .Developer {
+        padding: 5px 0;
+    }
+
+    .allProperties .Developer a {
+        font-size: 9px;
+    }
+
+    .builderDealerBanner .left {
+        width: 360px;
+        margin-bottom: 65px;
+        height: 200px;
+    }
+
+    .wdd .sinService {
+        padding: 20px 5%;
+        width: calc(100% - 10%);
+    }
+
+    .vistaContent .Facility .sinBox {
+        width: 48%;
+    }
+
+    .vistaContent .Facility .sinBox img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .vistaContent .Facility h5 {
+        font-size: 12px;
+    }
+
+    .vistaContent .Facility p {
+        font-size: 10px;
+    }
+
+    .gallery .properties .imgBox {
+        width: 48%;
+    }
+
+    .plans .planImg img {
+        width: 49%;
+        margin-bottom: 30px;
+    }
+
+    .aboutUs .cities .singleCities {
+        width: 48.5%;
+        margin-bottom: 20px;
+    }
+
+    .locAd .sinad {
+        width: 100%;
+    }
+
+    .footer .footerMenu ul li {
+        margin-bottom: 15px;
+        font-size: 13px;
+        text-transform: capitalize;
+    }
+
+    .contactUs .right {
+        width: calc(100% - 60px);
+    }
+
+
+
+    .imgBox {
+        margin: 0 0px !important;
+    }
+
+    .imgBox img {
+        width: 95% !important;
+    }
+
+
+
+
+
+
+    .featuredProperties .properties,
+    .popularCities .cities,
+    .aboutUs .cities,
+    .gallery .properties,
+    .plans .planImg {
+        display: none !important;
+    }
+
+    .singleProperties {
+        /* margin: 0 15px; */
+        margin-bottom: 15px;
+    }
+
+    .featuredProperties .singleProperties .imgBox,
+    .newlyLaunched .singleProperties .imgBox,
+    .popularCities .singleCities .imgBox {
+        margin: 10px 5px;
+    }
+
+    .featuredProperties .singleProperties h5,
+    .aboutUs .singleCities h5,
+    .popularCities .singleCities h5 {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .newlyLaunched .singleProperties h5 {
+        margin-bottom: 8px;
+    }
+
+    .newlyLaunched .singleProperties h6 {
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+
+    .newlyLaunched .singleProperties p {
+        margin-bottom: 8px;
+    }
+
+
+    .contactUs {
+        padding: 20px 0;
+    }
+
+
+
+
+    .sch {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+        bottom: 0;
+    }
+
+    .sch.active {
+        opacity: 1;
+    }
+
+    .sch button {
+        display: block;
+        margin: 0 auto;
+        min-width: 310px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .builderDealerBanner {
+        height: 290px;
+    }
+
+    .builderDealerBanner.vista {
+        height: 290px;
+    }
+
+    .builderDealerBanner.uni {
+        height: 290px;
+    }
+
+    .builderDealerBanner .right,
+    .builderDealerBanner.vista .right,
+    .builderDealerBanner.uni .right {
+        position: relative;
+        height: auto;
+        width: calc(100% - 70px);
+        box-shadow: inset 0 0 2px #ddd;
+        background: #fcfcfc;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .builderDealerBanner.vista .right {
+        left: 48%;
+        transform: translateX(-50%);
+    }
+    .builderDealerBanner.uni .right {
+        left: 48%;
+        transform: translateX(-50%);
+    }
+
+    .builderDealerBanner.vista .left {
+        margin-bottom: 80x;
+    }
+
+    .builderDealerBanner.uni .left {
+        margin-bottom: 80x;
+    }
+
+    .builderDealerBanner {
+        margin-bottom: 460px;
+    }
+
+    .builderDealerBanner.vista,
+    .builderDealerBanner.uni {
+        margin-bottom: 555px;
+    }
+
+
+
+
+
+
+
+    .planImg img,
+    img.plnimg {
+        width: 95% !important;
+    }
+
+
+
+
+    /* .popup{ */
+    .Form,
+    .downloadbro,
+    .imgshow {
+        background: #0000008c;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        display: grid;
+        place-content: center;
+        transform: scale(0);
+        transition: 0.5s all ease;
+    }
+
+    .Form.active,
+    .downloadbro.active,
+    .imgshow.active {
+        transition: 0.5s all ease;
+        transform: scale(1);
+    }
+
+    .Form .inqure,
+    .downloadbro .inqure,
+    .imgshow .inqure {
+        background: #ffffff;
+        width: 330px;
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid #64506b;
+        padding: 25px 15px;
+    }
+
+    .imgshow .inqure {
+        padding-top: 30px;
+    }
+
+    .Form .icon-close2,
+    .downloadbro .icon-close2 {
+        color: #64506b;
+        font-size: 16px;
+        background: #64506b30;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        padding: 5px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .imgshow .icon-close2 {
+        color: #64506b;
+        font-size: 16px;
+
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        padding: 5px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+
+
+    .popup .inqure .left p.download {
+        display: block;
+    }
+
+}
