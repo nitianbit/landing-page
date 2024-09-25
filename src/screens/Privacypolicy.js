@@ -12,7 +12,9 @@ const Privacypolicy = () => {
             {/* content */}
             <div className='aboutUs'>
                 <div className='container'>
-                    <h1>Privacy Policy</h1>
+                    <h1 style={{
+                        marginBottom:"30px"
+                    }}>Privacy Policy</h1>
                     <h3>1. INTRODUCTION</h3>
 
                     <p>apkiproperty.com is committed to the security and management of personal data, to function effectively and successfully for the
@@ -180,7 +182,9 @@ const Privacypolicy = () => {
                         Digital Personal Data Protection Act, 2023. The DPB serves as India's primary authority in matters relating to personal data
                         protection.</p>
                     <h3>15. UPDATES TO PRIVACY POLICY</h3>
-                    <p>At our discretion, we may change our privacy policy to reflect updates to our business processes, current acceptable practices, or
+                    <p style={{
+                        marginBottom:"50px"
+                    }}>At our discretion, we may change our privacy policy to reflect updates to our business processes, current acceptable practices, or
                         legislative or regulatory changes, and inclusion/ exclusion of target audience and stakeholders. If we decide to change this privacy
                         policy, we will post the changes here at the same link by which you are accessing this privacy policy.
                         If the changes are significant, or if required by applicable law, we will contact you based on your selected preferences for
