@@ -54,13 +54,12 @@ const Contactus = () => {
                             give you a call back.
                         </p>
                         <h3>Address</h3>
-                        <p>Apki Property
-                            Dwarka Sector 7
-                            New Delhi - 110075
+                        <p>Apki Property <br/>
+                            Dwarka Sector 7 <br/>
+                            New Delhi - 110075 <br/>
                             India</p>
                         <h3>Working Hours</h3>
-                        <p>Monday - Friday</p>
-                        <p>10:00 AM - 06:00 PM</p>
+                        <p>Monday - Friday <br/>10:00 AM - 06:00 PM</p>
                     </div>
                     <div className='right'>
                         <form onSubmit={(e) => {
@@ -97,7 +96,10 @@ const Contactus = () => {
                                     </div>
                                 );
                             })}
-                            <input type="submit" name="" value="Schedule a Call" className='button'></input>
+                            <input style={{
+                                width:"60%",
+                                textAlign:"center"
+                            }} type="submit" name="" value="Schedule a Call" className='button'></input>
                         </form>
                     </div>
                 </div>
