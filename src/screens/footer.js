@@ -84,7 +84,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footerbottom">
-                    <p className="text-center text-white">
+                    <p className="text-start text-white">
                         Copyright @apkiproperty.com. All Rights Reserved.
                     </p>
                 </div>
