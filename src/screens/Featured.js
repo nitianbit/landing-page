@@ -34,43 +34,43 @@ const Featured = () => {
                     <div className='imgBox'>
                         <img src="./images/2.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Residential Flats</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/3.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Residential Builder Floors</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/4.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Residential Duplex</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/5.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Residential Villas</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/6.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Residential Plots</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/7.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Commercial Offices</h5>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
                         <img src="./images/8.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Commercial Shops</h5>
                 </div>
             </Slider>
         </>
