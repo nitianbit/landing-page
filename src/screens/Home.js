@@ -23,10 +23,12 @@ const Home = () => {
             </div>
             {/* banner section end */}
             {/* featuredProperties start */}
-            <div className='featuredProperties'>
+            <div className='featuredProperties' style={{
+                paddingBottom:"0px"
+            }}>
                 <div className='container'>
-                    <h4 className='text-center subtitle'>WHAT WE OFFER</h4>
-                    <h1 className='text-center title'>Featured Properties</h1>
+                    {/* <h4 className='text-center subtitle'>WHAT WE OFFER</h4> */}
+                    <h1 className='text-start title'>Featured Properties</h1>
                     <div className='properties'>
                         <div className='singleProperties'>
                             <div className='imgBox'>
@@ -38,43 +40,43 @@ const Home = () => {
                             <div className='imgBox'>
                                 <img src="./images/2.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Flats</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/3.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Builder Floors</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/4.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Duplex</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/5.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Villas </h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/6.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Plots</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/7.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Commercial Offices</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/8.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Commercial Shops</h5>
                         </div>
                     </div>
                     <Featured />
@@ -82,69 +84,72 @@ const Home = () => {
             </div>
             {/* featuredProperties end */}
             {/* Popular Cities start */}
-            <div className='popularCities'>
+            <div className='popularCities' style={{
+                paddingBottom:"0px",
+                paddingTop:"40px"
+            }}>
                 <div className='container'>
-                    <h1 className='text-center title'>Popular Cities</h1>
+                    <h1 className='text-start title'>Popular Cities</h1>
                     <div className='cities'>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c1.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Delhi</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c2.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Gurugram</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c3.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Faridabad</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c4.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Noida</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c5.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Hyderabad</h5>
+                        </div>
+                        <div className='singleCities'>
+                            <div className='imgBox'>
+                                <img src="./images/c5.jpg" alt="" />
+                            </div>
+                            <h5>Mumbai</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c6.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Pune</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c7.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Bengaluru</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c8.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
-                        </div>
-                        <div className='singleCities'>
-                            <div className='imgBox'>
-                                <img src="./images/c1.jpg" alt="" />
-                            </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Chennai</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
                                 <img src="./images/c2.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Kolkata</h5>
                         </div>
                     </div>
                     <Popularcity />
@@ -152,10 +157,12 @@ const Home = () => {
             </div>
             {/* Popular Cities end */}
             {/* featuredProperties start */}
-            <div className='newlyLaunched'>
+            <div className='newlyLaunched' style={{
+                paddingTop:"40px"
+            }}>
                 <div className='container'>
-                    <h4 className='text-center subtitle'>HOT PROPERTIES</h4>
-                    <h1 className='text-center title'>NEWLY LAUNCHED</h1>
+                    {/* <h4 className='text-center subtitle'>HOT PROPERTIES</h4> */}
+                    <h1 className='text-start title'>Newly Launched</h1>
                     <div className='properties'>
                         <div className='singleProperties'>
                             <div className='imgBox'>
