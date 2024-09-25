@@ -79,16 +79,23 @@ a {
     box-sizing: border-box;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1184px) {
     .banner {
-        background: url("../../public/images/banner_laptop.jpg") no-repeat center center / cover;
+        background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
         height: 80vh;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .banner {
         background: url("../../public/images/banner_mobile.jpg") no-repeat center center / cover;
+        height: 86vh;
+    }
+}
+
+@media (width: 540px) {
+    .banner {
+        background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
         height: 86vh;
     }
 }
