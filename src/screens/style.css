@@ -89,7 +89,7 @@ a {
 @media (max-width: 768px) {
     .banner {
         background: url("../../public/images/banner_mobile.jpg") no-repeat center center / cover;
-        height: 70vh;
+        height: 86vh;
     }
 }
 
