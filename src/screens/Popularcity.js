@@ -30,61 +30,61 @@ const Popularcity = () => {
                     <div className='imgBox'>
                         <img src="./images/c1.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Delhi</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c2.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Gurugram</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c3.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Faridabad</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c4.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Noida</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c5.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Hyderabad</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c6.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Mumbai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c7.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Pune</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c8.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Bengaluru</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c1.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Chennai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
                         <img src="./images/c2.jpg" alt="" />
                     </div>
-                    <h5>Residential Apartments</h5>
+                    <h5>Kolkata</h5>
                 </div>
             </Slider>
         </>
