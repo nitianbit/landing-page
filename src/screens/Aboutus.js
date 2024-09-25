@@ -23,7 +23,12 @@ const About = () => {
                         helping you find properties that align with your goals, lifestyle, and budget. With access to a wide network of developers, agents,
                         and exclusive listings, we ensure that you have the advantage when it comes to making informed decisions.
                     </p>
-                    <h1 className='Why'>Why Choose Us?</h1>
+                    <h1 style={{
+                        marginTop: "35px"
+                    }} className='abt'>WHY CHOOSE US?</h1>
+                    <p>Whether you're a first-time homebuyer, a seasoned investor, or looking for a commercial property, Apki Property is here
+                        to make your property buying journey smooth and successful. Let us help you turn your property dreams into reality!
+                    </p>
                     <ul>
                         <li><b>Tailored Solutions:</b> We understand that every buyer is unique, and so are their needs. That’s why we take the time to listen,
                             analyze, and present options that match your vision.
@@ -32,21 +37,23 @@ const About = () => {
                             search to final purchase, ensuring you have a seamless and stress-free experience.
                         </li>
                         <li><b>Market Insight:</b> With our finger on the pulse of the Indian real estate market, we provide you with the latest information and
-trends, helping you make informed decisions.
+                            trends, helping you make informed decisions.
 
                         </li>
                         <li><b>Transparent Transactions:</b> We prioritise trust and transparency in every transaction, ensuring you have complete confidence
-in your property purchase.</li>
+                            in your property purchase.</li>
                     </ul>
-                    <p>Whether you're a first-time homebuyer, a seasoned investor, or looking for a commercial property, [Your Company Name] is here
-to make your property buying journey smooth and successful. Let us help you turn your property dreams into reality!
-                    </p>
+
                 </div>
             </div>
             {/* featuredProperties start */}
-            <div className='featuredProperties'>
+                <div className='featuredProperties' style={{
+                paddingBottom:"50px",
+                paddingTop:"35px"
+            }}>
                 <div className='container'>
-                    <h1 className='title'>What We Offer?</h1>
+                    {/* <h4 className='text-center subtitle'>WHAT WE OFFER</h4> */}
+                    <h1 className='text-start title'>What We Offer?</h1>
                     <div className='properties'>
                         <div className='singleProperties'>
                             <div className='imgBox'>
@@ -58,43 +65,43 @@ to make your property buying journey smooth and successful. Let us help you turn
                             <div className='imgBox'>
                                 <img src="./images/2.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Flats</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/3.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Builder Floors</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/4.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Duplex</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/5.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Villas </h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/6.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Residential Plots</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/7.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Commercial Offices</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/8.jpg" alt="" />
                             </div>
-                            <h5>Residential Apartments</h5>
+                            <h5>Commercial Shops</h5>
                         </div>
                     </div>
                     <Featured />
