@@ -11,7 +11,7 @@ const Home = () => {
             <Header />
             {/* banner section start */}
             <div className='banner'>
-                <div className='container'>
+                {/* <div className='container'>
                     <h1 className='text-center'>THINKING OF BUYING YOUR <br></br> HOME OR OFFICE?</h1>
                     <h4 className='text-center'>
                         <span> GET THE CARE AND GUIDANCE YOU DESERVE</span>
@@ -19,7 +19,7 @@ const Home = () => {
                     <p className='text-center'>
                         <a href="Contactus" className='button'>Contact Us</a>
                     </p>
-                </div>
+                </div> */}
             </div>
             {/* banner section end */}
             {/* featuredProperties start */}
