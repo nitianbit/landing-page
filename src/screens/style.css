@@ -161,7 +161,7 @@ h1.title {
 
 /* newlyLaunched start */
 .newlyLaunched {
-    padding: 80px 0 40px 0;
+    padding: 80px 0 50px 0;
 }
 
 .newlyLaunched .properties {
@@ -365,9 +365,42 @@ h1.title {
     font-size: 15px;
 }
 
+/* Default padding for small screens */
 .footerbottom {
-    padding: 20px;
+    padding: 10px;
+    padding-left: 20px;
     /* background: rgb(37 38 43); */
+}
+
+/* Medium screens (e.g., tablets) */
+
+@media only screen and (min-width: 300px) {
+    .footerbottom {
+        padding: 15px;
+        padding-left: 35px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .footerbottom {
+        padding: 15px;
+        padding-left: 50px;
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media only screen and (min-width: 1024px) {
+    .footerbottom {
+        padding: 20px;
+        padding-left: 55px;
+    }
+}
+
+/* Extra large screens (e.g., large desktops) */
+@media only screen and (min-width: 1200px) {
+    .footerbottom {
+        padding: 25px;
+        padding-left: 65px;
+    }
 }
 
 .footerbottom p {
@@ -391,7 +424,7 @@ h1.title {
 .aboutUs h1.abt {
     font-style: 31px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     font-family: 'Rasputin';
     color: #202020;
 
@@ -413,7 +446,7 @@ h1.title {
 
 .aboutUs p {
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 24px;
 }
 
@@ -438,7 +471,7 @@ h1.title {
 
 .aboutUs ul li {
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: 500;
 }
@@ -884,7 +917,7 @@ h1.title.pp {
 
 .contactUs .left p {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     line-height: 25px;
     color: #202020;
 }
@@ -904,6 +937,7 @@ h1.title.pp {
 
 .contactUs .right form h4 {
     color: #fff;
+    /* margin-bottom: 20px; */
 }
 
 .contactUs .right form input[type="submit"] {
