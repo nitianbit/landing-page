@@ -171,14 +171,14 @@ const Home = () => {
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
                             <p>Commercial</p>
-                            <h4>Starting ₹79 Lakh*</h4>
+                            <h4>Starting ₹49 Lakh*</h4>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/f2.jpg" alt="" />
                             </div>
-                            <h5>Universal Square</h5>
-                            <h6>Sector 79, Faridabad</h6>
+                            <h5>Vista Corner</h5>
+                            <h6>Sector 89, Gurugram</h6>
                             <p>Commercial</p>
                             <h4>Starting ₹79 Lakh*</h4>
                         </div>
@@ -186,19 +186,19 @@ const Home = () => {
                             <div className='imgBox'>
                                 <img src="./images/f3.jpg" alt="" />
                             </div>
-                            <h5>Universal Square</h5>
-                            <h6>Sector 79, Faridabad</h6>
-                            <p>Commercial</p>
-                            <h4>Starting ₹79 Lakh*</h4>
+                            <h5>EKAM</h5>
+                            <h6>Velimela, Hyderabad</h6>
+                            <p>Residential</p>
+                            <h4>Starting ₹1.16 Crore*</h4>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
                                 <img src="./images/f4.jpg" alt="" />
                             </div>
-                            <h5>Universal Square</h5>
-                            <h6>Sector 79, Faridabad</h6>
-                            <p>Commercial</p>
-                            <h4>Starting ₹79 Lakh*</h4>
+                            <h5>Mansha Affordable</h5>
+                            <h6>Sector 104, Faridabad</h6>
+                            <p>Residential</p>
+                            <h4>Starting ₹31.25 Lakh*</h4>
                         </div>
                     </div>
                     <p className='text-center'><a href="Forbuyers" className='button'>View All</a></p>
