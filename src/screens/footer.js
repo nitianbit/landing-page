@@ -30,12 +30,12 @@ const Footer = () => {
                             <h5>FOLLOW</h5>
                             <ul className="d-flex">
                                 <li>
-                                    <a href="facebook.com">
+                                    <a target="_blank" href="https://www.facebook.com/ApkiPropertyOfficial">
                                         <span className="icon-facebook"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="instagram.com">
+                                    <a target="_blank" href="https://www.instagram.com/ApkiPropertyOfficial">
                                         <span className="icon-instagram"></span>
                                     </a>
                                 </li>
