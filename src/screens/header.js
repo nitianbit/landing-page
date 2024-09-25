@@ -25,7 +25,9 @@ const Header = () => {
                             <li><a href="Forbuildersdealers">For Builders/Dealers</a></li>
                         </ul>
                         <div class="con">
-                            <a href="Contactus" className='button'>Contact Us</a>
+                            <a href="Contactus" style={{
+                                marginLeft:"20px"
+                            }} className='button'>Contact Us</a>
                         </div>
                     </div>
                     <i class="icon-menu ml-2" onClick={() =>{setMenuOpen(!menuOpen)}}></i>
@@ -36,4 +38,3 @@ const Header = () => {
 }
 
 export default Header;
-
