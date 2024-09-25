@@ -52,37 +52,37 @@ const Popularcity = () => {
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c5.jpg" alt="" />
+                        <img src="./images/c9.jpg" alt="" />
                     </div>
                     <h5>Hyderabad</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c6.jpg" alt="" />
+                        <img src="./images/c5.jpg" alt="" />
                     </div>
                     <h5>Mumbai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c7.jpg" alt="" />
+                        <img src="./images/c6.jpg" alt="" />
                     </div>
                     <h5>Pune</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c8.jpg" alt="" />
+                        <img src="./images/c7.jpg" alt="" />
                     </div>
                     <h5>Bengaluru</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c1.jpg" alt="" />
+                        <img src="./images/c8.jpg" alt="" />
                     </div>
                     <h5>Chennai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c2.jpg" alt="" />
+                        <img src="./images/c10.jpg" alt="" />
                     </div>
                     <h5>Kolkata</h5>
                 </div>
