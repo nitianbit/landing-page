@@ -117,7 +117,7 @@ const Home = () => {
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/c5.jpg" alt="" />
+                                <img src="./images/c9.jpg" alt="" />
                             </div>
                             <h5>Hyderabad</h5>
                         </div>
@@ -147,7 +147,7 @@ const Home = () => {
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/c2.jpg" alt="" />
+                                <img src="./images/c10.jpg" alt="" />
                             </div>
                             <h5>Kolkata</h5>
                         </div>
