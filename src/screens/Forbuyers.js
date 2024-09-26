@@ -131,7 +131,7 @@ const Forbuyers = () => {
                                 <h5>Developer</h5>
                                 <p>AURIC GROUP</p>
                             </div>
-                            <a href="Vistacorner" className='button'>MORE DETAILS</a>
+                            <a href="Universalsquare" className='button'>MORE DETAILS</a>
                         </div>
                     </div>
                 </div>
