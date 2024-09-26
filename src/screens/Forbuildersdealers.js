@@ -6,11 +6,14 @@ import Footer from './footer';
 import { CLIENTENDPOINTS } from '../components/clients/constant';
 import { doGET } from '../utils/HttpUtils';
 import { useUserContext } from '../context/UserContext';
-import { handleSubmit } from '../components/handleSubmit';
+import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
+import OTPPage from '../components/OTP/OtpPage';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Forbuildersdealers = () => {
+    const navigate = useNavigate()
     const [popup, setPopup] = useState(false);
     const { project, setProject } = useUserContext()
     const [form, setForm] = useState(null)
@@ -74,11 +77,13 @@ const Forbuildersdealers = () => {
                     <div className='right'>
                         <form onSubmit={(e) => {
                             e.preventDefault()
-                            console.log("hey")
-                                handleSubmit({ e, form, formData: data, phone: phoneNo, project }).then(res => {
-                                    res && setData({})
-                                })
-                                setPopup(!popup)
+                                handleSubmit({ e, form, formData: data, phone: phoneNo, project })
+                                if (form?.showOTP) {
+                                    setVeri(!Veri)
+                                } else {
+                                    navigate("/thankYou")
+                                    setData({})
+                                }
                             }} id="Schedule">
                             <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
                             <h4>TRY US NOW:</h4>
@@ -325,49 +330,77 @@ const Forbuildersdealers = () => {
             <div className={Form1 ? "Form active" : "Form"}>
                 <div class="inqure">
                     <span class="icon-close2 popcls" onClick={() => { setForm1(!Form1) }}></span>
-                    <form action="#" method="post">
-                        <h4 className='text-center'>Get in Touch</h4>
-                        <input type="text" name="" id="" placeholder="Full Name"></input>
-                        <input type="email" name="" id="" placeholder="Email ID"></input>
-                        <input type="tel" name="" id="" placeholder="Mobile Number"></input>
-                        <input type="text" name="" id="" placeholder="City you are living in"></input>
-                        <select name="" id="">
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                            <option value="">You are</option>
-                        </select>
-                        <div className='d-flex align-center mb-3'>
-                            <input type="checkbox" name="" id="agre"></input>
-                            <label for="agre">I agree to receive information regarding my submitted enquiry* </label>
-                        </div>
-                        <input type="button" name="" value="Schedule a Call" className='button' onClick={() => { setPopup(!popup) }}></input>
-                    </form>
+                    <form onSubmit={(e) => {
+                            e.preventDefault()
+                                handleSubmit({ e, form, formData: data, phone: phoneNo, project })
+                                if (form?.showOTP) {
+                                    setVeri(!Veri)
+                                } else {
+                                    navigate("/thankYou")
+                                    setData({})
+                                }
+                            }} id="Schedule">
+                            <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
+                            <h4>TRY US NOW:</h4>
+                            {form && form?.fields?.map((field, fieldIndex) => (
+                                field?.type === "select" ? (
+                                    <select
+                                        key={fieldIndex}
+                                        value={data[field?.name] || ''}
+                                        name={field?.name}
+                                        required={form?.requiredFields?.includes(field?._id) || false}
+                                        onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                        label={field?.label}
+                                        id="">
+                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                        {field?.options?.length ? (
+                                            field.options.map((option, optionIndex) => (
+                                                <option key={optionIndex} value={option}>{option}</option>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <option value="">Your Investment Budget</option>
+                                                <option value="">Your Investment Budget</option>
+                                                <option value="">Your Investment Budget</option>
+                                            </>
+                                        )}
+                                    </select>
+                                ) : (
+                                    <input
+                                        key={fieldIndex}
+                                        type={field?.type}
+                                        name={field?.name}
+                                        placeholder={field.label}
+                                        value={data[field?.name] || ''}
+                                        onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                        required={form?.requiredFields?.includes(field?._id) || false}
+                                    />
+                                )
+                            ))}
+                            <div className='d-flex align-center mb-3'>
+                                <input required type="checkbox" name="" id="agree"></input>
+                                <label for="agree">I agree to receive information regarding my submitted enquiry* </label>
+                            </div>
+                            <input type="submit" name="" value="Schedule a Call" className='button'></input>
+                        </form>
                 </div>
             </div>
 
-            <div className={Veri ? "Veri active" : "Veri"}>
-                <div class="inqure">
-                    <span class="icon-close2 popcls" onClick={() => { setVeri(!Veri) }}></span>
-                    <form action="#" method="post">
-                        <h4 className='text-center'>Verify OTP</h4>
-                        <p className='text-center'>Enter the 4-digit code sent to your mobile number.</p>
-                        <div className='code'>
-                            <input type="text" name="" id="code1"></input>
-                            <input type="text" name="" id="code2"></input>
-                            <input type="text" name="" id="code3"></input>
-                            <input type="text" name="" id="code4"></input>
-                        </div>
-                        <p className='text-center'><input type="button" name="" value="Verify OTP" className='button' onClick={() => { setThank(!thank); setVeri(!Veri)  }}></input></p>
-                        <p className='text-center result'>Didn't get OTP ? <u className='resend'>Resend Now</u></p>
-                        {/* You will show the result from here */}
-                        {/* <p className='text-center'>Wrong OTP ? <u className='resend'>Resend Now</u></p>
-                        <p className='text-center text-danger'>OTP Expired ? <u className='resend'>Resend Now</u></p>
-                        <p className='text-center text-success'>Verification successfull.</p> */}
-                        {/* You will show the result from here */}
-                    </form>
-                </div>
-            </div>
+            <OTPPage
+                isOpen={Veri}
+                setIsOpen={setVeri}
+                onSubmit={(v) => {
+                    verifyOTP({ formId: form?._id, phone: phoneNo, otp: v })
+                    setData({})
+                    setThank(!thank)
+                    navigate("/thankYou")
+                }}
+                resendOtp={() => {
+                    if (phoneNo) {
+                        sendOTP(phoneNo)
+                    }
+                }}
+            />
 
             <div className={popup ? "popup active" : "popup"}>
                 <div class="inqure">
