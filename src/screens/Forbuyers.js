@@ -31,7 +31,7 @@ const Forbuyers = () => {
                                 <img src="./images/f2.jpg" alt="" />
                             </div>
                             <div className='info '>
-                                <h2>Copious Vista Corner</h2>
+                                <h2>Vista Corner</h2>
                                 <h4>Sector 89, Gurgaon</h4>
                                 <p>Commercial SCO Plots & Showrooms</p>
                                 <h3>Starting ₹79 Lakh*</h3>
@@ -83,7 +83,7 @@ const Forbuyers = () => {
                                 <img src="./images/f1.jpg" alt="" />
                             </div>
                             <div className='info '>
-                                <h2>Universal Square by Auric Group</h2>
+                                <h2>Universal Square</h2>
                                 <h4>Sector 79, Faridaad</h4>
                                 <p>Commercial SCO Floors and Plots</p>
                                 <h3>Starting ₹49 Lakh*</h3>
