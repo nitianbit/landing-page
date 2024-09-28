@@ -9,6 +9,7 @@ import { useUserContext } from '../context/UserContext';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
+import { validateFields } from '../utils/helper';
 
 
 
@@ -20,6 +21,7 @@ const Forbuildersdealers = () => {
     const [data, setData] = useState({})
     const [phoneNo, setPhoneNo] = useState(null)
     const [sch, setSch] = useState(false);
+    const [errors, setErrors] = useState({});
     const [Veri, setVeri] = useState(false);
     const [thank, setThank] = useState(false);
     const getForm = async (projectId) => {
@@ -77,6 +79,9 @@ const Forbuildersdealers = () => {
                     <div className='right'>
                         <form onSubmit={(e) => {
                             e.preventDefault()
+                            const errorList = validateFields(form?.fields, data, setErrors);
+                            if (Object.keys(errorList).length <= 0) {
+                                e.preventDefault()
                                 handleSubmit({ e, form, formData: data, phone: phoneNo, project })
                                 if (form?.showOTP) {
                                     setVeri(!Veri)
@@ -84,43 +89,53 @@ const Forbuildersdealers = () => {
                                     navigate("/thankYou")
                                     setData({})
                                 }
-                            }} id="Schedule">
+                            } else {
+                                setErrors(errorList)
+                            }
+                        }} id="Schedule">
                             <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
                             <h4>TRY US NOW:</h4>
                             {form && form?.fields?.map((field, fieldIndex) => (
-                                field?.type === "select" ? (
-                                    <select
-                                        key={fieldIndex}
-                                        value={data[field?.name] || ''}
-                                        name={field?.name}
-                                        required={form?.requiredFields?.includes(field?._id) || false}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value)}
-                                        label={field?.label}
-                                        id="">
-                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
-                                        {field?.options?.length ? (
-                                            field.options.map((option, optionIndex) => (
-                                                <option key={optionIndex} value={option}>{option}</option>
-                                            ))
-                                        ) : (
-                                            <>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                            </>
-                                        )}
-                                    </select>
-                                ) : (
-                                    <input
-                                        key={fieldIndex}
-                                        type={field?.type}
-                                        name={field?.name}
-                                        placeholder={field.label}
-                                        value={data[field?.name] || ''}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
-                                        required={form?.requiredFields?.includes(field?._id) || false}
-                                    />
-                                )
+                                <div key={fieldIndex}>
+                                    {field?.type === "select" ? (
+                                        <select
+                                            key={fieldIndex}
+                                            value={data[field?.name] || ''}
+                                            name={field?.name}
+                                            required={form?.requiredFields?.includes(field?._id) || false}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                            label={field?.label}
+                                            id="">
+                                            <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                            {field?.options?.length ? (
+                                                field.options.map((option, optionIndex) => (
+                                                    <option key={optionIndex} value={option}>{option}</option>
+                                                ))
+                                            ) : (
+                                                <>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                </>
+                                            )}
+                                        </select>
+                                    ) : (
+                                        <input
+                                            key={fieldIndex}
+                                            type={field?.type}
+                                            name={field?.name}
+                                            placeholder={field.label}
+                                            value={data[field?.name] || ''}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                            required={form?.requiredFields?.includes(field?._id) || false}
+                                        />
+                                    )}
+                                    {errors[field.name] && (
+                                        <div style={{ color: 'red', margin: '0px 0px 5px 10px', fontSize: "12px" }}>
+                                            {errors[field.name]}
+                                        </div>
+                                    )}
+                                </div>
                             ))}
                             <div className='d-flex align-center mb-3'>
                                 <input required type="checkbox" name="" id="agree"></input>
@@ -313,7 +328,10 @@ const Forbuildersdealers = () => {
             </div>
             {/* featuredProperties end */}
             <p className={sch ? "sch active" : "sch"}>
-                <button type='button' className='button' onClick={() => { setForm1(!Form1) }}>Schedule a Call</button>
+                <button type='button' className='button' onClick={() => {
+                    setForm1(!Form1)
+                    setErrors({})
+                }}>Schedule a Call</button>
             </p>
             <div className={popup ? "popup active" : "popup"}>
                 <div class="inqure">
@@ -329,60 +347,76 @@ const Forbuildersdealers = () => {
 
             <div className={Form1 ? "Form active" : "Form"}>
                 <div class="inqure">
-                    <span class="icon-close2 popcls" onClick={() => { setForm1(!Form1) }}></span>
+                    <span class="icon-close2 popcls" onClick={() => {
+                        setForm1(!Form1)
+                        setErrors({})
+                    }}></span>
                     <form onSubmit={(e) => {
-                            e.preventDefault()
-                                handleSubmit({ e, form, formData: data, phone: phoneNo, project })
-                                if (form?.showOTP) {
-                                    setVeri(!Veri)
-                                } else {
-                                    navigate("/thankYou")
-                                    setData({})
-                                }
-                            }} id="Schedule">
-                            <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
-                            <h4>TRY US NOW:</h4>
-                            {form && form?.fields?.map((field, fieldIndex) => (
-                                field?.type === "select" ? (
-                                    <select
-                                        key={fieldIndex}
-                                        value={data[field?.name] || ''}
-                                        name={field?.name}
-                                        required={form?.requiredFields?.includes(field?._id) || false}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value)}
-                                        label={field?.label}
-                                        id="">
-                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
-                                        {field?.options?.length ? (
-                                            field.options.map((option, optionIndex) => (
-                                                <option key={optionIndex} value={option}>{option}</option>
-                                            ))
-                                        ) : (
-                                            <>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                            </>
-                                        )}
-                                    </select>
-                                ) : (
-                                    <input
-                                        key={fieldIndex}
-                                        type={field?.type}
-                                        name={field?.name}
-                                        placeholder={field.label}
-                                        value={data[field?.name] || ''}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
-                                        required={form?.requiredFields?.includes(field?._id) || false}
-                                    />
-                                )
-                            ))}
-                            <div className='d-flex align-center mb-3'>
-                                <input required type="checkbox" name="" id="agree"></input>
-                                <label for="agree">I agree to receive information regarding my submitted enquiry* </label>
+                        e.preventDefault()
+                        const errorList = validateFields(form?.fields, data, setErrors);
+                        if (Object.keys(errorList).length <= 0) {
+                            handleSubmit({ e, form, formData: data, phone: phoneNo, project })
+                            if (form?.showOTP) {
+                                setVeri(!Veri)
+                            } else {
+                                navigate("/thankYou")
+                                setData({})
+                            }
+                        } else {
+                            setErrors(errorList)
+                        }
+                    }} id="Schedule">
+                        <h4>GENERATE HIGH QUALITY LEADS FOR REAL  ESTATE.</h4>
+                        <h4>TRY US NOW:</h4>
+                        {form && form?.fields?.map((field, fieldIndex) => (
+                            <div key={fieldIndex}>
+                                {
+                                    field?.type === "select" ? (
+                                        <select
+                                            key={fieldIndex}
+                                            value={data[field?.name] || ''}
+                                            name={field?.name}
+                                            required={form?.requiredFields?.includes(field?._id) || false}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                            label={field?.label}
+                                            id="">
+                                            <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                            {field?.options?.length ? (
+                                                field.options.map((option, optionIndex) => (
+                                                    <option key={optionIndex} value={option}>{option}</option>
+                                                ))
+                                            ) : (
+                                                <>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                </>
+                                            )}
+                                        </select>
+                                    ) : (
+                                        <input
+                                            key={fieldIndex}
+                                            type={field?.type}
+                                            name={field?.name}
+                                            placeholder={field.label}
+                                            value={data[field?.name] || ''}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                            required={form?.requiredFields?.includes(field?._id) || false}
+                                        />
+                                    )}
+                                {errors[field.name] && (
+                                    <div style={{ color: 'red', margin: '0px 0px 5px 10px', fontSize: "12px" }}>
+                                        {errors[field.name]}
+                                    </div>
+                                )}
                             </div>
-                            <input type="submit" name="" value="Schedule a Call" className='button'></input>
-                        </form>
+                        ))}
+                        <div className='d-flex align-center mb-3'>
+                            <input required type="checkbox" name="" id="agree"></input>
+                            <label for="agree">I agree to receive information regarding my submitted enquiry* </label>
+                        </div>
+                        <input type="submit" name="" value="Schedule a Call" className='button'></input>
+                    </form>
                 </div>
             </div>
 
