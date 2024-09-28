@@ -10,6 +10,7 @@ import { doGET } from '../utils/HttpUtils';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
+import { validateFields } from '../utils/helper';
 
 
 const Universalsquare = () => {
@@ -20,6 +21,7 @@ const Universalsquare = () => {
     const [downloadbro, setDownloadbro] = useState(false);
     const [imgshow, setImgshow] = useState(false);
     const [sch, setSch] = useState(false);
+    const [errors, setErrors] = useState({});
 
     const { products, project } = useUserContext()
     const [data, setData] = useState({});
@@ -92,12 +94,18 @@ const Universalsquare = () => {
                     <div className='right'>
                         <form onSubmit={(e) => {
                             e.preventDefault()
-                            handleSubmit({ e, form: forms?.first, formData: data, phone: phoneNo, project, productId: products[0]?._id })
-                            if (forms?.first?.showOTP) {
-                                setVeri(!Veri)
+                            const errorList = validateFields(forms?.first?.fields, data, setErrors);
+                            if (Object.keys(errorList).length <= 0) {
+                                setErrors({});
+                                handleSubmit({ e, form: forms?.first, formData: data, phone: phoneNo, project, productId: products[0]?._id })
+                                if (forms?.first?.showOTP) {
+                                    setVeri(!Veri)
+                                } else {
+                                    navigate("/thankYou")
+                                    setData({})
+                                }
                             } else {
-                                navigate("/thankYou")
-                                setData({})
+                                setErrors(errorList)
                             }
                         }}>
                             <h4>ARE YOU SEEKING TO INVEST
@@ -105,39 +113,48 @@ const Universalsquare = () => {
                                 IN UNIVERSAL SQUARE?</h4>
                             <h4>REQUEST A CALLBACK:</h4>
                             {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
-                                field?.type === "select" ? (
-                                    <select
-                                        key={fieldIndex}
-                                        value={data[field?.name] || ''}
-                                        name={field?.name}
-                                        required={forms?.first?.requiredFields?.includes(field?._id) || false}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value)}
-                                        label={field?.label}
-                                        id="">
-                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
-                                        {field?.options?.length ? (
-                                            field.options.map((option, optionIndex) => (
-                                                <option key={optionIndex} value={option}>{option}</option>
-                                            ))
+                                <div key={fieldIndex} >
+                                    {
+                                        field?.type === "select" ? (
+                                            <select
+                                                key={fieldIndex}
+                                                value={data[field?.name] || ''}
+                                                name={field?.name}
+                                                required={forms?.first?.requiredFields?.includes(field?._id) || false}
+                                                onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                                label={field?.label}
+                                                id="">
+                                                <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                                {field?.options?.length ? (
+                                                    field.options.map((option, optionIndex) => (
+                                                        <option key={optionIndex} value={option}>{option}</option>
+                                                    ))
+                                                ) : (
+                                                    <>
+                                                        <option value="">Your Investment Budget</option>
+                                                        <option value="">Your Investment Budget</option>
+                                                        <option value="">Your Investment Budget</option>
+                                                    </>
+                                                )}
+                                            </select>
                                         ) : (
-                                            <>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                                <option value="">Your Investment Budget</option>
-                                            </>
-                                        )}
-                                    </select>
-                                ) : (
-                                    <input
-                                        key={fieldIndex}
-                                        type={field?.type}
-                                        name={field?.name}
-                                        placeholder={field.label}
-                                        value={data[field?.name] || ''}
-                                        onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
-                                        required={forms?.first?.requiredFields?.includes(field?._id) || false}
-                                    />
-                                )
+                                            <input
+                                                key={fieldIndex}
+                                                type={field?.type}
+                                                name={field?.name}
+                                                placeholder={field.label}
+                                                value={data[field?.name] || ''}
+                                                onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                                required={forms?.first?.requiredFields?.includes(field?._id) || false}
+                                            />
+                                        )
+                                    }
+                                    {errors[field.name] && (
+                                        <div style={{ color: 'red', margin: '0px 0px 5px 10px', fontSize: "12px" }}>
+                                            {errors[field.name]}
+                                        </div>
+                                    )}
+                                </div>
                             ))}
                             <div className='d-flex align-center mb-3'>
                                 <input required type="checkbox" name="" id="agree"></input>
@@ -410,11 +427,17 @@ const Universalsquare = () => {
             </div >
             {/* section end */}
             <p className={sch ? "sch active" : "sch"}>
-                <button type='button' className='button' onClick={() => { setForm(!Form) }}>Schedule a Call</button>
+                <button type='button' className='button' onClick={() => {
+                    setForm(!Form)
+                    setErrors({})
+                }}>Schedule a Call</button>
             </p>
             <div className={popup ? "popup active" : "popup"}>
                 <div class="inqure">
-                    <span class="icon-close2 popcls" onClick={() => { setPopup(!popup) }}></span>
+                    <span class="icon-close2 popcls" onClick={() => {
+                        setPopup(!popup)
+                        setErrors({})
+                    }}></span>
                     <div class="left">
                         <h4 className='text-center'>Thanks for the form submission</h4>
                         <p className='text-center download'>
@@ -426,51 +449,67 @@ const Universalsquare = () => {
             <div className={Form ? "Form active" : "Form"}>
                 <div class="inqure">
                     <span class="icon-close2 popcls" onClick={() => {
-                        setForm(!Form) }}></span>
+                        setForm(!Form)
+                        setErrors({})
+                    }}></span>
                     <form onSubmit={(e) => {
                         e.preventDefault()
-                        handleSubmit({ e, form: forms?.first, formData: data, phone: phoneNo, project, productId: products[0]?._id })
-                        if (forms?.first?.showOTP) {
-                            setVeri(!Veri)
+                        const errorList = validateFields(forms?.first?.fields, data, setErrors);
+                        if (Object.keys(errorList).length <= 0) {
+                            setErrors({});
+                            handleSubmit({ e, form: forms?.first, formData: data, phone: phoneNo, project, productId: products[0]?._id })
+                            if (forms?.first?.showOTP) {
+                                setVeri(!Veri)
+                            } else {
+                                setData({})
+                                navigate("/thankYou")
+                            }
                         } else {
-                            setData({})
-                            navigate("/thankYou")
+                            setErrors(errorList)
                         }
                     }}>
                         {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
-                            field?.type === "select" ? (
-                                <select
-                                    key={fieldIndex}
-                                    value={data[field?.name] || ''}
-                                    name={field?.name}
-                                    required={forms?.first?.requiredFields?.includes(field?._id) || false}
-                                    onChange={(e) => handleInputChange(field?.name, e.target.value)}
-                                    label={field?.label}
-                                    id="">
-                                    <option value="" disabled selected>{`Select ${field.label}`}</option>
-                                    {field?.options?.length ? (
-                                        field.options.map((option, optionIndex) => (
-                                            <option key={optionIndex} value={option}>{option}</option>
-                                        ))
+                            <div key={fieldIndex}>
+                                {
+                                    field?.type === "select" ? (
+                                        <select
+                                            key={fieldIndex}
+                                            value={data[field?.name] || ''}
+                                            name={field?.name}
+                                            required={forms?.first?.requiredFields?.includes(field?._id) || false}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                            label={field?.label}
+                                            id="">
+                                            <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                            {field?.options?.length ? (
+                                                field.options.map((option, optionIndex) => (
+                                                    <option key={optionIndex} value={option}>{option}</option>
+                                                ))
+                                            ) : (
+                                                <>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                </>
+                                            )}
+                                        </select>
                                     ) : (
-                                        <>
-                                            <option value="">Your Investment Budget</option>
-                                            <option value="">Your Investment Budget</option>
-                                            <option value="">Your Investment Budget</option>
-                                        </>
+                                        <input
+                                            key={fieldIndex}
+                                            type={field?.type}
+                                            name={field?.name}
+                                            placeholder={field.label}
+                                            value={data[field?.name] || ''}
+                                            onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
+                                            required={forms?.first?.requiredFields?.includes(field?._id) || false}
+                                        />
                                     )}
-                                </select>
-                            ) : (
-                                <input
-                                    key={fieldIndex}
-                                    type={field?.type}
-                                    name={field?.name}
-                                    placeholder={field.label}
-                                    value={data[field?.name] || ''}
-                                    onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
-                                    required={forms?.first?.requiredFields?.includes(field?._id) || false}
-                                />
-                            )
+                                {errors[field.name] && (
+                                    <div style={{ color: 'red', margin: '0px 0px 5px 10px', fontSize: "12px" }}>
+                                        {errors[field.name]}
+                                    </div>
+                                )}
+                            </div>
                         ))}
                         <div className='d-flex align-center mb-3'>
                             <input required type="checkbox" name="" id="agre"></input>
@@ -482,7 +521,10 @@ const Universalsquare = () => {
             </div>
             <div className={popup ? "popup active" : "popup"}>
                 <div class="inqure">
-                    <span class="icon-close2 popcls" onClick={() => { setPopup(!popup) }}></span>
+                    <span class="icon-close2 popcls" onClick={() => {
+                        setPopup(!popup)
+                        setErrors({})
+                    }}></span>
                     <div class="left">
                         <h4 className='text-center'>Thanks for the form submission</h4>
                         <p className='text-center download'>
@@ -520,60 +562,73 @@ const Universalsquare = () => {
                     <span class="icon-close2 popcls" onClick={() => {
                         setDownloadbro(!downloadbro)
                         setData1({})
+                        setErrors({})
                     }}></span>
                     <form onSubmit={(e) => {
                         e.preventDefault()
-                        handleSubmit({ e, form: forms?.second, formData: data1, phone: phoneNo1, project, productId: products[0]?._id }).then(res => {
-                            res && setData1({})
-                        })
-                        if (forms?.second?.showOTP) {
-                            setVeri(!Veri)
+                        const errorList = validateFields(forms?.second?.fields, data, setErrors);
+                        if (Object.keys(errorList).length <= 0) {
+                            setErrors({});
+                            handleSubmit({ e, form: forms?.second, formData: data1, phone: phoneNo1, project, productId: products[0]?._id }).then(res => {
+                                res && setData1({})
+                                if (forms?.second?.showOTP) {
+                                    setVeri(!Veri)
+                                } else {
+                                    setPopup(!popup)
+                                    setDownloadbro(!downloadbro)
+                                    navigate("/thankYou")
+                                }
+                            })
                         } else {
-                            setPopup(!popup)
-                            setDownloadbro(!downloadbro)
-                            navigate("/thankYou")
+                            setErrors(errorList)
                         }
-                        // setPopup(!popup)
-                        // setDownloadbro(!downloadbro)
                     }}>
                         <h4 className=''>ARE YOU SEEKING TO INVEST
                             IN A COMMERCIAL COMPLEX
                             IN COPIOUS VISTA CORNER?</h4>
 
                         {forms?.second && forms?.second?.fields?.map((field, fieldIndex) => (
-                            field?.type === "select" ? (
-                                <select
-                                    key={fieldIndex}
-                                    value={data1[field?.name] || ''}
-                                    name={field?.name}
-                                    required={forms?.second?.requiredFields?.includes(field?._id) || false}
-                                    onChange={(e) => handleInputChange1(field?.name, e.target.value)}
-                                    label={field?.label}
-                                    id="">
-                                    <option value="" disabled selected>{`Select ${field.label}`}</option>
-                                    {field?.options?.length ? (
-                                        field.options.map((option, optionIndex) => (
-                                            <option key={optionIndex} value={option}>{option}</option>
-                                        ))
+                            <div key={fieldIndex}>
+                                {
+                                    field?.type === "select" ? (
+                                        <select
+                                            key={fieldIndex}
+                                            value={data1[field?.name] || ''}
+                                            name={field?.name}
+                                            required={forms?.second?.requiredFields?.includes(field?._id) || false}
+                                            onChange={(e) => handleInputChange1(field?.name, e.target.value)}
+                                            label={field?.label}
+                                            id="">
+                                            <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                            {field?.options?.length ? (
+                                                field.options.map((option, optionIndex) => (
+                                                    <option key={optionIndex} value={option}>{option}</option>
+                                                ))
+                                            ) : (
+                                                <>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                    <option value="">Your Investment Budget</option>
+                                                </>
+                                            )}
+                                        </select>
                                     ) : (
-                                        <>
-                                            <option value="">Your Investment Budget</option>
-                                            <option value="">Your Investment Budget</option>
-                                            <option value="">Your Investment Budget</option>
-                                        </>
+                                        <input
+                                            key={fieldIndex}
+                                            type={field?.type}
+                                            name={field?.name}
+                                            placeholder={field.label}
+                                            value={data1[field?.name] || ''}
+                                            onChange={(e) => handleInputChange1(field?.name, e.target.value, field?.type)}
+                                            required={forms?.second?.requiredFields?.includes(field?._id) || false}
+                                        />
                                     )}
-                                </select>
-                            ) : (
-                                <input
-                                    key={fieldIndex}
-                                    type={field?.type}
-                                    name={field?.name}
-                                    placeholder={field.label}
-                                    value={data1[field?.name] || ''}
-                                    onChange={(e) => handleInputChange1(field?.name, e.target.value, field?.type)}
-                                    required={forms?.second?.requiredFields?.includes(field?._id) || false}
-                                />
-                            )
+                                {errors[field.name] && (
+                                    <div style={{ color: 'red', margin: '0px 0px 5px 10px', fontSize: "12px" }}>
+                                        {errors[field.name]}
+                                    </div>
+                                )}
+                            </div>
                         ))}
                         <div className='d-flex align-center mb-3'>
                             <input required type="checkbox" name="" id="agr"></input>
