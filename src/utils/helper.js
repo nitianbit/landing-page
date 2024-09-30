@@ -8,7 +8,7 @@ export const getUTMParameters = () => {
 };
 
 export const validateIndianMobileNumber = (mobileNumber)=> {
-    const pattern = /^[6-9]\d{9}$/;
+    const pattern = /^(?:\+91|91)?[7-9]\d{9}$/;
     return pattern.test(mobileNumber);
 }
 
