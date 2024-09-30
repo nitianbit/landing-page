@@ -12,7 +12,7 @@ export const handleSubmit = async ({e, form, formData, phone = null, project, pr
         value: formData[name]
       }));
 
-      const utmParameters = getUTMParameters();
+      const utmParameters = getUTMParameters(form?.utmParameters??[]);
 
       // Send form data to backend
       let response = await doPOST(FORMENDPOINSTS.addFormValue, { formId, values, projectId: project?._id,...(productId && {refererId: productId }), utmParameters, ...(phone && { phone }) });
