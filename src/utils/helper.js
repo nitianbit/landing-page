@@ -10,12 +10,12 @@ export const getUTMParameters = (inputKeys) => {
 };
 
 export const validateIndianMobileNumber = (mobileNumber)=> {
-    const pattern = /^(?:\+91|91)?[7-9]\d{9}$/;
+    const pattern = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
     return pattern.test(mobileNumber);
 }
 
 export const validateEmail = (email)=> {
-    const pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const pattern = /^[\w.-]+@[\w.-]+\.\w+$/;
     return pattern.test(email);
 }
 
