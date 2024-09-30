@@ -67,6 +67,7 @@ const Contactus = () => {
                             e.preventDefault()
                             const errorList = validateFields(form?.fields, data, setErrors);
                             if (Object.keys(errorList).length <= 0) {
+                                setErrors({})
                                 handleSubmit({ e, form, formData: data, project }).then(res => {
                                     res && setData({})
                                 })
