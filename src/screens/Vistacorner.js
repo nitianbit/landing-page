@@ -455,7 +455,7 @@ const Vistacorner = () => {
                     }}></span>
                     <form onSubmit={(e) => {
                         e.preventDefault()
-                        const errorList = validateFields(forms?.second?.fields, data, setErrors);
+                        const errorList = validateFields(forms?.second?.fields, data1, setErrors);
                         if (Object.keys(errorList).length <= 0) {
                             setErrors({});
                             handleSubmit({ e, form: forms?.second, formData: data1, phone: phoneNo1, project, productId: products[1]?._id }).then(res => {
