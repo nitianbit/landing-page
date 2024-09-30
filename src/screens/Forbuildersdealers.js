@@ -81,7 +81,7 @@ const Forbuildersdealers = () => {
                             e.preventDefault()
                             const errorList = validateFields(form?.fields, data, setErrors);
                             if (Object.keys(errorList).length <= 0) {
-                                e.preventDefault()
+                                setErrors({})
                                 handleSubmit({ e, form, formData: data, phone: phoneNo, project })
                                 if (form?.showOTP) {
                                     setVeri(!Veri)
@@ -355,6 +355,7 @@ const Forbuildersdealers = () => {
                         e.preventDefault()
                         const errorList = validateFields(form?.fields, data, setErrors);
                         if (Object.keys(errorList).length <= 0) {
+                            setErrors({})
                             handleSubmit({ e, form, formData: data, phone: phoneNo, project })
                             if (form?.showOTP) {
                                 setVeri(!Veri)
