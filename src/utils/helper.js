@@ -1,8 +1,10 @@
-export const getUTMParameters = () => {
+export const getUTMParameters = (inputKeys) => {
     const params = new URLSearchParams(window.location.search);
     const queryParameters = {};
     params.forEach((value, key) => {
-        queryParameters[key] = value;
+        if (inputKeys.includes(key)) {
+            queryParameters[key] = value;
+        }
     });
     return queryParameters;
 };
