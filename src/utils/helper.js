@@ -15,7 +15,7 @@ export const validateIndianMobileNumber = (mobileNumber)=> {
 }
 
 export const validateEmail = (email)=> {
-    const pattern = /^[\w.-]+@[\w.-]+\.\w+$/;
+    const pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return pattern.test(email);
 }
 
