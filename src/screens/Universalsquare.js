@@ -10,7 +10,7 @@ import { doGET } from '../utils/HttpUtils';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
-import { validateFields } from '../utils/helper';
+import { handleBlur, validateFields } from '../utils/helper';
 
 
 const Universalsquare = () => {
@@ -68,6 +68,12 @@ const Universalsquare = () => {
         if ((type == "number" && (fieldName == "Phone" || fieldName == "phone")) ? value : null) {
             setPhoneNo1((type == "number" && (fieldName == "Phone" || fieldName == "phone")) ? value : null)
         }
+    };
+
+    const handleBlurWithError = (field, data) => {
+        // Return the error and update state
+        const error = handleBlur(field, data);
+        setErrors(prevErrors => ({ ...prevErrors, ...error }));
     };
 
     useEffect(() => {
@@ -142,6 +148,7 @@ const Universalsquare = () => {
                                                 key={fieldIndex}
                                                 type={field?.type}
                                                 name={field?.name}
+                                                onBlur={() => handleBlurWithError(field, data)}
                                                 placeholder={field.label}
                                                 value={data[field?.name] || ''}
                                                 onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
@@ -205,7 +212,10 @@ const Universalsquare = () => {
                             </div>
                         </div>
                     </div>
-                    <p><button type='button' className='button' onClick={() => { setDownloadbro(!downloadbro) }}>Download Brochure</button></p>
+                    <p><button type='button' className='button' onClick={() => {
+                        setDownloadbro(!downloadbro)
+                        setErrors({})
+                    }}>Download Brochure</button></p>
                 </div>
             </div>
             {/* section end */}
@@ -498,6 +508,7 @@ const Universalsquare = () => {
                                             key={fieldIndex}
                                             type={field?.type}
                                             name={field?.name}
+                                            onBlur={() => handleBlurWithError(field, data)}
                                             placeholder={field.label}
                                             value={data[field?.name] || ''}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
@@ -617,6 +628,7 @@ const Universalsquare = () => {
                                             key={fieldIndex}
                                             type={field?.type}
                                             name={field?.name}
+                                            onBlur={() => handleBlurWithError(field, data1)}
                                             placeholder={field.label}
                                             value={data1[field?.name] || ''}
                                             onChange={(e) => handleInputChange1(field?.name, e.target.value, field?.type)}
