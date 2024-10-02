@@ -19,6 +19,23 @@ export const validateEmail = (email)=> {
     return pattern.test(email);
 }
 
+export const handleBlur = (field, data) => {
+    const { name, type } = field;
+    const value = data[name];
+    let error = '';
+
+    if (type === 'email' && !validateEmail(value)) {
+        error = 'Invalid email address';
+    }
+    if (name === 'mobile' && !validateIndianMobileNumber(value)) {
+        error = 'Invalid mobile number';
+    }
+
+    // Return the error object with the field name as key
+    return { [name]: error };
+};
+
+
 export const validateFields = (fields, data, setErrors) => {
     const errors = {};
     fields.forEach(field => {
