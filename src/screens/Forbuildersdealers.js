@@ -9,7 +9,7 @@ import { useUserContext } from '../context/UserContext';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
-import { validateFields } from '../utils/helper';
+import { handleBlur, validateFields } from '../utils/helper';
 
 
 
@@ -34,6 +34,11 @@ const Forbuildersdealers = () => {
         } catch (error) {
             console.error("Error fetching forms:", error);
         }
+    };
+    const handleBlurWithError = (field, data) => {
+        // Return the error and update state
+        const error = handleBlur(field, data);
+        setErrors(prevErrors => ({ ...prevErrors, ...error }));
     };
 
     const handleInputChange = (fieldName, value, type) => {
@@ -124,6 +129,7 @@ const Forbuildersdealers = () => {
                                             key={fieldIndex}
                                             type={field?.type}
                                             name={field?.name}
+                                            onBlur={() => handleBlurWithError(field, data)}
                                             placeholder={field.label}
                                             value={data[field?.name] || ''}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
@@ -399,6 +405,7 @@ const Forbuildersdealers = () => {
                                             key={fieldIndex}
                                             type={field?.type}
                                             name={field?.name}
+                                            onBlur={() => handleBlurWithError(field, data)}
                                             placeholder={field.label}
                                             value={data[field?.name] || ''}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
