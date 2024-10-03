@@ -128,7 +128,7 @@ const Vistacorner = () => {
                                             required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                         >
-                                            <option value="" disabled>{`Select ${field.label}`}</option>
+                                            <option value="" disabled>{`${field.label}`}</option>
                                             {field?.options?.length ? (
                                                 field.options.map((option, optionIndex) => (
                                                     <option key={optionIndex} value={option}>{option}</option>
@@ -416,7 +416,7 @@ const Vistacorner = () => {
                                         onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                         label={field?.label}
                                         id="">
-                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                        <option value="" disabled selected>{`${field.label}`}</option>
                                         {field?.options?.length ? (
                                             field.options.map((option, optionIndex) => (
                                                 <option key={optionIndex} value={option}>{option}</option>
@@ -498,7 +498,7 @@ const Vistacorner = () => {
                                         onChange={(e) => handleInputChange1(field?.name, e.target.value)}
                                         label={field?.label}
                                         id="">
-                                        <option value="" disabled selected>{`Select ${field.label}`}</option>
+                                        <option value="" disabled selected>{`${field.label}`}</option>
                                         {field?.options?.length ? (
                                             field.options.map((option, optionIndex) => (
                                                 <option key={optionIndex} value={option}>{option}</option>
