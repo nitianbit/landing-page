@@ -10,7 +10,7 @@ export const getUTMParameters = (inputKeys) => {
 };
 
 export const validateIndianMobileNumber = (mobileNumber)=> {
-    const pattern = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    const pattern = /^(\+?\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
     return pattern.test(mobileNumber);
 }
 
