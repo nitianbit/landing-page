@@ -27,7 +27,7 @@ export const handleBlur = (field, data) => {
     if (type === 'email' && !validateEmail(value)) {
         error = 'Invalid email address';
     }
-    if (name === 'mobile' && !validateIndianMobileNumber(value)) {
+    if ((name === 'mobile' || name == "tel")  && !validateIndianMobileNumber(value)) {
         error = 'Invalid mobile number';
     }
 
@@ -42,7 +42,7 @@ export const validateFields = (fields, data, setErrors) => {
         if (field.type === 'email' && !validateEmail(data[field.name])) {
             errors[field.name] = 'Invalid email address';
         }
-        if (field.name === 'mobile' && !validateIndianMobileNumber(data[field.name])) {
+        if ((field.name === 'mobile'  || field.name === "tel") && !validateIndianMobileNumber(data[field.name])) {
             errors[field.name] = 'Invalid mobile number';
         }
     });
