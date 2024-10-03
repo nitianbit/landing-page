@@ -7,7 +7,7 @@ import { CONTACTENDPOINTS } from '../components/contactUs/constant'
 import { doGET } from '../utils/HttpUtils'
 import { useUserContext } from '../context/UserContext'
 import { handleSubmit } from '../components/handleSubmit';
-import { validateFields } from '../utils/helper';
+import { handleBlur, validateFields } from '../utils/helper';
 
 
 const Contactus = () => {
@@ -31,6 +31,11 @@ const Contactus = () => {
         } catch (error) {
             console.error("Error fetching forms:", error);
         }
+    };
+    const handleBlurWithError = (field, data) => {
+        // Return the error and update state
+        const error = handleBlur(field, data);
+        setErrors(prevErrors => ({ ...prevErrors, ...error }));
     };
     useEffect(() => {
         if (project) {
@@ -98,6 +103,7 @@ const Contactus = () => {
                                                             // required={true}
                                                             required={form?.requiredFields?.includes(field?._id) || false}
                                                             value={data[field?.name] || ''}
+                                                            onBlur={() => handleBlurWithError(field, data)}
                                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                                             type={field?.type}
                                                             id={field?.label.toLowerCase()}
