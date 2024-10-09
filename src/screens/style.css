@@ -652,26 +652,31 @@ h1.title {
 }
 
 /* Forbuyers */
+.vista-img{
+    background: url("../../public/images/vista.jpg") no-repeat center center / cover;
+}
 
-
+.builder-img{
+    background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+}
 
 /* builderDealerBanner */
 .builderDealerBanner {
-    background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+    
     position: relative;
-    height: 500px;
+    height: 550px;
 }
 
 .builderDealerBanner.vista {
-    background: url("../../public/images/vista.jpg") no-repeat center center / cover;
+    
     position: relative;
-    height: 607px;
+    height: 550px;
 }
 
 .builderDealerBanner.uni {
     background: url("../../public/images/uni.jpg") no-repeat center center / cover;
     position: relative;
-    height: 590px;
+    height: 550px;
 }
 
 .builderDealerBanner .left {
@@ -708,6 +713,7 @@ h1.title {
     width: 340px;
     background: #fff;
     padding: 25px;
+    padding-top: 5px;
     position: absolute;
     height: 557px;
     top: 0;
@@ -769,7 +775,7 @@ input[type="button"]{
 }
 select {
     background: #fff;
-    color: #000;
+    color: #737373
 }
 
 .builderDealerBanner .right form input[type="checkbox"],
