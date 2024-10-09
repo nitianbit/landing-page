@@ -177,28 +177,40 @@ const Vistacorner = () => {
                     }}>Starting ₹1.43 Cr*</h2>
                     <h1 className='not'>Overview</h1>
                     <div className='Facility'>
-                        <div className='sinBox'>
+                        <div style={{
+                                display:"flex",
+                                alignItems:"start"
+                            }} className='sinBox'>
                             <img src="./images/icon1.png" alt="" />
                             <div className=''>
                                 <h5>Project Size</h5>
                                 <p>3.78 Acres</p>
                             </div>
                         </div>
-                        <div className='sinBox'>
+                        <div style={{
+                                display:"flex",
+                                alignItems:"start"
+                            }} className='sinBox'>
                             <img src="./images/icon2.png" alt="" />
                             <div className=''>
                                 <h5>Total Units</h5>
                                 <p>395</p>
                             </div>
                         </div>
-                        <div className='sinBox'>
+                        <div style={{
+                                display:"flex",
+                                alignItems:"start"
+                            }} className='sinBox'>
                             <img src="./images/icon3.png" alt="" />
-                            <div className=''>
+                            <div  className=''>
                                 <h5>Legal Approval</h5>
                                 <p>HRERA & SEIAA</p>
                             </div>
                         </div>
-                        <div className='sinBox'>
+                        <div style={{
+                                display:"flex",
+                                alignItems:"start"
+                            }} className='sinBox'>
                             <img src="./images/icon4.png" alt="" />
                             <div className=''>
                                 <h5>RERA ID</h5>
