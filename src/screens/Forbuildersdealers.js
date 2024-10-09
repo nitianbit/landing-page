@@ -75,11 +75,11 @@ const Forbuildersdealers = () => {
             <div className='builderDealerBanner vista column builder-img'>
                 <div className='container'>
                     <div className='left full'>
-                        {/* <h2>Boost Your Property Sales in India<br></br>
+                        <h2>Boost Your Property Sales in India<br></br>
                             with High Quality Leads!</h2>
                         <p>Elevate your sales pipeline, close more deals, and drive <br></br>
                             your real estate business to new heights with our expert <br></br>
-                            lead generation service.</p> */}
+                            lead generation service.</p>
                     </div>
                     <div className='right'>
                         <form onSubmit={(e) => {
