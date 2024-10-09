@@ -115,8 +115,10 @@ const Vistacorner = () => {
                                 setErrors(errorList)
                             }
                         }}>
-                            <h4>ARE YOU SEEKING TO INVEST
-                                IN A COMMERCIAL COMPLEX?</h4>
+                            <h4>
+                                ARE YOU SEEKING TO INVEST
+                                IN A COMMERCIAL COMPLEX?
+                            </h4>
                             <h4>REQUEST A CALLBACK:</h4>
                             {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
                                 <div key={fieldIndex} >
@@ -205,9 +207,9 @@ const Vistacorner = () => {
                         </div>
                     </div>
                     <p style={{
-                    borderBottom: "1px solid #ddd",
-                    paddingBottom:"16px"
-                }}><button style={{
+                        borderBottom: "1px solid #ddd",
+                        paddingBottom: "16px"
+                    }}><button style={{
                         marginTop: "20px",
                     }} type='button' className='button' onClick={() => {
                         setDownloadbro(!downloadbro)
@@ -280,7 +282,7 @@ const Vistacorner = () => {
                 <div className='container'>
                     <h1 className='not'>Why Vista Corner?</h1>
                     <p>The project is being developed as a Combination of Retail, Entertainment & Restaurants.</p>
-                    <h3 style={{ fontSize: "18px", marginTop:"31px" }}>AMENITIES</h3>
+                    <h3 style={{ fontSize: "18px", marginTop: "31px" }}>AMENITIES</h3>
                     <ul>
                         <li>Lower Ground, Ground & First Floor for Retail</li>
                         <li>Entertainment Zone & Restaurants on the Second Floor</li>
@@ -291,7 +293,7 @@ const Vistacorner = () => {
                         <li>Total Build-Up Area = 6 Lac Sq. Ft. (Approx)</li>
                     </ul>
                     <h3 style={{
-                        marginTop:"31px"
+                        marginTop: "31px"
                     }}>LOCATION ADVANTAGES</h3>
                     <p style={{
                         fontSize: "15px",
@@ -308,11 +310,11 @@ const Vistacorner = () => {
                         the ultimate destination for shopping, entertainment, and leisure.</p>
 
                     <h3 style={{
-                        marginTop:"31px"
+                        marginTop: "31px"
                     }}>HIGHLIGHTS</h3>
                     <ul style={{
-                        borderBottom:"1px solid #ddd",
-                        paddingBottom:"11px"
+                        borderBottom: "1px solid #ddd",
+                        paddingBottom: "11px"
                     }}>
                         <li>Immediate access to NH-8 and SPR Road</li>
                         <li>The best MNCs, Colleges and Universities of Gurugram just a short drive away</li>
@@ -322,27 +324,27 @@ const Vistacorner = () => {
                         <li>Situated bang on the 135 Mtr.Multi - Utility Corridor, which connects the IMT Manesar to Dwarka</li >
                     </ul>
                     <h1 style={{
-                        marginTop:"40px"
+                        marginTop: "40px"
                     }} className='not'>About Project</h1>
                     <p style={{
-                        fontSize:"15px",
-                        marginBottom:"15px"
+                        fontSize: "15px",
+                        marginBottom: "15px"
                     }}>Copious Vista Corner, located in Sector 89, Gurgaon, is an exciting new launch offering commercial investment opportunities to
                         suit a range of budgets. For those seeking high returns, it stands out as one of Gurgaon's most desirable commercial projects,
                         providing properties with excellent visibility and significant foot traffic.</p>
 
                     <p style={{
-                        fontSize:"15px",
-                        marginBottom:"15px"
+                        fontSize: "15px",
+                        marginBottom: "15px"
                     }}>Designed as a next-generation commercial hub, Copious Vista Corner boasts modern facilities and amenities, strategically located
                         in Sector 89. This area is rapidly developing, with improved infrastructure and connectivity compared to other commercial zones
                         in Gurgaon. Investors have access to a wide variety of property options, accommodating diverse budget needs, making it an ideal
                         choice for various types of professionals.</p>
 
                     <p style={{
-                        fontSize:"15px",
-                        paddingBottom:"16px",
-                        borderBottom:"1px solid #ddd"
+                        fontSize: "15px",
+                        paddingBottom: "16px",
+                        borderBottom: "1px solid #ddd"
                     }}>Developed by Copious Realtors Pvt Ltd, a well-known name in Gurgaon’s real estate, this luxurious project spans 3.78 acres and is
                         perfectly connected by key roads, including the Dwarka Expressway and Pataudi Road. With 395 units, Copious Vista Corner is
                         currently in its mid-construction phase and promises to deliver a premium commercial experience.</p>
@@ -367,8 +369,8 @@ const Vistacorner = () => {
                     </div>
                     <Floor />
                     <div style={{
-                        borderBottom:"1px solid #ddd",
-                        paddingBottom:"16px"
+                        borderBottom: "1px solid #ddd",
+                        paddingBottom: "16px"
                     }}></div>
                 </div>
             </div>
@@ -378,29 +380,29 @@ const Vistacorner = () => {
                 <div className='container'>
                     <h1 className='not'>About Developer</h1>
                     <p style={{
-                        fontSize:"15px",
-                        marginBottom:"15px"
+                        fontSize: "15px",
+                        marginBottom: "15px"
                     }}>Copious Realtors Pvt. Ltd. brings extensive experience in real estate development, with a strong focus on constructing commercial
                         complexes, multiplexes, shopping malls, and hotels. Their visionary approach has been instrumental in establishing the company
                         as a respected and trusted name among retailers and business partners alike.</p>
 
                     <p style={{
-                        fontSize:"15px",
-                        marginBottom:"15px"
+                        fontSize: "15px",
+                        marginBottom: "15px"
                     }}>The company’s reputation as a renowned real estate developer is built on an unwavering commitment to quality and timely
                         delivery. Copious Realtors maintain stringent quality standards, ensuring every project meets the expectations of their clients
                         without compromise.</p>
 
                     <p style={{
-                        fontSize:"15px"
+                        fontSize: "15px"
                     }}>Beyond just constructing commercial spaces and malls, Copious Realtors prioritize brand standards and client satisfaction. With a
                         dedicated in-house construction team, they offer full support and coordination throughout the development process, ensuring
                         seamless project execution and the best service to their clients.</p>
                     <h3 style={{
-                        marginTop:"31px"
+                        marginTop: "31px"
                     }}>Notable Projects:</h3>
                     <ul style={{
-                        marginBottom:"40px"
+                        marginBottom: "40px"
                     }}>
                         <li>Crowne Plaza Hotel Rohini, Delhi</li>
                         <li>City Center Rohini, Delhi</li>
@@ -455,6 +457,18 @@ const Vistacorner = () => {
                         setForm(!Form)
                         setErrors({})
                     }}></span>
+                    <h4 style={{
+                        fontWeight:"500",
+                        fontFamily:"Open Sans"
+                    }}>
+                        ARE YOU SEEKING TO INVEST
+                        IN A COMMERCIAL COMPLEX?
+                    </h4>
+                    <h4 style={{
+                        fontWeight:"500",
+                        fontFamily:"Open Sans",
+                        marginBottom:"31px"
+                    }}>REQUEST A CALLBACK:</h4>
                     <form onSubmit={(e) => {
                         e.preventDefault()
                         const errorList = validateFields(forms?.first?.fields, data, setErrors);
@@ -519,7 +533,9 @@ const Vistacorner = () => {
                             <input type="checkbox" required name="" id="agre"></input>
                             <label for="agre">I agree to receive information regarding my submitted enquiry* </label>
                         </div>
-                        <input type="submit" name="" value="Schedule a Call" className='button'></input>
+                        <input style={{
+                            marginTop: "22px"
+                        }} type="submit" name="" value="Schedule a Call" className='button'></input>
                     </form>
                 </div>
             </div>
@@ -550,9 +566,16 @@ const Vistacorner = () => {
                         }
 
                     }}>
-                        <h4 className=''>ARE YOU SEEKING TO INVEST
-                            IN A COMMERCIAL COMPLEX
-                            IN COPIOUS VISTA CORNER?</h4>
+                        <h4 className=''>
+                            <div style={{
+                                fontWeight: "500"
+                            }}>You are requesting to download <br /> brouchure of this property.</div>
+                            <br />
+                            <div style={{
+                                marginBottom: "31px",
+                                fontWeight: "500"
+                            }}>Please provide your details to download:</div>
+                        </h4>
 
                         {forms?.second && forms?.second?.fields?.map((field, fieldIndex) => (
                             <div key={fieldIndex}>
@@ -601,7 +624,9 @@ const Vistacorner = () => {
                             <input type="checkbox" name="" id="agr" required="required"></input>
                             <label for="agr">I agree to receive information regarding my submitted enquiry* </label>
                         </div>
-                        <input type="submit" name="" value="Download Brochure" className='button' download></input>
+                        <input style={{
+                            marginTop: "22px"
+                        }} type="submit" name="" value="Download Brochure" className='button' download></input>
                         {/* <p className="text-center"><a href="Vistacorner" type='submit' className='button' download >Download Brochure</a></p> */}
                     </form>
                 </div>
