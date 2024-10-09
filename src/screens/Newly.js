@@ -33,7 +33,7 @@ const Newly = () => {
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
                     <p>Commercial</p>
-                    <h4>Starting ₹79 Lakh*</h4>
+                    <h4>Starting ₹1.43 Cr*</h4>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
@@ -42,7 +42,7 @@ const Newly = () => {
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
                     <p>Commercial</p>
-                    <h4>Starting ₹79 Lakh*</h4>
+                    <h4>Starting ₹1.43 Cr*</h4>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
@@ -51,7 +51,7 @@ const Newly = () => {
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
                     <p>Commercial</p>
-                    <h4>Starting ₹79 Lakh*</h4>
+                    <h4>Starting ₹1.43 Cr*</h4>
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
@@ -60,7 +60,7 @@ const Newly = () => {
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
                     <p>Commercial</p>
-                    <h4>Starting ₹79 Lakh*</h4>
+                    <h4>Starting ₹1.43 Cr*</h4>
                 </div>
             </Slider>
         </>
