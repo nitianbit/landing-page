@@ -94,7 +94,7 @@ const Vistacorner = () => {
     return (
         <>
             {/* banner section start */}
-            <div className='builderDealerBanner vista column'>
+            <div className='builderDealerBanner vista column vista-img'>
                 <div className='container full'>
                     <div className='left full'>
                     </div>
@@ -171,7 +171,7 @@ const Vistacorner = () => {
                     <h1>Copious Vista Corner</h1>
                     <h3>Sector 89, Gurgaon</h3>
                     <p>Commercial SCO Plots & Showrooms</p>
-                    <h2>Starting ₹79 Lakh*</h2>
+                    <h2>Starting ₹1.43 Cr*</h2>
                     <h1 className='not'>Copious Vista Corner Overview</h1>
                     <div className='Facility'>
                         <div className='sinBox'>
