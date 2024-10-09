@@ -166,9 +166,7 @@ const Vistacorner = () => {
             {/* banner section end */}
             {/* content */}
             <div className='vistaContent'>
-                <div className='container' style={{
-                    borderBottom: "1px solid #ddd"
-                }}>
+                <div className='container'>
                     <h1>Copious Vista Corner</h1>
                     <h3>Sector 89, Gurgaon</h3>
                     <p>Commercial SCO Plots & Showrooms</p>
@@ -206,7 +204,10 @@ const Vistacorner = () => {
                             </div>
                         </div>
                     </div>
-                    <p><button style={{
+                    <p style={{
+                    borderBottom: "1px solid #ddd",
+                    paddingBottom:"16px"
+                }}><button style={{
                         marginTop: "20px",
                     }} type='button' className='button' onClick={() => {
                         setDownloadbro(!downloadbro)
@@ -350,10 +351,7 @@ const Vistacorner = () => {
             {/* section end */}
             {/* plan start */}
             <div class="plans">
-                <div class="container" style={{
-                        borderBottom:"1px solid #ddd",
-                        paddingBottom:"16px"
-                }}>
+                <div class="container">
                     <h2>Floor Plans</h2>
                     <div class="planImg">
                         <img src="./images/p1.jpg" alt="" />
@@ -368,6 +366,10 @@ const Vistacorner = () => {
                         <img src="./images/p10.jpg" alt="" />
                     </div>
                     <Floor />
+                    <div style={{
+                        borderBottom:"1px solid #ddd",
+                        paddingBottom:"16px"
+                    }}></div>
                 </div>
             </div>
             {/* plan end */}
