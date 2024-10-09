@@ -25,7 +25,9 @@ const Copious = () => {
         ]
     };
     return (
-        <>
+        <div style={{
+            marginBottom:"16px"
+        }}>
             <Slider {...settings} className=''>
                 <div className='imgBox'>
                     <img src="./images/1.jpg" alt="" onClick={() => { setImgshow(!imgshow); setUrl("./images/1.jpg");}}/>
@@ -61,7 +63,7 @@ const Copious = () => {
                     <img src={url} alt="" id='ShowImg'/>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
