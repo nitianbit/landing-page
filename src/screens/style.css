@@ -140,9 +140,8 @@ h4.subtitle {
 
 h1.title {
     color: #202020;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-family: 'Rasputin';
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .featuredProperties .properties {
@@ -441,7 +440,7 @@ h1.title {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .aboutUs {
-        padding-top: 140px; /* Padding for screens 768px and wider */
+        padding-top: 40px; /* Padding for screens 768px and wider */
     }
 }
 
@@ -469,8 +468,7 @@ h1.title {
 }
 
 .aboutUs p {
-    margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
 }
 
@@ -482,9 +480,8 @@ h1.title {
 }
 
 .aboutUs ul {
-    margin-bottom: 15px;
     list-style-type: disc;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .aboutUs ul li ul {
@@ -495,7 +492,7 @@ h1.title {
 
 .aboutUs ul li {
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     font-weight: 500;
 }
@@ -657,7 +654,7 @@ h1.title {
 }
 
 .builder-img{
-    background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+    background: url("../../public/images/Builderdealers.jpg") no-repeat center center / cover;
 }
 
 /* builderDealerBanner */
@@ -813,6 +810,7 @@ select {
 
 .aboutUs h3 {
     margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .aboutUs .percent {
@@ -983,44 +981,54 @@ h1.title.pp {
 /* contactUs */
 /* vistaContent */
 .vistaContent {
-    padding: 50px 0;
+    padding: 60px 0 0 0;
 }
 
 .vistaContent h1 {
-    margin-bottom: 15px;
-    font-family: 'Rasputin';
+    margin-bottom: 16px;
+    font-family: 'Montserrat';
+    font-size: 28px;
 }
 
 .vistaContent h1.not {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    margin-top: 40px;
     font-family: "Open Sans", sans-serif;
     color: #202020;
+    font-size: 24px;
 }
 
 .aboutUs h1.not {
-    margin-bottom: 15px;
     font-family: "Open Sans", sans-serif;
     color: #202020;
+    font-size: 24px;
 }
 
 .vistaContent h2 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
     /* border-bottom: 1px solid #ddd; */
     padding-bottom: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
 }
 
 .vistaContent h3 {
     margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat';
 }
 
 .vistaContent p {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #737373;
+    font-family: 'Montserrat';
 }
 
 .vistaContent .Facility {
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
     padding-top: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -1060,7 +1068,7 @@ h1.title.pp {
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
     padding-bottom: 20px;
 }
 
@@ -1081,10 +1089,9 @@ h1.title.pp {
 .plans {}
 
 .plans h2 {
-    font-size: 35px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 31px
 }
 
 .plans .planImg {
@@ -1489,7 +1496,7 @@ h1.title.pp {
 
     h1.title {
         color: #202020;
-        margin-bottom: 35px;
+        margin-bottom: 31px;
     }
 
     .footer .footerLogo {
@@ -1767,6 +1774,7 @@ h1.title.pp {
 
     .builderDealerBanner.vista .right {
         left: 48%;
+        padding: 23px;
         transform: translateX(-50%);
     }
     .builderDealerBanner.uni .right {
