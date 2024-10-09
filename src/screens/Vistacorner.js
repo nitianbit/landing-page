@@ -116,8 +116,7 @@ const Vistacorner = () => {
                             }
                         }}>
                             <h4>ARE YOU SEEKING TO INVEST
-                                IN A COMMERCIAL COMPLEX
-                                IN COPIOUS VISTA CORNER?</h4>
+                                IN A COMMERCIAL COMPLEX?</h4>
                             <h4>REQUEST A CALLBACK:</h4>
                             {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
                                 <div key={fieldIndex} >
@@ -167,12 +166,16 @@ const Vistacorner = () => {
             {/* banner section end */}
             {/* content */}
             <div className='vistaContent'>
-                <div className='container'>
+                <div className='container' style={{
+                    borderBottom: "1px solid #ddd"
+                }}>
                     <h1>Copious Vista Corner</h1>
                     <h3>Sector 89, Gurgaon</h3>
                     <p>Commercial SCO Plots & Showrooms</p>
-                    <h2>Starting ₹1.43 Cr*</h2>
-                    <h1 className='not'>Copious Vista Corner Overview</h1>
+                    <h2 style={{
+                        borderBottom: "1px solid #ddd"
+                    }}>Starting ₹1.43 Cr*</h2>
+                    <h1 className='not'>Overview</h1>
                     <div className='Facility'>
                         <div className='sinBox'>
                             <img src="./images/icon1.png" alt="" />
@@ -191,7 +194,7 @@ const Vistacorner = () => {
                         <div className='sinBox'>
                             <img src="./images/icon3.png" alt="" />
                             <div className=''>
-                                <h5>Legal Approva</h5>
+                                <h5>Legal Approval</h5>
                                 <p>HRERA & SEIAA</p>
                             </div>
                         </div>
@@ -203,7 +206,9 @@ const Vistacorner = () => {
                             </div>
                         </div>
                     </div>
-                    <p><button type='button' className='button' onClick={() => {
+                    <p><button style={{
+                        marginTop: "20px",
+                    }} type='button' className='button' onClick={() => {
                         setDownloadbro(!downloadbro)
                         setErrors({})
                     }}>Download Brochure</button></p>
@@ -211,48 +216,70 @@ const Vistacorner = () => {
             </div>
             {/* section end */}
             {/* featuredProperties start */}
-            <div className='gallery'>
-                <div className='container'>
-                    <h1 className='title'>Copious Vista Corner Photos</h1>
+            {/* <div className='gallery'>
+                <div className='container' style={{
+                    borderBottom: "1px solid #ddd"
+                }}>
+                    <h1 className='title' style={{
+                        marginTop:"40px"
+                    }}> Photos</h1>
                     <div className='properties'>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/1.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/2.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/3.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/4.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/5.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/6.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/7.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/8.jpg" alt="" />
                         </div>
-                        <div className='imgBox'>
+                        <div className='imgBox' style={{
+                            marginBottom:"14px"
+                        }}>
                             <img src="./images/1.jpg" alt="" />
                         </div>
                     </div>
                     <Copious />
                 </div>
-            </div>
+            </div> */}
             {/* featuredProperties end */}
             {/* content */}
             <div className='aboutUs'>
                 <div className='container'>
-                    <h1 className='not'>Why Buy in Copious Vista Corner?</h1>
-                    <p>The project is being developed as a Combination of Retail, Entertainment & Restaurants</p>
-                    <h3>AMENITIES</h3>
+                    <h1 className='not'>Why Vista Corner?</h1>
+                    <p>The project is being developed as a Combination of Retail, Entertainment & Restaurants.</p>
+                    <h3 style={{ fontSize: "18px", marginTop:"31px" }}>AMENITIES</h3>
                     <ul>
                         <li>Lower Ground, Ground & First Floor for Retail</li>
                         <li>Entertainment Zone & Restaurants on the Second Floor</li>
@@ -262,37 +289,60 @@ const Vistacorner = () => {
                         <li>Two Level Basement Parking</li>
                         <li>Total Build-Up Area = 6 Lac Sq. Ft. (Approx)</li>
                     </ul>
-                    <h3>LOCATION ADVANTAGES</h3>
-                    <p>Discover the Best Investment Opportunities in <b>New Gurugram's Premium Sector 89.</b> Looking for the perfect
+                    <h3 style={{
+                        marginTop:"31px"
+                    }}>LOCATION ADVANTAGES</h3>
+                    <p style={{
+                        fontSize: "15px",
+                        marginBottom: "15px"
+                    }}>Discover the Best Investment Opportunities in <b>New Gurugram's Premium Sector 89.</b> Looking for the perfect
                         investment opportunity in the residential and commercial sectors? Look no further than New Gurgaon's Sector 89 –
                         one of the city's most prestigious areas. With carefully planned and improved infrastructure, New Gurgaon has
                         become a top choice for property investment in recent years.</p>
-                    <p>The site boasts multiple expressways and highways – both operational and proposed – making it ideal for both
+                    <p style={{
+                        fontSize: "15px"
+                    }}>The site boasts multiple expressways and highways – both operational and proposed – making it ideal for both
                         commercial and residential needs. It is situated right on the 135 Mtr. Multi-Utility Corridor, which links the IMT Manesar
                         to the Dwarka Expressway, giving the area a luxurious and premium feel. With a complete retail hub, this location is
                         the ultimate destination for shopping, entertainment, and leisure.</p>
 
-                    <h3>HIGHLIGHTS</h3>
-                    <ul>
+                    <h3 style={{
+                        marginTop:"31px"
+                    }}>HIGHLIGHTS</h3>
+                    <ul style={{
+                        borderBottom:"1px solid #ddd",
+                        paddingBottom:"11px"
+                    }}>
                         <li>Immediate access to NH-8 and SPR Road</li>
                         <li>The best MNCs, Colleges and Universities of Gurugram just a short drive away</li>
                         <li>Only a short drive away from IGI Airport and HUDA City Center</li>
                         <li>Hot-Spot for new residential developments and luxury apartments</li>
                         <li>In center of Manesar and Gurugram</li >
-                        <li>Situated bang on the 135 Mtr.Multi - Utility Corridor, which connects the IMT</li >
-                        <li>Manesar to Dwarka</li >
+                        <li>Situated bang on the 135 Mtr.Multi - Utility Corridor, which connects the IMT Manesar to Dwarka</li >
                     </ul>
-                    <h1 className='not'>About Project - Copious Vista Corner</h1>
-                    <p>Copious Vista Corner, located in Sector 89, Gurgaon, is an exciting new launch offering commercial investment opportunities to
+                    <h1 style={{
+                        marginTop:"40px"
+                    }} className='not'>About Project</h1>
+                    <p style={{
+                        fontSize:"15px",
+                        marginBottom:"15px"
+                    }}>Copious Vista Corner, located in Sector 89, Gurgaon, is an exciting new launch offering commercial investment opportunities to
                         suit a range of budgets. For those seeking high returns, it stands out as one of Gurgaon's most desirable commercial projects,
                         providing properties with excellent visibility and significant foot traffic.</p>
 
-                    <p>Designed as a next-generation commercial hub, Copious Vista Corner boasts modern facilities and amenities, strategically located
+                    <p style={{
+                        fontSize:"15px",
+                        marginBottom:"15px"
+                    }}>Designed as a next-generation commercial hub, Copious Vista Corner boasts modern facilities and amenities, strategically located
                         in Sector 89. This area is rapidly developing, with improved infrastructure and connectivity compared to other commercial zones
                         in Gurgaon. Investors have access to a wide variety of property options, accommodating diverse budget needs, making it an ideal
                         choice for various types of professionals.</p>
 
-                    <p>Developed by Copious Realtors Pvt Ltd, a well-known name in Gurgaon’s real estate, this luxurious project spans 3.78 acres and is
+                    <p style={{
+                        fontSize:"15px",
+                        paddingBottom:"16px",
+                        borderBottom:"1px solid #ddd"
+                    }}>Developed by Copious Realtors Pvt Ltd, a well-known name in Gurgaon’s real estate, this luxurious project spans 3.78 acres and is
                         perfectly connected by key roads, including the Dwarka Expressway and Pataudi Road. With 395 units, Copious Vista Corner is
                         currently in its mid-construction phase and promises to deliver a premium commercial experience.</p>
                 </div >
@@ -300,8 +350,11 @@ const Vistacorner = () => {
             {/* section end */}
             {/* plan start */}
             <div class="plans">
-                <div class="container">
-                    <h2>Copious Vista Corner Floor Plans</h2>
+                <div class="container" style={{
+                        borderBottom:"1px solid #ddd",
+                        paddingBottom:"16px"
+                }}>
+                    <h2>Floor Plans</h2>
                     <div class="planImg">
                         <img src="./images/p1.jpg" alt="" />
                         <img src="./images/p2.jpg" alt="" />
@@ -321,20 +374,32 @@ const Vistacorner = () => {
             {/* content */}
             <div className='aboutUs mb-4'>
                 <div className='container'>
-                    <h1 className='not'>About Developer - Copious Realtors Pvt. Ltd.</h1>
-                    <p>Copious Realtors Pvt. Ltd. brings extensive experience in real estate development, with a strong focus on constructing commercial
+                    <h1 className='not'>About Developer</h1>
+                    <p style={{
+                        fontSize:"15px",
+                        marginBottom:"15px"
+                    }}>Copious Realtors Pvt. Ltd. brings extensive experience in real estate development, with a strong focus on constructing commercial
                         complexes, multiplexes, shopping malls, and hotels. Their visionary approach has been instrumental in establishing the company
                         as a respected and trusted name among retailers and business partners alike.</p>
 
-                    <p>The company’s reputation as a renowned real estate developer is built on an unwavering commitment to quality and timely
+                    <p style={{
+                        fontSize:"15px",
+                        marginBottom:"15px"
+                    }}>The company’s reputation as a renowned real estate developer is built on an unwavering commitment to quality and timely
                         delivery. Copious Realtors maintain stringent quality standards, ensuring every project meets the expectations of their clients
                         without compromise.</p>
 
-                    <p>Beyond just constructing commercial spaces and malls, Copious Realtors prioritize brand standards and client satisfaction. With a
+                    <p style={{
+                        fontSize:"15px"
+                    }}>Beyond just constructing commercial spaces and malls, Copious Realtors prioritize brand standards and client satisfaction. With a
                         dedicated in-house construction team, they offer full support and coordination throughout the development process, ensuring
                         seamless project execution and the best service to their clients.</p>
-                    <h3>Notable Projects:</h3>
-                    <ul>
+                    <h3 style={{
+                        marginTop:"31px"
+                    }}>Notable Projects:</h3>
+                    <ul style={{
+                        marginBottom:"40px"
+                    }}>
                         <li>Crowne Plaza Hotel Rohini, Delhi</li>
                         <li>City Center Rohini, Delhi</li>
                         <li>V3S East Center Laxmi Nagar, Delhi</li>
