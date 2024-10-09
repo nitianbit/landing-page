@@ -287,7 +287,7 @@ const Forbuildersdealers = () => {
 
                 </div>
             </div>
-            {/* section end */}
+                            {/* section end */}
             {/* featuredProperties start */}
             <div className='newlyLaunched'>
                 <div className='container'>
@@ -300,7 +300,7 @@ const Forbuildersdealers = () => {
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
                             <p>Commercial</p>
-                            <h5>Starting ₹79 Lakh*</h5>
+                            <h5>Starting ₹1.43 Cr*</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
@@ -309,7 +309,7 @@ const Forbuildersdealers = () => {
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
                             <p>Commercial</p>
-                            <h5>Starting ₹79 Lakh*</h5>
+                            <h5>Starting ₹1.43 Cr*</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
@@ -318,7 +318,7 @@ const Forbuildersdealers = () => {
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
                             <p>Commercial</p>
-                            <h5>Starting ₹79 Lakh*</h5>
+                            <h5>Starting ₹1.43 Cr*</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
@@ -327,7 +327,7 @@ const Forbuildersdealers = () => {
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
                             <p>Commercial</p>
-                            <h5>Starting ₹79 Lakh*</h5>
+                            <h5>Starting ₹1.43 Cr*</h5>
                         </div>
                     </div>
                 </div>
