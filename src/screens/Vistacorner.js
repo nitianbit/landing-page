@@ -12,7 +12,7 @@ import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import ThankYouPage from '../components/ThankYou/ThankYouPage'
 import { useNavigate } from 'react-router-dom';
-import { validateFields, handleBlur,downloadFile } from '../utils/helper';
+import { validateFields, handleBlur } from '../utils/helper';
 
 
 
@@ -128,7 +128,8 @@ const Vistacorner = () => {
                                             name={field?.name}
                                             required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
-                                            style={{WebkitAppearance:'none'}}
+                                            style={{WebkitAppearance:'none', color:data[field?.name]?'#000':'#999'}}
+                                            
                                         >
                                             <option value="" disabled>{`${field.label}`}</option>
                                             {field?.options?.length ? (
@@ -146,6 +147,7 @@ const Vistacorner = () => {
                                             value={data[field?.name] || ''}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value, field?.type)}
                                             required={forms?.first?.requiredFields?.includes(field?._id) || false}
+                                            style={{color:data[field?.name]?'#000':'#999'}}
                                         />
                                     )}
                                     {errors[field.name] && (
@@ -506,6 +508,7 @@ const Vistacorner = () => {
                                         key={fieldIndex}
                                         value={data[field?.name] || ''}
                                         name={field?.name}
+                                        style={{color:data[field?.name]?'#000':'#999'}}
                                         required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                         onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                         label={field?.label}
@@ -527,6 +530,7 @@ const Vistacorner = () => {
                                     <input
                                         key={fieldIndex}
                                         type={field?.type}
+                                        style={{color:data[field?.name]?'#000':'#999'}}
                                         name={field?.name}
                                         onBlur={() => handleBlurWithError(field, data)}
                                         placeholder={field.label}
@@ -566,7 +570,6 @@ const Vistacorner = () => {
                             setErrors({});
                             handleSubmit({ e, form: forms?.second, formData: data1, phone: phoneNo1, project, productId: products[1]?._id }).then(res => {
                                 res && setData({})
-                                  downloadFile(`/files/Vista.pdf`,'VistaCorner.pdf')
                             })
                             if (forms?.second?.showOTP) {
                                 setVeri(!Veri)
@@ -598,6 +601,7 @@ const Vistacorner = () => {
                                         key={fieldIndex}
                                         value={data1[field?.name] || ''}
                                         name={field?.name}
+                                        style={{color:data1[field?.name]?'#000':'#999'}}
                                         required={forms?.second?.requiredFields?.includes(field?._id) || false}
                                         onChange={(e) => handleInputChange1(field?.name, e.target.value)}
                                         label={field?.label}
@@ -620,6 +624,7 @@ const Vistacorner = () => {
                                         key={fieldIndex}
                                         type={field?.type}
                                         name={field?.name}
+                                        style={{color:data1[field?.name]?'#000':'#999'}}
                                         onBlur={() => handleBlurWithError(field, data1)}
                                         placeholder={field.label}
                                         value={data1[field?.name] || ''}
