@@ -6,7 +6,7 @@ const ThankYouPage = ({ isOpen, setIsOpen }) => {
   // const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
   useEffect(()=>{
-    downloadPdf("../../VistaCorner.pdf","VistaCorner.pdf")
+     window.scrollTo(0, 0);
   },[])
   return (
     <div style={{
