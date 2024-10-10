@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import downloadPdf from '../DownloadPdf'
 
 const ThankYouPage = ({ isOpen, setIsOpen }) => {
   // const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
+  useEffect(()=>{
+    downloadPdf("../../VistaCorner.pdf","VistaCorner.pdf")
+  },[])
   return (
     <div style={{
       fontStyle:"Garet, sans-serif"
