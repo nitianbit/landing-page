@@ -94,6 +94,7 @@ const Contactus = () => {
                                                             value={data[field?.name] || ''}
                                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                                             id={field?.label.toLowerCase()}
+                                                            style={{color:data[field?.name]?'#000':'#999'}}
                                                             cols="30"
                                                             rows="10"
                                                             placeholder={field?.label}
@@ -101,6 +102,7 @@ const Contactus = () => {
                                                     ) : (
                                                         <input
                                                             // required={true}
+                                                            style={{color:data[field?.name]?'#000':'#999'}}
                                                             required={form?.requiredFields?.includes(field?._id) || false}
                                                             value={data[field?.name] || ''}
                                                             onBlur={() => handleBlurWithError(field, data)}
