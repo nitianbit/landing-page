@@ -48,3 +48,15 @@ export const validateFields = (fields, data, setErrors) => {
     });
     return errors;
 };
+
+export const downloadFile = async (filePath, fileName) => {
+    const response = await fetch(filePath);
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+};
