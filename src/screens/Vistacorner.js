@@ -12,7 +12,7 @@ import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import ThankYouPage from '../components/ThankYou/ThankYouPage'
 import { useNavigate } from 'react-router-dom';
-import { validateFields, handleBlur } from '../utils/helper';
+import { validateFields, handleBlur,downloadFile } from '../utils/helper';
 
 
 
@@ -566,6 +566,7 @@ const Vistacorner = () => {
                             setErrors({});
                             handleSubmit({ e, form: forms?.second, formData: data1, phone: phoneNo1, project, productId: products[1]?._id }).then(res => {
                                 res && setData({})
+                                  downloadFile(`/files/Vista.pdf`,'VistaCorner.pdf')
                             })
                             if (forms?.second?.showOTP) {
                                 setVeri(!Veri)
