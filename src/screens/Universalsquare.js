@@ -10,7 +10,7 @@ import { doGET } from '../utils/HttpUtils';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
-import { handleBlur, validateFields } from '../utils/helper';
+import { handleBlur, validateFields,downloadFile } from '../utils/helper';
 
 
 const Universalsquare = () => {
@@ -558,6 +558,7 @@ const Universalsquare = () => {
                     verifyOTP({ formId: forms?.first?._id, phone: phoneNo, otp: v })
                     setData({})
                     setThank(!thank)
+                    downloadFile(`/files/universal.pdf`,'Universal.pdf')
                     navigate("/thankYou")
                 }}
                 resendOtp={() => {
