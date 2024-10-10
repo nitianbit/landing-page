@@ -42,7 +42,7 @@ export const validateFields = (fields, data, setErrors) => {
         if (field.type === 'email' && !validateEmail(data[field.name])) {
             errors[field.name] = 'Invalid email address';
         }
-        if ((field.name === 'mobile'  || field.name === "tel") && !validateIndianMobileNumber(data[field.name])) {
+        if ((["mobile","mobile_number"] .includes(field.name)  || field.name === "tel") && !validateIndianMobileNumber(data[field.name])) {
             errors[field.name] = 'Invalid mobile number';
         }
     });
