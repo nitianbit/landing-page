@@ -10,7 +10,7 @@ import { doGET } from '../utils/HttpUtils';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
-import { handleBlur, validateFields,downloadFile } from '../utils/helper';
+import { handleBlur, validateFields } from '../utils/helper';
 
 
 const Universalsquare = () => {
@@ -126,6 +126,7 @@ const Universalsquare = () => {
                                                 key={fieldIndex}
                                                 value={data[field?.name] || ''}
                                                 name={field?.name}
+                                                style={{color:data[field?.name]?'#000':'#999'}}
                                                 required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                                 onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                                 label={field?.label}
@@ -148,6 +149,7 @@ const Universalsquare = () => {
                                                 key={fieldIndex}
                                                 type={field?.type}
                                                 name={field?.name}
+                                                style={{color:data[field?.name]?'#000':'#999'}}
                                                 onBlur={() => handleBlurWithError(field, data)}
                                                 placeholder={field.label}
                                                 value={data[field?.name] || ''}
@@ -486,6 +488,7 @@ const Universalsquare = () => {
                                             key={fieldIndex}
                                             value={data[field?.name] || ''}
                                             name={field?.name}
+                                            style={{color:data[field?.name]?'#000':'#999'}}
                                             required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                             label={field?.label}
@@ -508,6 +511,7 @@ const Universalsquare = () => {
                                             key={fieldIndex}
                                             type={field?.type}
                                             name={field?.name}
+                                            style={{color:data[field?.name]?'#000':'#999'}}
                                             onBlur={() => handleBlurWithError(field, data)}
                                             placeholder={field.label}
                                             value={data[field?.name] || ''}
@@ -558,7 +562,6 @@ const Universalsquare = () => {
                     verifyOTP({ formId: forms?.first?._id, phone: phoneNo, otp: v })
                     setData({})
                     setThank(!thank)
-                    downloadFile(`/files/universal.pdf`,'Universal.pdf')
                     navigate("/thankYou")
                 }}
                 resendOtp={() => {
@@ -607,6 +610,7 @@ const Universalsquare = () => {
                                             key={fieldIndex}
                                             value={data1[field?.name] || ''}
                                             name={field?.name}
+                                            style={{color:data1[field?.name]?'#000':'#999'}}
                                             required={forms?.second?.requiredFields?.includes(field?._id) || false}
                                             onChange={(e) => handleInputChange1(field?.name, e.target.value)}
                                             label={field?.label}
@@ -628,6 +632,7 @@ const Universalsquare = () => {
                                         <input
                                             key={fieldIndex}
                                             type={field?.type}
+                                            style={{color:data1[field?.name]?'#000':'#999'}}
                                             name={field?.name}
                                             onBlur={() => handleBlurWithError(field, data1)}
                                             placeholder={field.label}
