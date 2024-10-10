@@ -128,6 +128,7 @@ const Vistacorner = () => {
                                             name={field?.name}
                                             required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                             onChange={(e) => handleInputChange(field?.name, e.target.value)}
+                                            style={{WebkitAppearance:'none'}}
                                         >
                                             <option value="" disabled>{`${field.label}`}</option>
                                             {field?.options?.length ? (
