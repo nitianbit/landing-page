@@ -27,7 +27,7 @@ export const handleBlur = (field, data) => {
     if (type === 'email' && !validateEmail(value)) {
         error = 'Invalid email address';
     }
-    if ((name === 'mobile' || name == "tel")  && !validateIndianMobileNumber(value)) {
+    if ((["mobile","mobile_number"] .includes(name) || name == "tel")  && !validateIndianMobileNumber(value)) {
         error = 'Invalid mobile number';
     }
 
