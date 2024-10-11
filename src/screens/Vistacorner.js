@@ -94,10 +94,10 @@ const Vistacorner = () => {
     return (
         <>
             {/* banner section start */}
-            <div className='builderDealerBanner vista column vista-img'>
+
+            <div className='builderDealerBanner vista column header-image-view '>
+                <img src='/images/IMG-20241010-WA0006.jpg' className='header-image'/>
                 <div className='container full'>
-                    <div className='left full'>
-                    </div>
                     <div className='right'>
                         <form onSubmit={(e) => {
                             e.preventDefault()
@@ -170,6 +170,7 @@ const Vistacorner = () => {
                 </div>
 
             </div>
+        
             {/* banner section end */}
             {/* content */}
             <div className='vistaContent'>
