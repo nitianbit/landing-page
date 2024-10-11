@@ -761,10 +761,13 @@ h1.title {
     margin-bottom: 10px;
     border-radius: 25px;
     color: #999;
+
+}
+
+select{
     --webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
 }
 
 .select-wrapper {
