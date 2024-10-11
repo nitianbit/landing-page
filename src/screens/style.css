@@ -111,6 +111,13 @@ a {
     }
 }
 
+@media (max-width: 540px) {
+    .header-image{
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+}
+
 @media (width: 540px) {
     .banner {
         background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
