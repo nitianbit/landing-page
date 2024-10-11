@@ -660,6 +660,7 @@ h1.title {
     background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
 }
 
+/* for header image view */
 .header-image{
     width: calc(100% - 392px);
     object-fit: cover;
