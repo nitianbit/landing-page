@@ -122,6 +122,7 @@ const Universalsquare = () => {
                                 <div key={fieldIndex} >
                                     {
                                         field?.type === "select" ? (
+                                          <div className="select-wrapper">
                                             <select
                                                 key={fieldIndex}
                                                 value={data[field?.name] || ''}
@@ -144,6 +145,7 @@ const Universalsquare = () => {
                                                     </>
                                                 )}
                                             </select>
+                                          </div>
                                         ) : (
                                             <input
                                                 key={fieldIndex}
