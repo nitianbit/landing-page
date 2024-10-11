@@ -123,6 +123,7 @@ const Vistacorner = () => {
                             {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
                                 <div key={fieldIndex} >
                                     {field?.type === "select" ? (
+                                     <div className="select-wrapper">
                                         <select
                                             value={data[field?.name] || ''}
                                             name={field?.name}
@@ -138,6 +139,7 @@ const Vistacorner = () => {
                                                 ))
                                             ) : null}
                                         </select>
+                                      </div>
                                     ) : (
                                         <input
                                             type={field?.type}
