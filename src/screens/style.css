@@ -116,9 +116,6 @@ a {
         background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
         height: 86vh;
     }
-    .header-image {
-        display: none;
-    }
 }
 
 .banner h4 span {
