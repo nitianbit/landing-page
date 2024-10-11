@@ -754,8 +754,43 @@ h1.title {
     margin-bottom: 10px;
     border-radius: 25px;
     color: #999;
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
 }
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .select-wrapper::after {
+    content: "\25BC"; 
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8em; 
+    color: #999; 
+
+  }
+  
+  .select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding-right: 30px; 
+ 
+  }
+  
+  /* For IE10+ */
+  .select::-ms-expand {
+    display: none;
+  }
 
 .builderDealerBanner .right form select,
 .Form .inqure select,
