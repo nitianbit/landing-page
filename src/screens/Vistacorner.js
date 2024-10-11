@@ -507,11 +507,12 @@ const Vistacorner = () => {
                         {forms?.first && forms?.first?.fields?.map((field, fieldIndex) => (
                             <div key={fieldIndex}>
                                 {field?.type === "select" ? (
+                                    <div className="select-wrapper">
                                     <select
                                         key={fieldIndex}
                                         value={data[field?.name] || ''}
                                         name={field?.name}
-                                        style={{color:data[field?.name]?'#000':'#999'}}
+                                        style={{WebkitAppearance:'none', color:data[field?.name]?'#000':'#999'}}
                                         required={forms?.first?.requiredFields?.includes(field?._id) || false}
                                         onChange={(e) => handleInputChange(field?.name, e.target.value)}
                                         label={field?.label}
@@ -529,6 +530,7 @@ const Vistacorner = () => {
                                             </>
                                         )}
                                     </select>
+                                    </div>
                                 ) : (
                                     <input
                                         key={fieldIndex}
@@ -600,11 +602,12 @@ const Vistacorner = () => {
                         {forms?.second && forms?.second?.fields?.map((field, fieldIndex) => (
                             <div key={fieldIndex}>
                                 {field?.type === "select" ? (
+                                    <div className="select-wrapper">
                                     <select
                                         key={fieldIndex}
                                         value={data1[field?.name] || ''}
                                         name={field?.name}
-                                        style={{color:data1[field?.name]?'#000':'#999'}}
+                                        style={{WebkitAppearance:'none', color:data1[field?.name]?'#000':'#999'}}
                                         required={forms?.second?.requiredFields?.includes(field?._id) || false}
                                         onChange={(e) => handleInputChange1(field?.name, e.target.value)}
                                         label={field?.label}
@@ -622,6 +625,7 @@ const Vistacorner = () => {
                                             </>
                                         )}
                                     </select>
+                                    </div>
                                 ) : (
                                     <input
                                         key={fieldIndex}
