@@ -101,6 +101,7 @@ const Forbuildersdealers = () => {
                             {form && form?.fields?.map((field, fieldIndex) => (
                                 <div key={fieldIndex}>
                                     {field?.type === "select" ? (
+                                        <div className="select-wrapper">
                                         <select
                                             key={fieldIndex}
                                             value={data[field?.name] || ''}
@@ -122,6 +123,7 @@ const Forbuildersdealers = () => {
                                                 </>
                                             )}
                                         </select>
+                                        </div>
                                     ) : (
                                         <input
                                             key={fieldIndex}
@@ -372,6 +374,7 @@ const Forbuildersdealers = () => {
                             <div key={fieldIndex}>
                                 {
                                     field?.type === "select" ? (
+                                        <div className="select-wrapper">
                                         <select
                                             key={fieldIndex}
                                             value={data[field?.name] || ''}
@@ -393,6 +396,7 @@ const Forbuildersdealers = () => {
                                                 </>
                                             )}
                                         </select>
+                                        </div>
                                     ) : (
                                         <input
                                             key={fieldIndex}
