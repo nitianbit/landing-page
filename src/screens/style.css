@@ -116,6 +116,9 @@ a {
         background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
         height: 86vh;
     }
+    .header-image {
+        display: none;
+    }
 }
 
 .banner h4 span {
@@ -655,6 +658,12 @@ h1.title {
 
 .builder-img{
     background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+}
+
+.header-image{
+    width: calc(100% - 392px);
+    object-fit: cover;
+    height: 100%;
 }
 
 /* builderDealerBanner */
