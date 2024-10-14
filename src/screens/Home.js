@@ -180,7 +180,7 @@ const Home = () => {
                             <h5>Vista Corner</h5>
                             <h6>Sector 89, Gurugram</h6>
                             <p>Commercial</p>
-                            <h4>Starting ₹1.43 Cr*</h4>
+                            <h4>Starting ₹1.15 Cr*</h4>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
