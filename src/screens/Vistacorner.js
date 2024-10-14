@@ -96,7 +96,7 @@ const Vistacorner = () => {
             {/* banner section start */}
 
             <div className='builderDealerBanner vista column header-image-view '>
-                <img src='/images/vista_mobile.jpg' className='header-image'/>
+                <img src='/images/vista_laptop.jpg' className='header-image'/>
                 <div className='container full'>
                     <div className='right'>
                         <form onSubmit={(e) => {
