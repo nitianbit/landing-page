@@ -296,7 +296,9 @@ const Vistacorner = () => {
             </div> */}
             {/* featuredProperties end */}
             {/* content */}
-            <div className='aboutUs'>
+            <div className='aboutUs' style={{
+                paddingTop:"24px"
+            }}>
                 <div className='container'>
                     <h1 className='not'>Why Vista Corner?</h1>
                     <p>The project is being developed as a Combination of Retail, Entertainment & Restaurants.</p>
