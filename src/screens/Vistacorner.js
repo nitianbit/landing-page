@@ -96,7 +96,7 @@ const Vistacorner = () => {
             {/* banner section start */}
 
             <div className='builderDealerBanner vista column header-image-view '>
-                <img src='/images/IMG-20241010-WA0006.jpg' className='header-image'/>
+                <img src='/images/vista_mobile.jpg' className='header-image'/>
                 <div className='container full'>
                     <div className='right'>
                         <form onSubmit={(e) => {
@@ -180,7 +180,7 @@ const Vistacorner = () => {
                     <p>Commercial SCO Plots & Showrooms</p>
                     <h2 style={{
                         borderBottom: "1px solid #ddd"
-                    }}>Starting ₹1.43 Cr*</h2>
+                    }}>Starting ₹1.15 Cr*</h2>
                     <h1 className='not'>Overview</h1>
                     <div className='Facility'>
                         <div style={{
