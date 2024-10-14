@@ -177,7 +177,7 @@ const Vistacorner = () => {
                 <div className='container'>
                     <h1>Copious Vista Corner</h1>
                     <h3>Sector 89, Gurgaon</h3>
-                    <p>Commercial SCO Plots & Showrooms</p>
+                    <p>Commercial Shops, Food Court & Restaurants</p>
                     <h2 style={{
                         borderBottom: "1px solid #ddd"
                     }}>Starting ₹1.15 Cr*</h2>
