@@ -13,6 +13,8 @@ import OTPPage from '../components/OTP/OtpPage';
 import ThankYouPage from '../components/ThankYou/ThankYouPage'
 import { useNavigate } from 'react-router-dom';
 import { validateFields, handleBlur } from '../utils/helper';
+import useWindowResize from '../hooks/useWindowResize';
+import downloadPdf from '../components/DownloadPdf';
 
 
 
@@ -91,12 +93,13 @@ const Vistacorner = () => {
             setSch(false);
         }
     })
+   const {isMobile} =  useWindowResize()
     return (
         <>
             {/* banner section start */}
 
             <div className='builderDealerBanner vista column header-image-view '>
-                <img src='/images/vista_laptop.jpg' className='header-image'/>
+                <img src={`/images/${isMobile ? 'vista_mobile.jpg' : 'vista_laptop.jpg'}`} className='header-image'/>
                 <div className='container full'>
                     <div className='right'>
                         <form onSubmit={(e) => {
@@ -584,6 +587,7 @@ const Vistacorner = () => {
                                 setPopup(!popup)
                                 setDownloadbro(!downloadbro)
                                 navigate("/thankYou")
+                                downloadPdf("/files/Vista.pdf", "Vista.pdf")
                             }
                         } else {
                             setErrors(errorList)
