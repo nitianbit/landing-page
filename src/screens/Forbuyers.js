@@ -33,7 +33,7 @@ const Forbuyers = () => {
                                 <h2>Vista Corner</h2>
                                 <h4>Sector 89, Gurgaon</h4>
                                 <p>Commercial SCO Plots & Showrooms</p>
-                                <h3>Starting ₹1.43 Cr*</h3>
+                                <h3>Starting ₹1.15 Cr*</h3>
                                 <div className='Facility column'>
                                     <div className='sinBox full'>
                                         <img src="./images/icon1.png" alt="" />
