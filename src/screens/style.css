@@ -775,6 +775,7 @@ select{
     --webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-size: 13.3px;
 }
 
 .select-wrapper {
