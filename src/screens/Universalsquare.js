@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './css/demo.css';
 import './style.css';
-import Header from './header';
-import Footer from './footer';
 import Copious from './Copious';
 import Popularcity from './Popularcity';
 import { useUserContext } from '../context/UserContext';
@@ -11,6 +9,7 @@ import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
 import { handleBlur, validateFields } from '../utils/helper';
+import downloadPdf from '../components/DownloadPdf';
 
 
 const Universalsquare = () => {
@@ -568,6 +567,7 @@ const Universalsquare = () => {
                     setData({})
                     setThank(!thank)
                     navigate("/thankYou")
+                    downloadPdf("/public/files/universal.pdf", "Universal.pdf")
                 }}
                 resendOtp={() => {
                     if (phoneNo) {
@@ -597,6 +597,7 @@ const Universalsquare = () => {
                                     setPopup(!popup)
                                     setDownloadbro(!downloadbro)
                                     navigate("/thankYou")
+                                    downloadPdf("/public/files/universal.pdf", "Universal.pdf")
                                 }
                             })
                         } else {
