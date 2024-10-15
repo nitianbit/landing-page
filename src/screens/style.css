@@ -773,6 +773,8 @@ h1.title {
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 25px;
+    color:#737373;
+    font-size: 12px;
 /*     color: #999; */
 
 }
@@ -832,7 +834,9 @@ input[type="button"]{
 }
 select {
     background: #fff;
-    color: #737373
+    color: #737373;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .builderDealerBanner .right form input[type="checkbox"],
