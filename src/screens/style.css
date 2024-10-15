@@ -1813,7 +1813,7 @@ h1.title.pp {
     }
 
     .builderDealerBanner.vista {
-        height: 290px;
+/*         height: 290px; */
     }
 
     .builderDealerBanner.uni {
@@ -1856,7 +1856,7 @@ h1.title.pp {
 
     .builderDealerBanner.vista,
     .builderDealerBanner.uni {
-        margin-bottom: 555px;
+/*         margin-bottom: 555px; */
     }
 
 
