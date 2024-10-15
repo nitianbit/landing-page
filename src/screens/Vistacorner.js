@@ -451,6 +451,7 @@ const Vistacorner = () => {
                     setData({})
                     setThank(!thank)
                     navigate("/thankYou")
+                    downloadPdf("/public/files/Vista.pdf", "vista.pdf")
                 }}
                 resendOtp={() => {
                     if (phoneNo) {
