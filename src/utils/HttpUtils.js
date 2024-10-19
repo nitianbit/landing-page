@@ -8,6 +8,7 @@ export const doGET = async function (url) {
         const response = await apiHandler(url, API_METHODS.GET)
         return response;
     } catch (err) {
+        console.log(err)
         throw new Error(err?.message);
     }
 };
@@ -17,6 +18,7 @@ export const doPOST = async function (url, data) {
         const response = await apiHandler(url, API_METHODS.POST, data)
         return response;
     } catch (err) {
+        console.log(err)
         throw new Error(err?.message);
     }
 };
@@ -26,6 +28,7 @@ export const doDELETE = async function (url, data) {
         const response = await apiHandler(url, API_METHODS.DELETE, data)
         return response;
     } catch (err) {
+        console.log(err)
         throw new Error(err?.message);
     }
 };
@@ -35,6 +38,7 @@ export const doPUT = async function (url, data) {
         const response = await apiHandler(url, API_METHODS.PUT, data)
         return response;
     } catch (err) {
+        console.log(err)
         throw new Error(err?.message);
     }
 }
