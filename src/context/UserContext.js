@@ -13,35 +13,42 @@ export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [project, setProject] = useState(null);
     const [products, setProducts] = useState(null);
+    const [domainName, setDomainName] = useState(null);
 
     const success = (message) => toast.success(message);
     const error = (message) => toast.error(message);
 
-    
-  const getProjectDomain = async () => {
-    try {
-      const response = await doGET(`/projectDomain?domain=${window?.location?.hostname}`);
-      setProject(response)
-    } catch (error) {
-      console.error("Error fetching form:", error);
-    }
-  };
 
-  const getProducts = async (projectId) => {
-    try {
-        const response = await doGET(`/getProductsByProject/${projectId}`);
-        setProducts(response);
-    } catch (error) {
-        console.error("Error fetching form:", error);
-    }
-};
+    const getProjectDomain = async () => {
+        try {
+            const response = await doGET(`/projectDomain?domain=${window?.location?.hostname}`);
+            setProject(response)
+        } catch (error) {
+            console.error("Error fetching form:", error);
+        }
+    };
+
+    const getProducts = async (projectId) => {
+        try {
+            const response = await doGET(`/getProductsByProject/${projectId}`);
+            setProducts(response);
+        } catch (error) {
+            console.error("Error fetching form:", error);
+        }
+    };
 
     useEffect(() => {
-        getProjectDomain()
-        if(project?._id){
+        setDomainName(window?.location?.hostname)
+    }, [domainName])
+
+    useEffect(() => {
+        if(domainName){
+            getProjectDomain()
+        }
+        if (project?._id) {
             getProducts(project?._id)
         }
-    }, [project?._id]);
+    }, [project?._id, domainName]);
 
     const logout = () => {
         localStorage.clear();
@@ -57,7 +64,7 @@ export const UserProvider = ({ children }) => {
         logout,
         user,
         setUser,
-        project, 
+        project,
         setProject,
         products
     };
