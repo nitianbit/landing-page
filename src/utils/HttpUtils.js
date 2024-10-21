@@ -8,7 +8,8 @@ export const doGET = async function (url) {
         const response = await apiHandler(url, API_METHODS.GET)
         return response;
     } catch (err) {
-        console.log(err)
+        console.log("doGet", err)
+        console.error("doGet", err)
         throw new Error(err?.message);
     }
 };
