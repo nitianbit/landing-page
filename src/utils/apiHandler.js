@@ -19,7 +19,7 @@ const apiHandler = async (endPoint, method, data = null) => {
     return response.data;
   } catch (error) {
     if (error.response) {
-      console.error("Response Error:", error.response.data);
+      console.error("Response Error:", error.response);
       throw new Error(error.response.data.message || "Something went wrong");
     } else if (error.request) {
       console.error("Request Error:", error.request);
