@@ -21,7 +21,7 @@ export const UserProvider = ({ children }) => {
 
     const getProjectDomain = async () => {
         try {
-            const response = await doGET(`/projectDomain?domain=${window?.location?.hostname}`);
+            const response = await doGET(`/projectDomain?domain=${domainName}`);
             setProject(response)
         } catch (error) {
             console.error("Error fetching form:", error);
@@ -38,7 +38,8 @@ export const UserProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        setDomainName(window?.location?.hostname)
+        const domain = window?.location?.hostname.replace(/^www\./i, '');
+        setDomainName(domain)
     }, [domainName])
 
     useEffect(() => {
