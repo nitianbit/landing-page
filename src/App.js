@@ -11,7 +11,11 @@ import Featured from './screens/Featured';
 import ThankYouPage from './components/ThankYou/ThankYouPage';
 import Footer from './screens/footer';
 import Header from './screens/header';
+import facebookPixel from './pixels/facebookPixel';
 
+
+facebookPixel.init("1072641991236564");
+facebookPixel.track("PageView");
 
 const App = () => {
   const router = createBrowserRouter([
