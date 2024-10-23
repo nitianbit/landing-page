@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ReactPixel from 'react-facebook-pixel'
+import facebookPixel from '../../pixels/facebookPixel'
+import googlePixel from '../../pixels/googlePixel'
+
 
 const ThankYouPage = ({ isOpen, setIsOpen }) => {
   // const [isOpen, setIsOpen] = useState(false)
@@ -10,8 +13,9 @@ const ThankYouPage = ({ isOpen, setIsOpen }) => {
   }, [])
 
   useEffect(() => {
-    ReactPixel.init('1072641991236564')
-    ReactPixel.pageView()
+    facebookPixel.track("GenerateLead");
+    googlePixel.track("GenerateLead");
+
   }, [])
 
   return (
