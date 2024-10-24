@@ -23,14 +23,14 @@ const defaultOptions = {
   debug: false,
 };
 
-export default {
-  init(pixelId, options = defaultOptions) {
-    if (!pixelId) {
-      console.warn("Please insert pixel id for initializing");
+const loadFacebookPixelScript = () => {
+  return new Promise((resolve) => {
+    if (window.fbq) {
+      resolve();
       return;
     }
 
-    !(function (f, b, e, v, n, t, s) {
+    (function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
       n = f.fbq = function () {
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -45,10 +45,25 @@ export default {
       t.src = v;
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', pixelId); // Initialize the pixel
-    fbq('track', 'PageView'); // Track the PageView event
+      t.onload = () => {
+        resolve(); // Resolve the promise when the script loads
+      };
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  });
+};
+
+export default {
+  async init(pixelId, options = defaultOptions) {
+    if (!pixelId) {
+      console.warn("Please insert pixel id for initializing");
+      return;
+    }
+
+    await loadFacebookPixelScript(); // Wait for the script to load
+
+    window.fbq('init', pixelId); // Initialize the pixel
+    window.fbq('track', 'PageView'); // Track the PageView event
 
     console.log("Facebook Pixel loaded");
     initialized = true;
@@ -60,7 +75,7 @@ export default {
       return;
     }
 
-    fbq('track', event, data); // Track custom event
+    window.fbq('track', event, data); // Track custom event
     console.log(`called fbq('track', '${event}');`);
 
     if (debug) {
@@ -73,7 +88,7 @@ export default {
       return;
     }
 
-    fbq(...args); // Pass through to fbq
+    window.fbq(...args); // Pass through to fbq
 
     if (debug) {
       log(`called fbq('${args.slice(0, 2).join("', '")}')`);
