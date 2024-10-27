@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ReactPixel from 'react-facebook-pixel'
-import facebookPixel from '../../pixels/facebookPixel'
-import googlePixel from '../../pixels/googlePixel'
-
+ import facebookPixelService, { FB_PIXEL_EVENTS } from '../../services/facebookPixelService'
+ 
 
 const ThankYouPage = ({ isOpen, setIsOpen }) => {
   // const [isOpen, setIsOpen] = useState(false)
@@ -13,9 +11,7 @@ const ThankYouPage = ({ isOpen, setIsOpen }) => {
   }, [])
 
   useEffect(() => {
-    facebookPixel.track("GenerateLead");
-    googlePixel.track("GenerateLead");
-
+    facebookPixelService.trackEvent(FB_PIXEL_EVENTS.LEAD_GENERATED);
   }, [])
 
   return (
