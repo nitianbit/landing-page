@@ -11,13 +11,24 @@ import Featured from './screens/Featured';
 import ThankYouPage from './components/ThankYou/ThankYouPage';
 import Footer from './screens/footer';
 import Header from './screens/header';
-import facebookPixel from './pixels/facebookPixel';
+import facebookPixelService from './services/facebookPixelService';
+import { useEffect } from 'react';
+// import facebookPixel from './pixels/facebookPixel';
 
 
-facebookPixel.init("1072641991236564");
-facebookPixel.track("PageView");
+// facebookPixel.init("1072641991236564");
+// facebookPixel.track("PageView");
 
 const App = () => {
+
+  useEffect(() => {
+    facebookPixelService.init();
+ 
+  }, []);
+
+ 
+
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -66,7 +77,7 @@ const App = () => {
   ])
   return (
     <>
-       <Header />
+      <Header />
       <RouterProvider router={router} />
       <Footer/>
     </>
