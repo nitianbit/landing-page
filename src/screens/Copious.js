@@ -30,31 +30,31 @@ const Copious = () => {
         }}>
             <Slider {...settings} className=''>
                 <div className='imgBox'>
-                    <img src="./images/1.jpg" alt="" onClick={() => { setImgshow(!imgshow); setUrl("./images/1.jpg");}}/>
+                    <img src="./webpImages/1.webp" alt="" onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/1.webp");}}/>
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/2.jpg" alt="" onClick={() => { setImgshow(!imgshow); setUrl("./images/2.jpg");}} />
+                    <img src="./webpImages/2.webp" alt="" onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/2.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/3.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/3.jpg");}} />
+                    <img src="./webpImages/3.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/3.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/4.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/4.jpg");}} />
+                    <img src="./webpImages/4.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/4.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/5.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/5.jpg");}} />
+                    <img src="./webpImages/5.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/5.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/6.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/6.jpg");}} />
+                    <img src="./webpImages/6.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/6.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/7.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/7.jpg");}} />
+                    <img src="./webpImages/7.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/7.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/8.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/8.jpg");}} />
+                    <img src="./webpImages/8.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/8.webp");}} />
                 </div>
                 <div className='imgBox'>
-                    <img src="./images/1.jpg" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./images/9.jpg");}} />
+                    <img src="./webpImages/1.webp" alt="" onClick={() => { setImgshow(!imgshow);  setUrl("./webpImages/9.webp");}} />
                 </div>
             </Slider>
             <div className={imgshow ? "imgshow active" : "imgshow"}>

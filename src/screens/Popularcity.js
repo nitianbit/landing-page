@@ -28,61 +28,61 @@ const Popularcity = () => {
             <Slider {...settings} className=''>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c1.jpg" alt="" />
+                        <img src="./webpImages/c1.webp" alt="" />
                     </div>
                     <h5>Delhi</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c2.jpg" alt="" />
+                        <img src="./webpImages/c2.webp" alt="" />
                     </div>
                     <h5>Gurugram</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c3.jpg" alt="" />
+                        <img src="./webpImages/c3.webp" alt="" />
                     </div>
                     <h5>Faridabad</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c4.jpg" alt="" />
+                        <img src="./webpImages/c4.webp" alt="" />
                     </div>
                     <h5>Noida</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c9.jpg" alt="" />
+                        <img src="./webpImages/c9.webp" alt="" />
                     </div>
                     <h5>Hyderabad</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c5.jpg" alt="" />
+                        <img src="./webpImages/c5.webp" alt="" />
                     </div>
                     <h5>Mumbai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c6.jpg" alt="" />
+                        <img src="./webpImages/c6.webp" alt="" />
                     </div>
                     <h5>Pune</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c7.jpg" alt="" />
+                        <img src="./webpImages/c7.webp" alt="" />
                     </div>
                     <h5>Bengaluru</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c8.jpg" alt="" />
+                        <img src="./webpImages/c8.webp" alt="" />
                     </div>
                     <h5>Chennai</h5>
                 </div>
                 <div className='singleCities'>
                     <div className='imgBox'>
-                        <img src="./images/c10.jpg" alt="" />
+                        <img src="./webpImages/c10.webp" alt="" />
                     </div>
                     <h5>Kolkata</h5>
                 </div>

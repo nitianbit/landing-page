@@ -27,7 +27,7 @@ const Forbuyers = () => {
                     <div className='sinPro '>
                         <div className='d-flex gp3'>
                             <div className='img'>
-                                <img src="./images/f2.jpg" alt="" />
+                                <img src="./webpImages/f2.webp" alt="" />
                             </div>
                             <div className='info '>
                                 <h2>Vista Corner</h2>
@@ -36,28 +36,28 @@ const Forbuyers = () => {
                                 <h3>Starting ₹1.15 Cr*</h3>
                                 <div className='Facility column'>
                                     <div className='sinBox full'>
-                                        <img src="./images/icon1.png" alt="" />
+                                        <img src="./webpImages/icon1.webp" alt="" />
                                         <div className=''>
                                             <h5>Project Size</h5>
                                             <p>3.78 Acres</p>
                                         </div>
                                     </div>
                                     <div className='sinBox full'>
-                                        <img src="./images/icon2.png" alt="" />
+                                        <img src="./webpImages/icon2.webp" alt="" />
                                         <div className=''>
                                             <h5>Total Units</h5>
                                             <p>395</p>
                                         </div>
                                     </div>
                                     <div className='sinBox smd'>
-                                        <img src="./images/icon3.png" alt="" />
+                                        <img src="./webpImages/icon3.webp" alt="" />
                                         <div className=''>
                                             <h5>Legal Approval</h5>
                                             <p>HRERA & SEIAA</p>
                                         </div>
                                     </div>
                                     <div className='sinBox smd'>
-                                        <img src="./images/icon4.png" alt="" />
+                                        <img src="./webpImages/icon4.webp" alt="" />
                                         <div className=''>
                                             <h5>RERA ID</h5>
                                             <p>GGM/634/366/2022/109</p>
@@ -79,7 +79,7 @@ const Forbuyers = () => {
                     <div className='sinPro '>
                         <div className='d-flex gp3'>
                             <div className='img'>
-                                <img src="./images/f1.jpg" alt="" />
+                                <img src="./webpImages/f1.webp" alt="" />
                             </div>
                             <div className='info '>
                                 <h2>Universal Square</h2>
@@ -88,28 +88,28 @@ const Forbuyers = () => {
                                 <h3>Starting ₹49 Lakh*</h3>
                                 <div className='Facility column'>
                                     <div className='sinBox full'>
-                                        <img src="./images/icon1.png" alt="" />
+                                        <img src="./webpImages/icon1.webp" alt="" />
                                         <div className=''>
                                             <h5>Project Size</h5>
                                             <p>13.87 Acres</p>
                                         </div>
                                     </div>
                                     <div className='sinBox full'>
-                                        <img src="./images/icon2.png" alt="" />
+                                        <img src="./webpImages/icon2.webp" alt="" />
                                         <div className=''>
                                             <h5>Total Units</h5>
                                             <p>227</p>
                                         </div>
                                     </div>
                                     <div className='sinBox smd'>
-                                        <img src="./images/icon3.png" alt="" />
+                                        <img src="./webpImages/icon3.webp" alt="" />
                                         <div className=''>
                                             <h5>Legal Approval</h5>
                                             <p>DTCP & HRERA</p>
                                         </div>
                                     </div>
                                     <div className='sinBox smd'>
-                                        <img src="./images/icon4.png" alt="" />
+                                        <img src="./webpImages/icon4.webp" alt="" />
                                         <div className=''>
                                             <h5>RERA ID</h5>
                                             <p>HRERA-PKL-FBD-440-2023</p>

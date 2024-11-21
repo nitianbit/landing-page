@@ -65,7 +65,7 @@ a {
 
 /* .banner start */
 /* .banner {
-    background: url("../../public/images/banner1.jpg") no-repeat center center / cover;
+    background: url("../../public/webpImages/banner1.webp") no-repeat center center / cover;
     height: 80vh;
     display: flex;
 }
@@ -87,7 +87,7 @@ a {
 } */
 
 .banner {
-    background: url("../../public/images/banner_laptop.jpg") no-repeat center center / cover;
+    background: url("../../public/webpImages/banner_laptop.webp") no-repeat center center / cover;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -99,14 +99,14 @@ a {
 
 @media (max-width: 1184px) {
     .banner {
-        background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
+        background: url("../../public/webpImages/banner_tab.webp") no-repeat center center / cover;
         height: 80vh;
     }
 }
 
 @media (max-width: 968px) {
     .banner {
-        background: url("../../public/images/banner_mobile.jpg") no-repeat center center / cover;
+        background: url("../../public/webpImages/banner_mobile.webp") no-repeat center center / cover;
         height: 86vh;
     }
 }
@@ -120,7 +120,7 @@ a {
 
 @media (width: 540px) {
     .banner {
-        background: url("../../public/images/banner_tab.jpg") no-repeat center center / cover;
+        background: url("../../public/webpImages/banner_tab.webp") no-repeat center center / cover;
         height: 86vh;
     }
 }
@@ -657,11 +657,11 @@ h1.title {
 
 /* Forbuyers */
 .vista-img{
-    background: url("../../public/images/vista1.jpg") no-repeat center center / cover;
+    background: url("../../public/webpImages/vista1.webp") no-repeat center center / cover;
 }
 
 .builder-img{
-    background: url("../../public/images/BuildersDealers.jpg") no-repeat center center / cover;
+    background: url("../../public/webpImages/BuildersDealers.webp") no-repeat center center / cover;
 }
 
 /* for header image view */
@@ -691,7 +691,7 @@ h1.title {
 }
 
 .builderDealerBanner.uni {
-    background: url("../../public/images/uni.jpg") no-repeat center center / cover;
+    background: url("../../public/webpImages/uni.webp") no-repeat center center / cover;
     position: relative;
     height: 550px;
 }

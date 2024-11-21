@@ -99,7 +99,7 @@ const Vistacorner = () => {
             {/* banner section start */}
 
             <div className='builderDealerBanner vista column header-image-view '>
-                <img src={`/images/${isMobile ? 'vista_mobile.jpg' : 'vista_laptop.jpg'}`} className='header-image'/>
+                <img src={`/webpImages/${isMobile ? 'vista_mobile.webp' : 'vista_laptop.webp'}`} className='header-image'/>
                 <div className='container full'>
                     <div className='right'>
                         <form onSubmit={(e) => {
@@ -190,7 +190,7 @@ const Vistacorner = () => {
                                 display:"flex",
                                 alignItems:"start"
                             }} className='sinBox'>
-                            <img src="./images/icon1.png" alt="" />
+                            <img src="./webpImages/icon1.webp" alt="" />
                             <div className=''>
                                 <h5>Project Size</h5>
                                 <p>3.78 Acres</p>
@@ -200,7 +200,7 @@ const Vistacorner = () => {
                                 display:"flex",
                                 alignItems:"start"
                             }} className='sinBox'>
-                            <img src="./images/icon2.png" alt="" />
+                            <img src="./webpImages/icon2.webp" alt="" />
                             <div className=''>
                                 <h5>Total Units</h5>
                                 <p>395</p>
@@ -210,7 +210,7 @@ const Vistacorner = () => {
                                 display:"flex",
                                 alignItems:"start"
                             }} className='sinBox'>
-                            <img src="./images/icon3.png" alt="" />
+                            <img src="./webpImages/icon3.webp" alt="" />
                             <div  className=''>
                                 <h5>Legal Approval</h5>
                                 <p>HRERA & SEIAA</p>
@@ -220,7 +220,7 @@ const Vistacorner = () => {
                                 display:"flex",
                                 alignItems:"start"
                             }} className='sinBox'>
-                            <img src="./images/icon4.png" alt="" />
+                            <img src="./webpImages/icon4.webp" alt="" />
                             <div className=''>
                                 <h5>RERA ID</h5>
                                 <p>GGM/634/366/2022/109</p>
@@ -251,47 +251,47 @@ const Vistacorner = () => {
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/1.jpg" alt="" />
+                            <img src="./webpImages/1.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/2.jpg" alt="" />
+                            <img src="./webpImages/2.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/3.jpg" alt="" />
+                            <img src="./webpImages/3.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/4.jpg" alt="" />
+                            <img src="./webpImages/4.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/5.jpg" alt="" />
+                            <img src="./webpImages/5.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/6.jpg" alt="" />
+                            <img src="./webpImages/6.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/7.jpg" alt="" />
+                            <img src="./webpImages/7.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/8.jpg" alt="" />
+                            <img src="./webpImages/8.webp" alt="" />
                         </div>
                         <div className='imgBox' style={{
                             marginBottom:"14px"
                         }}>
-                            <img src="./images/1.jpg" alt="" />
+                            <img src="./webpImages/1.webp" alt="" />
                         </div>
                     </div>
                     <Copious />
@@ -379,16 +379,16 @@ const Vistacorner = () => {
                 <div class="container">
                     <h2>Floor Plans</h2>
                     <div class="planImg">
-                        <img src="./images/p1.jpg" alt="" />
-                        <img src="./images/p2.jpg" alt="" />
-                        <img src="./images/p3.jpg" alt="" />
-                        <img src="./images/p4.jpg" alt="" />
-                        <img src="./images/p5.jpg" alt="" />
-                        <img src="./images/p6.jpg" alt="" />
-                        <img src="./images/p7.jpg" alt="" />
-                        <img src="./images/p8.jpg" alt="" />
-                        <img src="./images/p9.jpg" alt="" />
-                        <img src="./images/p10.jpg" alt="" />
+                        <img src="./webpImages/p1.webp" alt="" />
+                        <img src="./webpImages/p2.webp" alt="" />
+                        <img src="./webpImages/p3.webp" alt="" />
+                        <img src="./webpImages/p4.webp" alt="" />
+                        <img src="./webpImages/p5.webp" alt="" />
+                        <img src="./webpImages/p6.webp" alt="" />
+                        <img src="./webpImages/p7.webp" alt="" />
+                        <img src="./webpImages/p8.webp" alt="" />
+                        <img src="./webpImages/p9.webp" alt="" />
+                        <img src="./webpImages/p10.webp" alt="" />
                     </div>
                     <Floor />
                     <div style={{
