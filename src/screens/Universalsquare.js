@@ -10,6 +10,7 @@ import OTPPage from '../components/OTP/OtpPage';
 import { useNavigate } from 'react-router-dom';
 import { handleBlur, validateFields } from '../utils/helper';
 import downloadPdf from '../components/DownloadPdf';
+import Loader from '../components/Loader/Loader';
 
 
 const Universalsquare = () => {
@@ -31,6 +32,7 @@ const Universalsquare = () => {
     const [phoneNo, setPhoneNo] = useState(null)
     const [phoneNo1, setPhoneNo1] = useState(null)
     const [Veri, setVeri] = useState(false);
+    const [loading, setLoading] = useState(true)
 
 
     const getProducts = async () => {
@@ -46,6 +48,9 @@ const Universalsquare = () => {
             });
         } catch (error) {
             console.error("Error fetching form:", error);
+        }
+        finally{
+            setLoading(false)
         }
     };
 
@@ -89,8 +94,9 @@ const Universalsquare = () => {
     })
     return (
         <>
-            {/* Sorting */}
-            {/* banner section start */}
+        {
+            loading ? <Loader/> : 
+            <div>
             <div className='builderDealerBanner uni'>
                 <div className='container flex-between-center column'>
                     <div className='left'>
@@ -661,10 +667,11 @@ const Universalsquare = () => {
                             <label for="agr">I agree to receive information regarding my submitted enquiry* </label>
                         </div>
                         <input type="submit" name="" value="Download Brochure" className='button' dowmload></input>
-                        {/* <p className="text-center"><a href="Vistacorner" type='submit' className='button' download >Download Brochure</a></p> */}
                     </form>
                 </div>
             </div>
+        </div>
+        }
         </>
     )
 }
