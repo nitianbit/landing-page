@@ -212,7 +212,7 @@ const Forbuildersdealers = () => {
                     <div class="wdd column">
                         <div class="sinService">
                             <div class="serIcon">
-                                <img src="./images/sr1.png" alt="" />
+                                <img src="./webpImages/sr1.webp" alt="" />
                             </div>
                             <div class="serInfo">
                                 <h4>Targeted Audience</h4>
@@ -226,7 +226,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div class="sinService">
                             <div class="serIcon">
-                                <img src="./images/sr2.png" alt="" />
+                                <img src="./webpImages/sr2.webp" alt="" />
                             </div>
                             <div class="serInfo">
                                 <h4>Better Conversion Rates</h4>
@@ -239,7 +239,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div class="sinService">
                             <div class="serIcon">
-                                <img src="./images/sr3.png" alt="" />
+                                <img src="./webpImages/sr3.webp" alt="" />
                             </div>
                             <div class="serInfo">
                                 <h4>Time and Cost Efficiency</h4>
@@ -251,7 +251,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div class="sinService">
                             <div class="serIcon">
-                                <img src="./images/sr4.png" alt="" />
+                                <img src="./webpImages/sr4.webp" alt="" />
                             </div>
                             <div class="serInfo">
                                 <h4>Custom Solutions</h4>
@@ -291,7 +291,7 @@ const Forbuildersdealers = () => {
                     <div className='properties'>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/f1.jpg" alt="" />
+                                <img src="./webpImages/f1.webp" alt="" />
                             </div>
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
@@ -300,7 +300,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/f2.jpg" alt="" />
+                                <img src="./webpImages/f2.webp" alt="" />
                             </div>
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
@@ -309,7 +309,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/f3.jpg" alt="" />
+                                <img src="./webpImages/f3.webp" alt="" />
                             </div>
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>
@@ -318,7 +318,7 @@ const Forbuildersdealers = () => {
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/f4.jpg" alt="" />
+                                <img src="./webpImages/f4.webp" alt="" />
                             </div>
                             <h5>Universal Square</h5>
                             <h6>Sector 79, Faridabad</h6>

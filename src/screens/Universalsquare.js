@@ -187,28 +187,28 @@ const Universalsquare = () => {
                     <h1>Universal Square Overview</h1>
                     <div className='Facility'>
                         <div className='sinBox'>
-                            <img src="./images/icon1.png" alt="" />
+                            <img src="./webpImages/icon1.webp" alt="" />
                             <div className=''>
                                 <h5>Project Size</h5>
                                 <p>3.78 Acres</p>
                             </div>
                         </div>
                         <div className='sinBox'>
-                            <img src="./images/icon2.png" alt="" />
+                            <img src="./webpImages/icon2.webp" alt="" />
                             <div className=''>
                                 <h5>Total Units</h5>
                                 <p>395</p>
                             </div>
                         </div>
                         <div className='sinBox'>
-                            <img src="./images/icon3.png" alt="" />
+                            <img src="./webpImages/icon3.webp" alt="" />
                             <div className=''>
                                 <h5>Legal Approva</h5>
                                 <p>HRERA & SEIAA</p>
                             </div>
                         </div>
                         <div className='sinBox'>
-                            <img src="./images/icon4.png" alt="" />
+                            <img src="./webpImages/icon4.webp" alt="" />
                             <div className=''>
                                 <h5>RERA ID</h5>
                                 <p>GGM/634/366/2022/109</p>
@@ -228,31 +228,31 @@ const Universalsquare = () => {
                     <h1 className='title' onClick={() => { setImgshow(!imgshow) }}>Universal Square Photos</h1>
                     <div className='properties'>
                         <div className='imgBox'>
-                            <img src="./images/1.jpg" alt="" />
+                            <img src="./webpImages/1.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/2.jpg" alt="" />
+                            <img src="./webpImages/2.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/3.jpg" alt="" />
+                            <img src="./webpImages/3.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/4.jpg" alt="" />
+                            <img src="./webpImages/4.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/5.jpg" alt="" />
+                            <img src="./webpImages/5.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/6.jpg" alt="" />
+                            <img src="./webpImages/6.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/7.jpg" alt="" />
+                            <img src="./webpImages/7.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/8.jpg" alt="" />
+                            <img src="./webpImages/8.webp" alt="" />
                         </div>
                         <div className='imgBox' >
-                            <img src="./images/1.jpg" alt="" />
+                            <img src="./webpImages/1.webp" alt="" />
                         </div>
                     </div>
                     <Copious />
@@ -267,73 +267,73 @@ const Universalsquare = () => {
                     <div className='cities'>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/1.jpg" alt="" />
+                                <img src="./webpImages/1.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/2.jpg" alt="" />
+                                <img src="./webpImages/2.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/2.jpg" alt="" />
+                                <img src="./webpImages/2.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/3.jpg" alt="" />
+                                <img src="./webpImages/3.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/4.jpg" alt="" />
+                                <img src="./webpImages/4.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/5.jpg" alt="" />
+                                <img src="./webpImages/5.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/6.jpg" alt="" />
+                                <img src="./webpImages/6.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/7.jpg" alt="" />
+                                <img src="./webpImages/7.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/8.jpg" alt="" />
+                                <img src="./webpImages/8.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/1.jpg" alt="" />
+                                <img src="./webpImages/1.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/2.jpg" alt="" />
+                                <img src="./webpImages/2.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleCities'>
                             <div className='imgBox'>
-                                <img src="./images/3.jpg" alt="" />
+                                <img src="./webpImages/3.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>

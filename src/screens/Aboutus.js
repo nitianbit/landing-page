@@ -56,49 +56,49 @@ const About = () => {
                     <div className='properties'>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/1.jpg" alt="" />
+                                <img src="./webpImages/1.webp" alt="" />
                             </div>
                             <h5>Residential Apartments</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/2.jpg" alt="" />
+                                <img src="./webpImages/2.webp" alt="" />
                             </div>
                             <h5>Residential Flats</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/3.jpg" alt="" />
+                                <img src="./webpImages/3.webp" alt="" />
                             </div>
                             <h5>Residential Builder Floors</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/4.jpg" alt="" />
+                                <img src="./webpImages/4.webp" alt="" />
                             </div>
                             <h5>Residential Duplex</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/5.jpg" alt="" />
+                                <img src="./webpImages/5.webp" alt="" />
                             </div>
                             <h5>Residential Villas </h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/6.jpg" alt="" />
+                                <img src="./webpImages/6.webp" alt="" />
                             </div>
                             <h5>Residential Plots</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/7.jpg" alt="" />
+                                <img src="./webpImages/7.webp" alt="" />
                             </div>
                             <h5>Commercial Offices</h5>
                         </div>
                         <div className='singleProperties'>
                             <div className='imgBox'>
-                                <img src="./images/8.jpg" alt="" />
+                                <img src="./webpImages/8.webp" alt="" />
                             </div>
                             <h5>Commercial Shops</h5>
                         </div>

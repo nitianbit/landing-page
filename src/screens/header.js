@@ -13,7 +13,7 @@ const Header = () => {
                 <div className="container flex-between-center">
                     <div className="logo">
                         <a href="Home" >
-                            <img src="./images/logo.png" alt="" />
+                            <img src="./webpImages/logo.webp" alt="" />
                         </a>
                     </div>
                     <div className={menuOpen ? "menu active flex-between-center" : "menu flex-between-center"}>

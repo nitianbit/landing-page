@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="container d-flex flex-between column">
                         <div className="footerLogo">
                             <a href="home" >
-                                <img src="./images/logo.png" alt="" />
+                                <img src="./webpImages/logo.webp" alt="" />
                             </a>
                         </div>
                         <div className="footerMenu">

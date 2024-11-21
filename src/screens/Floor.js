@@ -28,16 +28,16 @@ const Floor = () => {
     return (
         <>
             <Slider {...settings} className=''>
-                <img src="./images/p1.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p1.jpg");}} />
-                <img src="./images/p2.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p2.jpg");}} />
-                <img src="./images/p3.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p3.jpg");}} />
-                <img src="./images/p4.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p4.jpg");}} />
-                <img src="./images/p5.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p5.jpg");}} />
-                <img src="./images/p6.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p6.jpg");}} />
-                <img src="./images/p7.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p7.jpg");}} />
-                <img src="./images/p8.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p8.jpg");}} />
-                <img src="./images/p9.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p9.jpg");}} />
-                <img src="./images/p10.jpg" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./images/p10.jpg");}} />
+                <img src="./webpImages/p1.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p1.webp");}} />
+                <img src="./webpImages/p2.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p2.webp");}} />
+                <img src="./webpImages/p3.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p3.webp");}} />
+                <img src="./webpImages/p4.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p4.webp");}} />
+                <img src="./webpImages/p5.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p5.webp");}} />
+                <img src="./webpImages/p6.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p6.webp");}} />
+                <img src="./webpImages/p7.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p7.webp");}} />
+                <img src="./webpImages/p8.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p8.webp");}} />
+                <img src="./webpImages/p9.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p9.webp");}} />
+                <img src="./webpImages/p10.webp" alt="" className='plnimg' onClick={() => { setImgshow(!imgshow); setUrl("./webpImages/p10.webp");}} />
             </Slider>
             <div className={imgshow ? "imgshow active" : "imgshow"}>
                 <div class="inqure">

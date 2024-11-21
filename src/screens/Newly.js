@@ -28,7 +28,7 @@ const Newly = () => {
             <Slider {...settings} className=''>
                 <div className='singleProperties'>
                     <div className='imgBox'>
-                        <img src="./images/f1.jpg" alt="" />
+                        <img src="./webpImages/f1.webp" alt="" />
                     </div>
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
@@ -37,7 +37,7 @@ const Newly = () => {
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
-                        <img src="./images/f2.jpg" alt="" />
+                        <img src="./webpImages/f2.webp" alt="" />
                     </div>
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
@@ -46,7 +46,7 @@ const Newly = () => {
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
-                        <img src="./images/f3.jpg" alt="" />
+                        <img src="./webpImages/f3.webp" alt="" />
                     </div>
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
@@ -55,7 +55,7 @@ const Newly = () => {
                 </div>
                 <div className='singleProperties'>
                     <div className='imgBox'>
-                        <img src="./images/f4.jpg" alt="" />
+                        <img src="./webpImages/f4.webp" alt="" />
                     </div>
                     <h5>Universal Square</h5>
                     <h6>Sector 79, Faridabad</h6>
