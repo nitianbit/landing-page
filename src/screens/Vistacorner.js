@@ -1,20 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/demo.css';
 import './css/fonts/style.css';
 import './style.css';
-import Header from './header';
-import Footer from './footer';
-import Copious from './Copious';
 import Floor from './Floor';
 import { doGET } from '../utils/HttpUtils';
 import { useUserContext } from '../context/UserContext';
 import { handleSubmit, sendOTP, verifyOTP } from '../components/handleSubmit';
 import OTPPage from '../components/OTP/OtpPage';
-import ThankYouPage from '../components/ThankYou/ThankYouPage'
 import { useNavigate } from 'react-router-dom';
 import { validateFields, handleBlur } from '../utils/helper';
 import useWindowResize from '../hooks/useWindowResize';
 import downloadPdf from '../components/DownloadPdf';
+import Loader from '../components/Loader/Loader';
 
 
 
@@ -25,27 +22,28 @@ const Vistacorner = () => {
     const [data, setData] = useState({});
     const [data1, setData1] = useState({});
     const [errors, setErrors] = useState({});
-    // const [popup, setPopup] = useState(false);
     const [product, setProducts] = useState(null)
     const [forms, setForms] = useState(null)
     const [phoneNo, setPhoneNo] = useState(null)
     const [phoneNo1, setPhoneNo1] = useState(null)
     const [Veri, setVeri] = useState(false);
     const [thank, setThank] = useState(false);
+    const [loading, setLoading] = useState(true)
 
     const getProducts = async () => {
         try {
             const response = await doGET(`/product/${products[1]?._id}`);
             setProducts(response)
-            // const formsArray = Array.from({ length: 3 }, (_, index) => response?.forms?.find(form => form.formIndex === index) || []);
             response?.forms?.sort((a, b) => a.formIndex - b.formIndex)
             setForms({
                 first: response.forms?.length ? response.forms[0] : null,
                 second: response.forms?.length > 1 ? response.forms[1] : null,
-                // third: response[2],
             });
         } catch (error) {
             console.error("Error fetching form:", error);
+        }
+        finally{
+            setLoading(false)
         }
     };
 
@@ -70,7 +68,6 @@ const Vistacorner = () => {
     };
 
     const handleBlurWithError = (field, data) => {
-        // Return the error and update state
         const error = handleBlur(field, data);
         setErrors(prevErrors => ({ ...prevErrors, ...error }));
     };
@@ -96,8 +93,9 @@ const Vistacorner = () => {
    const {isMobile} =  useWindowResize()
     return (
         <>
-            {/* banner section start */}
-
+        {
+            loading ? <Loader/> : 
+            <div>
             <div className='builderDealerBanner vista column header-image-view '>
                 <img src={`/webpImages/${isMobile ? 'vista_mobile.webp' : 'vista_laptop.webp'}`} className='header-image'/>
                 <div className='container full'>
@@ -174,8 +172,6 @@ const Vistacorner = () => {
 
             </div>
         
-            {/* banner section end */}
-            {/* content */}
             <div className='vistaContent'>
                 <div className='container'>
                     <h1>Copious Vista Corner</h1>
@@ -238,67 +234,7 @@ const Vistacorner = () => {
                     }}>Download Brochure</button></p>
                 </div>
             </div>
-            {/* section end */}
-            {/* featuredProperties start */}
-            {/* <div className='gallery'>
-                <div className='container' style={{
-                    borderBottom: "1px solid #ddd"
-                }}>
-                    <h1 className='title' style={{
-                        marginTop:"40px"
-                    }}> Photos</h1>
-                    <div className='properties'>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/1.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/2.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/3.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/4.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/5.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/6.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/7.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/8.webp" alt="" />
-                        </div>
-                        <div className='imgBox' style={{
-                            marginBottom:"14px"
-                        }}>
-                            <img src="./webpImages/1.webp" alt="" />
-                        </div>
-                    </div>
-                    <Copious />
-                </div>
-            </div> */}
-            {/* featuredProperties end */}
-            {/* content */}
+
             <div className='aboutUs' style={{
                 paddingTop:"24px"
             }}>
@@ -664,10 +600,8 @@ const Vistacorner = () => {
                     </form>
                 </div>
             </div>
-            {/* <ThankYouPage
-                isOpen={thank}
-                setIsOpen={setThank}
-            /> */}
+        </div>
+        }
         </>
     )
 }
