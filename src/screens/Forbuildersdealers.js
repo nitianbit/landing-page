@@ -82,7 +82,7 @@ const Forbuildersdealers = () => {
                                         your real estate business to new heights with our expert <br></br>
                                         lead generation service.</p>
                                 </div>
-                                <div className='right'>
+                                <div className='right builder'>
                                     <form onSubmit={(e) => {
                                         e.preventDefault()
                                         const errorList = validateFields(form?.fields, data, setErrors);
