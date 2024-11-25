@@ -978,7 +978,7 @@ h1.title.pp {
 /* contactUs */
 .contactUs {
     font-family: 'Rasputin';
-
+    margin-top: 30px;
 }
 
 .contactUs .bgs {
@@ -1837,8 +1837,13 @@ h1.title.pp {
 
     .builderDealerBanner.vista .right {
         left: 48%;
+        /* top:250px; */
         padding: 23px;
         transform: translateX(-50%);
+    }
+
+    .builderDealerBanner.vista .builder {
+        top: 250px !important; /* Use !important only if necessary */
     }
     .builderDealerBanner.uni .right {
         left: 48%;
