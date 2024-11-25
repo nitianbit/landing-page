@@ -449,6 +449,10 @@ h1.title {
     .aboutUs {
         padding-top: 40px; /* Padding for screens 768px and wider */
     }
+
+    .aboutUs .builder{
+        padding-top: 100px; /* Padding for screens 768px and wider */
+    }
 }
 
 .aboutUs h1.abt {

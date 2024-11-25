@@ -157,7 +157,7 @@ const Forbuildersdealers = () => {
                         </div>
                         {/* content */}
                         <div className='aboutUs'>
-                            <div className='container'>
+                            <div className='container builder'>
                                 <h1>Advertise with Apki Property</h1>
                                 <p className='Reach'>Reach out to Highly Interested Property Seekers</p>
                                 <h3>ABOUT APKI PROPERTY</h3>
