@@ -56,37 +56,40 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
-  <script data-cfasync="false" type="text/javascript" id="clever-core">
-    /* <![CDATA[ */
-        (function (document, window) {
-            var a, c = document.createElement("script"), f = window.frameElement;
-    
-    
-            c.id = "CleverCoreLoader89200";
-            c.src = "https://scripts.cleverwebserver.com/a4b7469af8981aa8c0fba43a0252b77a.js";
-    
-    
-            c.async = !0;
-            c.type = "text/javascript";
-            c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
-            c.setAttribute("data-callback", "put-your-callback-function-here");
-            c.setAttribute("data-callback-url-click", "put-your-click-macro-here");
-            c.setAttribute("data-callback-url-view", "put-your-view-macro-here");
-            
-    
-    
-            try {
-                a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
-            } catch (e) {
-                a = !1;
-            }
-    
-    
-            a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
-            a.parentNode.insertBefore(c, a);
-        })(document, window);
-    /* ]]> */
-    </script>
-</body>
+  <!-- Add callback function before the clever-core script -->
+  <script>
+    function cleverCallback(event) {
+      console.log('Clever ad event:', event);
+      // Add any custom handling here
+    }
+  </script>
 
+  <!-- <script data-cfasync="false" type="text/javascript" id="clever-core">
+    /* <![CDATA[ */
+    (function (document, window) {
+        var a, c = document.createElement("script"), f = window.frameElement;
+
+        c.id = "CleverCoreLoader89200";
+        c.src = "https://scripts.cleverwebserver.com/a4b7469af8981aa8c0fba43a0252b77a.js";
+
+        c.async = !0;
+        c.type = "text/javascript";
+        // Update these attributes with your actual values
+        c.setAttribute("data-target", "clever-target");
+        c.setAttribute("data-callback", "cleverCallback");
+        c.setAttribute("data-callback-url-click", window.location.href);
+        c.setAttribute("data-callback-url-view", window.location.href);
+
+        try {
+            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+        } catch (e) {
+            a = !1;
+        }
+
+        a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+        a.parentNode.insertBefore(c, a);
+    })(document, window);
+    /* ]]> */
+  </script> -->
+</body>
 </html>

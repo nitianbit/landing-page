@@ -13,6 +13,7 @@ import Footer from './screens/footer';
 import Header from './screens/header';
 import facebookPixelService from './services/facebookPixelService';
 import { useEffect } from 'react';
+import VistacornerTest from './screens/VistaCornerTest';
 // import facebookPixel from './pixels/facebookPixel';
 
 
@@ -61,6 +62,10 @@ const App = () => {
     {
       path: "/Vistacorner",
       element: <Vistacorner />
+    },
+    {
+      path: "/VistacornerTest",
+      element: <VistacornerTest />
     },
     {
       path: "/Universalsquare",
