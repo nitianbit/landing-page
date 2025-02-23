@@ -78,13 +78,23 @@ const VistacornerTest = () => {
         }
     }, [products])
 
-    useEffect(() => {
+    // Add this new function to handle ad initialization
+    const initializeAd = () => {
+        // First, add the ad container div right after the navbar
+        const adContainer = document.createElement('div');
+        adContainer.id = 'clever-target';
+        
+        // Find the navbar or header element and insert ad container after it
+        const headerElement = document.querySelector('.builderDealerBanner');
+        if (headerElement) {
+            headerElement.parentNode.insertBefore(adContainer, headerElement);
+        }
+
         // Add callback function
         window.cleverCallback = function(event) {
             console.log('Clever ad event:', event);
-            // Add any custom handling here
         };
-    
+
         // Create and inject the Clever Core script
         const script = document.createElement('script');
         script.setAttribute('data-cfasync', 'false');
@@ -120,10 +130,21 @@ const VistacornerTest = () => {
         
         script.textContent = scriptContent;
         document.body.appendChild(script);
-    
+    };
+
+    // Add a new useEffect to handle ad initialization after component mounts
+    useEffect(() => {
+        initializeAd();
+
         // Cleanup function
         return () => {
-            // Set the callback to null instead of trying to delete it
+            // Remove the ad container
+            const adContainer = document.getElementById('clever-target');
+            if (adContainer) {
+                adContainer.remove();
+            }
+
+            // Set the callback to null
             window.cleverCallback = null;
             
             // Remove the script elements
