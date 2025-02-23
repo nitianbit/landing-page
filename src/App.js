@@ -82,7 +82,7 @@ const App = () => {
   ])
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <RouterProvider router={router} />
       <Footer/>
     </>
