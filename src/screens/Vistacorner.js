@@ -78,6 +78,124 @@ const Vistacorner = () => {
         }
     }, [products])
 
+     // Add this new function to handle ad initialization
+        const initializeAd = () => {
+            // Create and inject CSS styles
+            const styleSheet = document.createElement('style');
+            styleSheet.textContent = `
+                .builderDealerBanner {
+                    position: relative;
+                    z-index: 2;
+                }
+                #clever-target {
+                    position: relative;
+                    z-index: 1;
+                    margin: 20px auto;
+                    max-width: 100%;
+                    clear: both;
+                    display: block;
+                    min-height: 90px;
+                }
+                .ad-container {
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+    
+            // Create container div with proper structure
+            const adWrapper = document.createElement('div');
+            adWrapper.className = 'ad-container';
+    
+            const adContainer = document.createElement('div');
+            adContainer.id = 'clever-target';
+            adWrapper.appendChild(adContainer);
+    
+            // Find the header element and insert ad container after it
+            const headerElement = document.querySelector('.builderDealerBanner');
+            if (headerElement && headerElement.parentNode) {
+                headerElement.parentNode.insertBefore(adWrapper, headerElement.nextSibling);
+            }
+    
+            // Add callback function
+            window.cleverCallback = function (event) {
+                console.log('Clever ad event:', event);
+            };
+    
+            // Create and inject the Clever Core script
+            const script = document.createElement('script');
+            script.setAttribute('data-cfasync', 'false');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('id', 'clever-core');
+    
+            const scriptContent = `
+                /* <![CDATA[ */
+                (function (document, window) {
+                    var a, c = document.createElement("script"), f = window.frameElement;
+        
+                    c.id = "CleverCoreLoader89200";
+                    c.src = "https://scripts.cleverwebserver.com/a4b7469af8981aa8c0fba43a0252b77a.js";
+        
+                    c.async = !0;
+                    c.type = "text/javascript";
+                    c.setAttribute("data-target", "clever-target");
+                    c.setAttribute("data-callback", "cleverCallback");
+                    c.setAttribute("data-callback-url-click", window.location.href);
+                    c.setAttribute("data-callback-url-view", window.location.href);
+        
+                    try {
+                        a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+                    } catch (e) {
+                        a = !1;
+                    }
+        
+                    a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+                    a.parentNode.insertBefore(c, a);
+                })(document, window);
+                /* ]]> */
+            `;
+    
+            script.textContent = scriptContent;
+            document.body.appendChild(script);
+        };
+    
+        // Update the cleanup function in useEffect
+        useEffect(() => {
+            initializeAd();
+    
+            // Cleanup function
+            return () => {
+                // Remove the ad container and wrapper
+                const adContainer = document.querySelector('.ad-container');
+                if (adContainer) {
+                    adContainer.remove();
+                }
+    
+                // Remove the injected styles
+                const styleSheet = document.querySelector('style');
+                if (styleSheet && styleSheet.textContent.includes('#clever-target')) {
+                    styleSheet.remove();
+                }
+    
+                // Set the callback to null
+                window.cleverCallback = null;
+    
+                // Remove the script elements
+                const existingScript = document.getElementById('clever-core');
+                if (existingScript) {
+                    existingScript.remove();
+                }
+    
+                const loaderScript = document.getElementById('CleverCoreLoader89200');
+                if (loaderScript) {
+                    loaderScript.remove();
+                }
+            };
+        }, []);
+    
+
 
     const [popup, setPopup] = useState(false);
     const [Form, setForm] = useState(false);

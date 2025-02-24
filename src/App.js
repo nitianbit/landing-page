@@ -14,79 +14,75 @@ import Header from './screens/header';
 import facebookPixelService from './services/facebookPixelService';
 import { useEffect } from 'react';
 import VistacornerTest from './screens/VistaCornerTest';
-// import facebookPixel from './pixels/facebookPixel';
 
-
-// facebookPixel.init("1072641991236564");
-// facebookPixel.track("PageView");
+// Layout component that conditionally renders the header
+const Layout = ({ children, showHeader = true }) => {
+  return (
+    <>
+      {showHeader && <Header />}
+      {children}
+      <Footer />
+    </>
+  );
+};
 
 const App = () => {
-
   useEffect(() => {
     facebookPixelService.init();
- 
   }, []);
-
- 
-
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />
+      element: <Layout><Home /></Layout>
     },
     {
       path: "/Home",
-      element: <Home />
+      element: <Layout><Home /></Layout>
     },
     {
       path: "/Aboutus",
-      element: <About />
+      element: <Layout><About /></Layout>
     },
     {
       path: "/Forbuyers",
-      element: <Forbuyers />
+      element: <Layout><Forbuyers /></Layout>
     },
     {
       path: "/Forbuildersdealers",
-      element: <Forbuildersdealers />
+      element: <Layout><Forbuildersdealers /></Layout>
     },
     {
       path: "/Contactus",
-      element: <Contactus />
+      element: <Layout><Contactus /></Layout>
     },
     {
       path: "/Privacypolicy",
-      element: <Privacypolicy />
+      element: <Layout><Privacypolicy /></Layout>
     },
     {
       path: "/Vistacorner",
-      element: <Vistacorner />
+      element: <Layout><Vistacorner /></Layout>
     },
     {
       path: "/VistacornerTest",
-      element: <VistacornerTest />
+      element: <Layout showHeader={false}><VistacornerTest /></Layout>
     },
     {
       path: "/Universalsquare",
-      element: <Universalsquare />
+      element: <Layout><Universalsquare /></Layout>
     },
     {
       path: "/Featured",
-      element: <Featured />
+      element: <Layout><Featured /></Layout>
     },
     {
       path: "/thankYou",
-      element: <ThankYouPage />
+      element: <Layout><ThankYouPage /></Layout>
     },
-  ])
-  return (
-    <>
-      <Header />
-      <RouterProvider router={router} />
-      <Footer/>
-    </>
-  )
-}
+  ]);
+
+  return <RouterProvider router={router} />;
+};
 
 export default App;
